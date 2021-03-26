@@ -4,6 +4,9 @@
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },

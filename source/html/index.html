@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  @@include("html_components/head.html", {
+    "page": "Кэт энерджи"
+  })
+
+  <body class="page__body">
+
+    @@include("html_components/header.html", {
+      "index": '',
+      "catalog": 'href="catalog.html"',
+      "form": 'href="form.html"'
+    })
+    <main class="page-main">
+      <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
+      <section class="functional-nutrition">
+        <div class="functional-nutrition__color-wrapper">
+          <h2 class="functional-nutrition__header">Функциональное питание для котов</h2>
+          <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
+          <img src="img/some/chicken-box.png" alt="коробка с кошачьей едой" class="functional-nutrition__drop-food">
+        </div>
+        <div class="functional-nutrition__nocolor-wrapper">
+          <a href="form.html" class="functional-nutrition__button button">Подобрать программу</a>
+        </div>
+      </section>
+
+    </main>
+
+    @@include("html_components/footer.html")
+
+  </body>
+</html>
