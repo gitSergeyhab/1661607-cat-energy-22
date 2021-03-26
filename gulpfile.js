@@ -12,6 +12,8 @@ const htmlProto = (fileName) => {
 }
 
 const indexHtml = () => htmlProto('index');
+const catalogHtml = () => htmlProto('catalog');
+const formHtml = () => htmlProto('form');
 
 const watcher = () => {
   sync.init({
@@ -20,8 +22,12 @@ const watcher = () => {
     }
   });
 
-  watch('source/html/**/*.html', indexHtml)
+  watch('source/html/**/*.html', indexHtml);
+  watch('source/html/**/*.html', catalogHtml)
+  watch('source/html/**/*.html', formHtml)
 }
 
 exports.indexHtml = indexHtml;
-exports.default = series(indexHtml, watcher)
+exports.catalogHtml = catalogHtml;
+exports.formHtml = formHtml;
+exports.default = series(indexHtml, catalogHtml, formHtml, watcher)
