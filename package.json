@@ -4,6 +4,7 @@
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-file-include": "^2.3.0",
