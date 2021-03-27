@@ -9,13 +9,15 @@
     "gulp-cli": "^2.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-format-html": "^1.2.5",
+    "htmlhint": "^0.14.2",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "test": "npm run editorconfig",
+    "testhtml": "htmlhint ./source/html/*.html"
   },
   "editorconfig-cli": [
     "*.json",
