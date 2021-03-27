@@ -9,6 +9,7 @@ const htmlProto = (fileName) => {
       basepath: '@file'
     }))
     .pipe(dest('source'))
+    .pipe(sync.stream())
 }
 
 const indexHtml = () => htmlProto('index');
@@ -30,4 +31,5 @@ const watcher = () => {
 exports.indexHtml = indexHtml;
 exports.catalogHtml = catalogHtml;
 exports.formHtml = formHtml;
+exports.watcher = watcher;
 exports.default = series(indexHtml, catalogHtml, formHtml, watcher)
