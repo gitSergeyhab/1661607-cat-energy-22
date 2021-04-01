@@ -1,40 +1,51 @@
-const {src, dest, series, watch} = require('gulp');
-const includer = require('gulp-file-include');
-const sync = require('browser-sync').create()
-const beautify = require('gulp-beautify').html;
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const sync = require("browser-sync").create();
 
-const htmlProto = (fileName) => {
-  return src(`source/html/${fileName}.html`)
-    .pipe(includer({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(beautify({
-      end_with_newline: true,
-      indent_size: 2
-    }))
-    .pipe(dest('source'))
-    .pipe(sync.stream())
+// Styles
+
+const styles = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("source/css"))
+    .pipe(sync.stream());
 }
 
-const indexHtml = () => htmlProto('index');
-const catalogHtml = () => htmlProto('catalog');
-const formHtml = () => htmlProto('form');
+exports.styles = styles;
 
-const watcher = () => {
+// Server
+
+const server = (done) => {
   sync.init({
     server: {
       baseDir: 'source'
-    }
+    },
+    cors: true,
+    notify: false,
+    ui: false,
   });
-
-  watch('source/html/**/*.html', indexHtml);
-  watch('source/html/**/*.html', catalogHtml)
-  watch('source/html/**/*.html', formHtml)
+  done();
 }
 
-exports.indexHtml = indexHtml;
-exports.catalogHtml = catalogHtml;
-exports.formHtml = formHtml;
-exports.watcher = watcher;
-exports.default = series(indexHtml, catalogHtml, formHtml, watcher)
+exports.server = server;
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html").on("change", sync.reload);
+}
+
+exports.default = gulp.series(
+  styles, server, watcher
+);
