@@ -27,12 +27,6 @@
 
 }
 
-@mixin line {
-  height: 1.5px;
-  width: 24px;
-  background-color: $basic-black;
-}
-
 .page-header__nav-open {
   display: block;
   @include line;

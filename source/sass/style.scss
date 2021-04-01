@@ -1,58 +1,50 @@
 @import "variables.scss";
+@import "mixins.scss";
 @import "global.scss";
 
-@import "blocks/page-header.scss";
-@import "blocks/logo.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/site-list.scss";
-
 @import "blocks/page-main.scss";
+@import "blocks/title-green-line.scss";
+@import "blocks/logo-text.scss";
+
+// header
+@import "blocks/header/page-header.scss";
+@import "blocks/header/logo.scss";
+@import "blocks/header/main-nav.scss";
+@import "blocks/header/site-list.scss";
+
+//footer/
+@import "blocks/footer/page-footer.scss";
+@import "blocks/footer/footer-location.scss";
+@import "blocks/footer/footer-address.scss";
+@import "blocks/footer/footer-map.scss";
+@import "blocks/footer/contacts.scss";
+@import "blocks/footer/socials.scss";
+@import "blocks/footer/developer.scss";
+
 
 //index
-@import "blocks/functional-nutrition.scss";
-@import "blocks/purpose.scss";
-@import "blocks/metodology.scss";
-@import "blocks/example.scss";
-@import "blocks/cat-slider.scss";
+@import "blocks/index/functional-nutrition.scss";
+@import "blocks/index/purpose.scss";
+@import "blocks/index/metodology.scss";
+@import "blocks/index/example.scss";
+@import "blocks/index/cat-slider.scss";
 
 // catalog
-@import "blocks/main-catalog.scss";
-@import "blocks/product-card.scss";
-@import "blocks/specification-table.scss";
-@import "blocks/additional-catalog.scss";
-@import "blocks/additional-card.scss";
+@import "blocks/catalog/main-catalog.scss";
+@import "blocks/catalog/product-card.scss";
+@import "blocks/catalog/specification-table.scss";
+@import "blocks/catalog/additional-catalog.scss";
+@import "blocks/catalog/additional-card.scss";
 
 // form
-@import "blocks/questionnaire.scss";
-@import "blocks/data.scss";
-
-@import "blocks/parameters.scss";
-@import "blocks/purposes.scss";
-@import "blocks/owner.scss";
-@import "blocks/comment.scss";
-@import "blocks/optional.scss";
-@import "blocks/button-field.scss";
-
+@import "blocks/form/questionnaire.scss";
+@import "blocks/form/data.scss";
+@import "blocks/form/parameters.scss";
+@import "blocks/form/purposes.scss";
+@import "blocks/form/owner.scss";
+@import "blocks/form/comment.scss";
+@import "blocks/form/optional.scss";
+@import "blocks/form/button-field.scss";
 
 
 
-
-@import "blocks/title-green-line.scss";
-
-
-
-
-
-
-
-
-
-@import "blocks/page-footer.scss";
-@import "blocks/footer-location.scss";
-@import "blocks/footer-address.scss";
-
-@import "blocks/footer-map.scss";
-@import "blocks/contacts.scss";
-@import "blocks/logo-text.scss";
-@import "blocks/socials.scss";
-@import "blocks/developer.scss";
