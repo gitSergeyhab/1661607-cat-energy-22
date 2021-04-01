@@ -3,25 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи: подбор программы</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo" href="index.html" aria-label="логотип Кэт-энерджи">
-      <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
-      <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
-    </a>
-    <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
+    <div class="page-header__top">
+      <a class="page-header__logo logo" href="index.html" aria-label="логотип Кэт-энерджи">
+        <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+        <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
+      </a>
+      <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
+        <!-- <span class="page-header__nav-open"></span> -->
+        <span class="js-span-btn"></span>
+
+      </button>
+    </div>
     <nav class="page-header__main-nav main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item"><a>Подбор программы</a></li>
-        </ul>
-      </div>
+      <!-- <div class="main-nav__wrapper"> -->
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--current"><a href="index.html">Главная</a></li>
+
+        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="site-list__item"><a>Подбор программы</a></li>
+      </ul>
+      <!-- </div> -->
     </nav>
   </header>
 
@@ -35,14 +42,14 @@
         программу питания для вашего кота
       </p>
       <form class="questionnaire__data data" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="data__parameters parameters">
+        <div class="data__parameters parameters">
           <ul class="parameters__list">
             <li class="parameters__item">
               <label class="data__label" for="cat-name">Имя:*</label>
               <input class="data__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
             </li>
             <li class="parameters__item">
-              <label class="data__label" for="cat-weight">Вес:*</label>
+              <label class="data__label" for="cat-weight">Вес(кг):*</label>
               <input class="data__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
             </li>
             <li class="parameters__item">
@@ -50,27 +57,28 @@
               <input class="data__input" id="cat-age" type="number" name="cat-age" placeholder="7">
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="data__purpose purpose">
-          <ul class="purpose__list">
-            <li class="purpose__item">
-              <input class="data__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose">
-              <label class="data__label data__label--right" for="weight-lose">Похудение</label>
+        <div class="data__purpose purposes">
+          <ul class="purposes__list">
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose">
+              <label class="data__label purposes__label" for="weight-lose">Похудение</label>
             </li>
-            <li class="purpose__item">
-              <input class="data__radio" type="radio" name="purpose" value="weight-gain" id="weight-gain">
-              <label class="data__label data__label--right" for="weight-gain">Набор массы</label>
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="weight-gain" id="weight-gain">
+              <label class="data__label
+                purposes__label" for="weight-gain">Набор массы</label>
             </li>
-            <li class="purpose__item">
-              <input class="data__radio" type="radio" name="purpose" value="advice" id="advice">
-              <label class="data__label data__label--right" for="advice">Не знаю (Нужен ваш совет)</label>
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="advice" id="advice">
+              <label class="data__label purposes__label" for="advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="data__owner owner">
-          <legend class="data__legend">Контактные данные (владельца кота)</legend>
+        <div class="data__owner owner">
+          <h3 class="owner__legend title-green-line">Контактные данные (владельца кота)</h3>
           <ul class="owner__list">
             <li class="owner__item">
               <label class="data__label" for="email">E-MAIL:*</label>
@@ -81,37 +89,41 @@
               <input class="data__input data__input--tel" id="tel" type="tel" name="tel" placeholder="7" required>
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="data__comment">
-          <legend class="data__legend">Комментрий</legend>
+        <div class="data__comment comment">
+          <h3 class="comment__legend title-green-line">Комментрий</h3>
           <label class="visually-hidden" for="data__comment">Поле для ввода комментария</label>
-          <textarea class="data__comment" name="data__comment" id="data__comment" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+          <textarea class="comment__field" name="data__comment" id="data__comment" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
 
-        <fieldset class="data__optional optional">
-          <legend class="data__legend">Дополнительно</legend>
+        <div class="data__optional optional">
+          <h3 class="optional__legend title-green-line">Дополнительно</h3>
           <ul class="optional__list">
             <li class="optional__item">
-              <input class="data__checkbox" type="checkbox" name="sweetener" id="sweetener">
-              <label class="data__label data__label--right" for="sweetener">Сахарозаменитель</label>
+              <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener">
+              <label class="data__label optional__label" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="optional__item">
-              <input class="data__checkbox" type="checkbox" name="water" id="water">
-              <label class="data__label data__label--right" for="water">Питьевая вода</label>
+              <input class="optional__checkbox" type="checkbox" name="water" id="water">
+              <label class="data__label optional__label" for="water">Питьевая вода</label>
             </li>
             <li class="optional__item">
-              <input class="data__checkbox" type="checkbox" name="milk" id="milk">
-              <label class="data__label data__label--right" for="milk">Молоко</label>
+              <input class="optional__checkbox" type="checkbox" name="milk" id="milk">
+              <label class="data__label optional__label" for="milk">Молоко</label>
             </li>
             <li class="optional__item">
-              <input class="data__checkbox" type="checkbox" name="vitamins" id="vitamins">
-              <label class="data__label data__label--right" for="vitamins">Витамины</label>
+              <input class="optional__checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <label class="data__label optional__label" for="vitamins">Витамины</label>
             </li>
           </ul>
-        </fieldset>
-        <button class="button data__button" type="submit">Отправить заявку</button>
-        <p class="questionnaire__comment">* — Обязательные поля</p>
+        </div>
+
+        <div class="data__button-field button-field">
+          <button class="button button-field__button" type="submit">Отправить заявку</button>
+          <p class="button-field__comment">* — Обязательные поля</p>
+        </div>
+
       </form>
     </section>
   </main>
@@ -138,13 +150,13 @@
       <div class="contacts__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#" aria-label="ссылка Вконтакте">vk</a>
+            <a class="socials__link socials__link--vk" href="#" aria-label="ссылка Вконтакте"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="#" aria-label="ссылка Инстаграмм">ig</a>
+            <a class="socials__link socials__link--ig" href="#" aria-label="ссылка Инстаграмм"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук">fb</a>
+            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук"></a>
           </li>
         </ul>
       </div>
@@ -158,6 +170,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 
 </body>
 

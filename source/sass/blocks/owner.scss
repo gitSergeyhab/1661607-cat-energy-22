@@ -1,0 +1,27 @@
+.owner {
+    padding: 0;
+    margin: 0;
+}
+
+.owner__legend {
+    margin: 0;
+    margin-bottom: 35px;
+    margin-right: -20px;
+}
+
+.owner__list {
+    display: grid;
+    row-gap: 14px;
+    grid-template-rows: 45px 45px;
+    margin: 0;
+    margin-bottom: 24px;
+
+}
+
+.owner__item {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

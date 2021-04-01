@@ -3,26 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи: каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo" href="index.html" aria-label="логотип Кэт-энерджи">
-      <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
-      <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
-    </a>
-    <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
+    <div class="page-header__top">
+      <a class="page-header__logo logo" href="index.html" aria-label="логотип Кэт-энерджи">
+        <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+        <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
+      </a>
+      <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
+        <!-- <span class="page-header__nav-open"></span> -->
+        <span class="js-span-btn"></span>
+
+      </button>
+    </div>
     <nav class="page-header__main-nav main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a>Каталог продукции</a></li>
-          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
-        </ul>
-      </div>
+      <!-- <div class="main-nav__wrapper"> -->
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--current"><a href="index.html">Главная</a></li>
+
+        <li class="site-list__item"><a>Каталог продукции</a></li>
+        <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+      </ul>
+      <!-- </div> -->
     </nav>
   </header>
 
@@ -231,7 +238,7 @@
     </section>
 
     <section class="additional-catalog page-main__catalog">
-      <h2 class="additional-catalog__title">Дополнительные товары</h2>
+      <h2 class="additional-catalog__title title-green-line">Дополнительные товары</h2>
       <ul class="additional-catalog__list">
         <li class="additional-catalog__item additional-card">
           <h3 class="additional-card__title">Сахарозаменитель</h3>
@@ -297,13 +304,13 @@
       <div class="contacts__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#" aria-label="ссылка Вконтакте">vk</a>
+            <a class="socials__link socials__link--vk" href="#" aria-label="ссылка Вконтакте"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="#" aria-label="ссылка Инстаграмм">ig</a>
+            <a class="socials__link socials__link--ig" href="#" aria-label="ссылка Инстаграмм"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук">fb</a>
+            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук"></a>
           </li>
         </ul>
       </div>
@@ -317,6 +324,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 
 </body>
 

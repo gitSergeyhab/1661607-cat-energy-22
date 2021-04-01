@@ -1,0 +1,68 @@
+.page-header {
+  width: 100%;
+  min-width: 320px;
+  background-color: $basic-white;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+}
+
+
+.page-header__nav-toggle {
+  width: 24px;
+  height: 17.5px;
+  border: none;
+  background-color: $basic-white;
+  padding: 0;
+  cursor: pointer;
+
+}
+
+@mixin line {
+  height: 1.5px;
+  width: 24px;
+  background-color: $basic-black;
+}
+
+.page-header__nav-open {
+  display: block;
+  @include line;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    @include line;
+    top: -6.5px;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    @include line;
+    top: 6.5px;
+    left: 0;
+  }
+}
+
+.page-header__nav-close {
+  display: block;
+  @include line;
+  transform: rotate(30deg);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    @include line;
+    left: 0;
+    transform: rotate(-60deg);
+  }
+}

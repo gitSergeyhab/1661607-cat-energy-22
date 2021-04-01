@@ -1,0 +1,31 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 320px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-main__metodology,
+.page-main__purpose,
+.page-main__catalog {
+  width: 100%;
+  min-width: 320px;
+  padding: 20px;
+  background-color: $basic-white;
+  box-sizing: border-box;
+}
+.page-main__example {
+  width: 100%;
+  min-width: 320px;
+  padding: 27px 20px 31px;
+  background-color: $again-gray-2;
+  box-sizing: border-box;
+}
+
+.page-main__title {
+  margin: 0;
+  padding: 27px 20px 37px ;
+  background-color: $basic-white;
+}

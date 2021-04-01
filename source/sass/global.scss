@@ -1,0 +1,47 @@
+.page__body {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin hidden-mix {
+  position: absolute;
+  width: 1px solid var(--basic-white);
+  height: 1px solid var(--basic-white);
+  margin: -1px solid var(--basic-white);
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.visually-hidden {
+  @include hidden-mix();
+}
+
+
+.button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: $basic-white;
+  background-color: $basic-green;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($basic-white, .5);
+  }
+}
