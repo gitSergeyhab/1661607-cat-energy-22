@@ -8,7 +8,10 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const includer = require('gulp-file-include');
 const beautify = require('gulp-beautify').html;
+const concat = require('gulp-concat');
 
+
+// html
 const htmlProto = (fileName) => {
   return src(`source/html/${fileName}.html`)
     .pipe(includer({
@@ -26,6 +29,16 @@ const htmlProto = (fileName) => {
 const indexHtml = () => htmlProto('index');
 const catalogHtml = () => htmlProto('catalog');
 const formHtml = () => htmlProto('form');
+
+// js
+
+const scriptList = ['source/js/example.js', 'source/js/page-header.js']
+const scripts = () => {
+  return src(scriptList)
+    .pipe(concat('script.js'))
+    .pipe(dest('source/js'))
+    .pipe(sync.stream())
+}
 
 // Styles
 
@@ -65,12 +78,14 @@ exports.server = server;
 const watcher = () => {
   // gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   // gulp.watch("source/*.html").on("change", sync.reload);
-  watch("source/sass/**/*.scss", styles);
+  
   watch('source/html/**/*.html', indexHtml);
-  watch('source/html/**/*.html', catalogHtml)
-  watch('source/html/**/*.html', formHtml)
+  watch('source/html/**/*.html', catalogHtml);
+  watch('source/html/**/*.html', formHtml);
+  watch('source/js/**/*.js', scripts)
+  watch("source/sass/**/*.scss", styles);
   
 }
 
 
-exports.default = series(indexHtml, catalogHtml, formHtml, styles, server, watcher);
+exports.default = series(indexHtml, catalogHtml, scripts, formHtml, styles, server, watcher);
