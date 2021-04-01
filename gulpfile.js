@@ -1,7 +1,7 @@
 const {src, dest, series, watch} = require('gulp');
 const includer = require('gulp-file-include');
 const sync = require('browser-sync').create()
-const formatHtml = require('gulp-format-html');
+const beautify = require('gulp-beautify').html;
 
 const htmlProto = (fileName) => {
   return src(`source/html/${fileName}.html`)
@@ -9,7 +9,10 @@ const htmlProto = (fileName) => {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(formatHtml())
+    .pipe(beautify({
+      end_with_newline: true,
+      indent_size: 2
+    }))
     .pipe(dest('source'))
     .pipe(sync.stream())
 }
