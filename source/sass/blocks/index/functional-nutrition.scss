@@ -10,17 +10,19 @@
   border-bottom: 25px;
   text-align: center;
 }
+
 .functional-nutrition__text {
   @include font-mix(14, 14);
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
+  text-align: center;
 }
 
 .functional-nutrition__color-wrapper {
   height: 302px;
   width: 100%;
-  background-image: url('../img/some/model-cat.jpg');
+  background-image: url("../img/some/model-cat.jpg");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -29,6 +31,7 @@
   color: $basic-white;
   background-color: $dark-gray;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;

@@ -78,13 +78,11 @@ exports.server = server;
 const watcher = () => {
   // gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   // gulp.watch("source/*.html").on("change", sync.reload);
-  
   watch('source/html/**/*.html', indexHtml);
   watch('source/html/**/*.html', catalogHtml);
   watch('source/html/**/*.html', formHtml);
   watch(['source/js/**/*.js', '!source/js/script.js'], scripts)
   watch("source/sass/**/*.scss", styles);
-  
 }
 
 

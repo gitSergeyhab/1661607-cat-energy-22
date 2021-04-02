@@ -1,7 +1,6 @@
 .purpose {
   display: flex;
   flex-direction: column;
-  
 }
 
 .purpose__list {
@@ -19,6 +18,7 @@
   &:last-child {
     margin: 0;
   }
+
   &::before {
     position: absolute;
     content: "";
@@ -68,6 +68,7 @@
 }
 
 .purpose__link {
+  @include font-mix(16, 16);
   width: 100%;
   display: flex;
   align-items: center;
@@ -75,12 +76,12 @@
   text-decoration: none;
   border-top: 1px solid $dark-gray;
   position: relative;
-  @include font-mix(16, 16);
   text-transform: uppercase;
 
   &:active {
     opacity: 0.5;
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -94,6 +95,7 @@
   &:hover::after {
     background-image: url("../img/arrows/arrow-long.svg");
   }
+
   &:active::after {
     opacity: 0.5;
   }

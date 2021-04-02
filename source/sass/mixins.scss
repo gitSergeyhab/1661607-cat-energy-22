@@ -1,28 +1,27 @@
 @mixin hidden-mix {
-    position: absolute;
-    width: 1px solid var(--basic-white);
-    height: 1px solid var(--basic-white);
-    margin: -1px solid var(--basic-white);
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
+  position: absolute;
+  width: 1px solid var(--basic-white);
+  height: 1px solid var(--basic-white);
+  margin: -1px solid var(--basic-white);
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 @mixin line {
-    height: 1.5px;
-    width: 24px;
-    background-color: $basic-black;
+  height: 1.5px;
+  width: 24px;
+  background-color: $basic-black;
 }
 
 @mixin font-mix($size, $height, $color: inherit, $weight: 400, $family: "Oswald") {
-    font-family: $family, "Arial", sans-serif;
-    font-weight: $weight;
-    font-size: #{$size}px;
-    line-height: #{$height}px;
-    color: $color; 
-    font-style: normal;
+  font-family: $family, "Arial", sans-serif;
+  font-weight: $weight;
+  font-size: #{$size}px;
+  line-height: #{$height}px;
+  color: $color;
+  font-style: normal;
 }

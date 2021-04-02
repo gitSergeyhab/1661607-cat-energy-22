@@ -1,8 +1,8 @@
 const menuBtn = document.querySelector('.page-header__nav-toggle');
 const spanBtn = menuBtn.querySelector('span');
-const menuList = document.querySelector('.site-list')
+const menuList = document.querySelector('.site-list');
 
-menuList.style.display = 'none'
+menuList.style.display = 'none';
 spanBtn.classList.add('page-header__nav-open');
 
 menuBtn.addEventListener('click', () => {
@@ -15,8 +15,6 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-
-  
 const links = document.querySelectorAll('.site-list__item a');
 links.forEach(link => {
   link.parentNode.classList.remove('site-list__item--current');

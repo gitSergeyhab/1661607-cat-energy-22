@@ -1,18 +1,18 @@
 .metodology {
   padding: 27px 20px 22px;
-
 }
+
 .metodology__title {
+  @include font-mix(36, 40);
   margin: 0;
   margin-bottom: 38px;
-  @include font-mix(36, 40);
 }
 
 .metodology__list {
+  @include font-mix(14, 18, $dark-gray, 400, "Arial");
   list-style: none;
   padding-left: 80px;
   margin: 0;
-  @include font-mix(14, 18, $dark-gray, 400, "Arial");
 }
 
 .metodology__item {
@@ -21,6 +21,7 @@
   min-height: 60px;
   margin-bottom: 20px;
   position: relative;
+
   &::before,
   &::after {
     position: absolute;
@@ -34,22 +35,23 @@
     background-color: $basic-green;
   }
 
-
   &::after {
     background-repeat: no-repeat;
     background-position: center;
-    top: 0;
   }
 
   &:first-child::after {
     background-image: url("../img/how_working/icon_leaf.svg");
   }
+
   &:nth-child(2)::after {
     background-image: url("../img/how_working/icon_tub.svg");
   }
+
   &:nth-child(3)::after {
     background-image: url("../img/how_working/icon_eat.svg");
   }
+
   &:last-child::after {
     background-image: url("../img/how_working/icon_alarm.svg");
   }

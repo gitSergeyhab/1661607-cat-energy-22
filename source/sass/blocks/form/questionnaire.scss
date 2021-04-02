@@ -1,10 +1,12 @@
 .questionnaire {
   background-color: $basic-white;
   padding: 0 20px 32px;
+
   & fieldset {
     border: none;
     border-bottom: 1px solid $basic-gray;
   }
+
   & ul {
     list-style: none;
     padding: 0;

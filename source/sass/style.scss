@@ -2,7 +2,6 @@
 @import "fonts.scss";
 @import "mixins.scss";
 @import "global.scss";
-
 @import "blocks/page-main.scss";
 @import "blocks/title-line.scss";
 @import "blocks/logo-text.scss";
@@ -13,7 +12,7 @@
 @import "blocks/header/main-nav.scss";
 @import "blocks/header/site-list.scss";
 
-// footer 
+// footer
 @import "blocks/footer/page-footer.scss";
 @import "blocks/footer/footer-location.scss";
 @import "blocks/footer/footer-address.scss";
@@ -45,6 +44,3 @@
 @import "blocks/form/comment.scss";
 @import "blocks/form/optional.scss";
 @import "blocks/form/button-field.scss";
-
-
-

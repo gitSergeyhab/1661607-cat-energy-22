@@ -9,7 +9,6 @@
 
 .data__parameters {
   margin-bottom: 24px;
-
 }
 
 .data__input {
@@ -17,11 +16,11 @@
   margin-left: 16px;
   height: 45px;
   width: 100px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   text-transform: uppercase;
+
   &--tel,
   &--email {
     margin-left: 11px;
   }
 }
-

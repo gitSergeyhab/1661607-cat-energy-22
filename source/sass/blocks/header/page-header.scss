@@ -25,38 +25,40 @@
   background-color: $basic-white;
   padding: 0;
   cursor: pointer;
-
 }
 
 .page-header__nav-open {
-  display: block;
   @include line;
+  display: block;
   position: relative;
+
   &::before {
+    @include line;
     content: "";
     position: absolute;
-    @include line;
     top: -6.5px;
     left: 0;
   }
+
   &::after {
+    @include line;
     content: "";
     position: absolute;
-    @include line;
     top: 6.5px;
     left: 0;
   }
 }
 
 .page-header__nav-close {
-  display: block;
   @include line;
+  display: block;
   transform: rotate(30deg);
   position: relative;
+
   &::before {
+    @include line;
     content: "";
     position: absolute;
-    @include line;
     left: 0;
     transform: rotate(-60deg);
   }
