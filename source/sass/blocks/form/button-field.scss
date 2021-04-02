@@ -1,3 +1,12 @@
 .button-field {
-  // empty
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-field__comment {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }

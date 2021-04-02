@@ -1,17 +1,22 @@
 .parameters {
   padding: 0;
   margin: 0;
+  border-bottom: 1px solid $again-gray;
 }
 
 .parameters__list {
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 24px;
 }
 
 .parameters__item {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

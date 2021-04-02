@@ -1,15 +1,13 @@
 .purposes {
-  margin: 0;
-  padding: 0;
-  padding-top: 28px;
+  padding: 28px 0 25px;
+  border-bottom: 1px solid $again-gray;
 }
 
 .purposes__list {
   margin: 0;
-  margin-bottom: 7px;
 }
 
-.purposes__item {
+.purposes__item:not(:last-child) {
   margin-bottom: 24px;
 }
 
