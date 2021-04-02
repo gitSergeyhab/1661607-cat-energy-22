@@ -5,22 +5,20 @@
   min-width: 320px;
   width: 100%;
   overflow: hidden;
+  background-color: $basic-white;
 }
 
-.page-main__metodology,
+.page-main__nutrition {
+  margin-bottom: 20px;
+}
+
 .page-main__purpose,
 .page-main__catalog {
   width: 100%;
   min-width: 320px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: $basic-white;
-  box-sizing: border-box;
-}
-.page-main__example {
-  width: 100%;
-  min-width: 320px;
-  padding: 27px 20px 31px;
-  background-color: $again-gray-2;
   box-sizing: border-box;
 }
 
@@ -29,3 +27,4 @@
   padding: 27px 20px 37px ;
   background-color: $basic-white;
 }
+

@@ -82,7 +82,7 @@ const watcher = () => {
   watch('source/html/**/*.html', indexHtml);
   watch('source/html/**/*.html', catalogHtml);
   watch('source/html/**/*.html', formHtml);
-  watch('source/js/**/*.js', scripts)
+  watch(['source/js/**/*.js', '!source/js/script.js'], scripts)
   watch("source/sass/**/*.scss", styles);
   
 }

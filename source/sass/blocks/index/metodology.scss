@@ -1,16 +1,18 @@
-// .metodology {
-//
-// }
+.metodology {
+  padding: 27px 20px 22px;
+
+}
 .metodology__title {
   margin: 0;
   margin-bottom: 38px;
+  @include font-mix(36, 40);
 }
 
 .metodology__list {
   list-style: none;
   padding-left: 80px;
   margin: 0;
-
+  @include font-mix(14, 18, $dark-gray, 400, "Arial");
 }
 
 .metodology__item {

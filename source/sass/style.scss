@@ -1,9 +1,10 @@
 @import "variables.scss";
+@import "fonts.scss";
 @import "mixins.scss";
 @import "global.scss";
 
 @import "blocks/page-main.scss";
-@import "blocks/title-green-line.scss";
+@import "blocks/title-line.scss";
 @import "blocks/logo-text.scss";
 
 // header
@@ -12,7 +13,7 @@
 @import "blocks/header/main-nav.scss";
 @import "blocks/header/site-list.scss";
 
-//footer/
+// footer 
 @import "blocks/footer/page-footer.scss";
 @import "blocks/footer/footer-location.scss";
 @import "blocks/footer/footer-address.scss";
@@ -21,8 +22,7 @@
 @import "blocks/footer/socials.scss";
 @import "blocks/footer/developer.scss";
 
-
-//index
+// index
 @import "blocks/index/functional-nutrition.scss";
 @import "blocks/index/purpose.scss";
 @import "blocks/index/metodology.scss";

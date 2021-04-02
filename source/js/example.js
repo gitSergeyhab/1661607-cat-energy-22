@@ -18,7 +18,6 @@ if (rangeField) {
     rangeBar.style.width = rangeBarLen + 'px';
     const fatCatLen = Math.floor(rangeBarLen / rangeFieldLen * catsContainer.offsetWidth) +"px";
     fatCat.style.width = fatCatLen
-    console.log(rangeBarLen)
   })
   
   

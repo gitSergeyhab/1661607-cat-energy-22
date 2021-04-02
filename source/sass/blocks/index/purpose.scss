@@ -1,20 +1,24 @@
 .purpose {
   display: flex;
   flex-direction: column;
+  
 }
 
 .purpose__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .purpose__item {
-  background-color: $again-gray;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 29px;
+  background-color: $basic-gray;
+  padding: 30px 20px 0;
+  margin-bottom: 20px;
   position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -49,13 +53,17 @@
 }
 
 .purpose__title {
+  @include font-mix(24, 37);
   padding-left: 12px;
-  text-align: center;
   margin: 0;
+  margin-bottom: 29px;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .purpose__text {
+  @include font-mix(14, 18, $dark-gray, 400, "Arial");
+  margin: 0;
   margin-bottom: 23px;
 }
 
@@ -64,12 +72,11 @@
   display: flex;
   align-items: center;
   height: 57px;
-
   text-decoration: none;
-  color: $basic-black;
-  text-transform: uppercase;
   border-top: 1px solid $dark-gray;
   position: relative;
+  @include font-mix(16, 16);
+  text-transform: uppercase;
 
   &:active {
     opacity: 0.5;
@@ -81,7 +88,7 @@
     width: 32px;
     background-image: url("../img/arrows/arrow-short.svg");
     background-repeat: no-repeat;
-    left: 119px;
+    left: 100px;
   }
 
   &:hover::after {
@@ -91,3 +98,18 @@
     opacity: 0.5;
   }
 }
+
+
+// @media (min-width: $tablet) {
+//   .purpose__title {
+//     @include font-mix(36, 36);
+//     padding-left: 0;
+//     text-align: start;
+//     // margin: 0;
+//     // text-transform: uppercase;
+//   }
+//   .purpose__text {
+//     @include font-mix(16, 24, $basic-black, 400, "Arial");
+//     margin-bottom: 23px;
+//   }
+// }

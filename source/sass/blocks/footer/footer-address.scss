@@ -3,27 +3,28 @@
   max-width: 100%;
   display: flex;
   align-items: center;
-  padding: 19px;
+  padding: 28px 19px;
+  box-sizing: border-box;
 }
 
 .footer-address__text,
 .footer-address__info {
-  width: 40%;
-}
-.footer-address__text {
-  margin-right: 5%;
-  font-size: 16px;
+  width: 50%;
 }
 
 .footer-address__text {
+  font-size: 16px; 
+  @include font-mix(14, 18, $dark);
   text-transform: uppercase;
 }
+
 
 .footer-address__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @include font-mix(14, 20, $dark-gray, 400, "Arial");
 }
 
 .footer-address__address {

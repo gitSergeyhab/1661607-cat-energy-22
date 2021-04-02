@@ -18,6 +18,7 @@
   display: block;
   position: absolute;
   left: 30px;
+  
 }
 
 .cat-slider__past-cat-block {
@@ -27,6 +28,7 @@
   top: 0;
   width: 50%;
   overflow: hidden;
+  background-color: $again-gray-2;
 }
 
 .cat-slider__interactive {
@@ -42,6 +44,7 @@
   text-transform: uppercase;
   cursor: pointer;
   background-color: $again-gray-2;
+  @include font-mix(16, 20);
 
 }
 

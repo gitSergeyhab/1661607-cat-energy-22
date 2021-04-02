@@ -1,16 +1,22 @@
 .example {
-
-
+  width: 100%;
+  min-width: 320px;
+  padding: 20px 27px;
+  background-color: $again-gray-2;
+  box-sizing: border-box;
 }
 
 .example__title {
   margin: 0;
   margin-bottom: 33px;
+  @include font-mix(36, 40);
+
 }
 
 .example__text {
   margin: 0;
   margin-bottom: 25px;
+  @include font-mix(14, 18, $dark-gray, 400, "Arial");
 }
 
 .progress {
@@ -33,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 14.5px;
+  
   &:first-child {
     margin-right: 32px;
   }
@@ -40,20 +47,25 @@
 
 .progress__main {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
+  @include font-mix(24, 24);
   text-transform: uppercase;
 }
 
 .progress__text {
   width: 87px;
+  padding: 4px;
+  box-sizing: border-box;
   text-align: center;
   margin: 0;
   z-index: 1;
   background-color: $again-gray-2;
+  @include font-mix(12, 12, $dark-gray, 400, "Arial");
 }
 
 .example__price {
   margin: 0;
   margin-bottom: 24px;
+  @include font-mix(14, 20);
   text-align: center;
 }

@@ -21,6 +21,7 @@
   cursor: pointer;
   color: $basic-white;
   background-color: $basic-green;
+  @include font-mix(16, 20, $basic-white);
 
   &:hover {
     background-color: $basic-green-2;
@@ -28,5 +29,14 @@
 
   &:active {
     color: rgba($basic-white, .5);
+  }
+}
+
+// text 
+
+.main-text {
+  @include font-mix(36, 36);
+  @media (min-width: $tablet) {
+    @include font-mix(60, 60);
   }
 }
