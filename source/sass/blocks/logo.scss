@@ -13,3 +13,32 @@
     opacity: 0.6;
   }
 }
+
+.logo__img {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    &,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}

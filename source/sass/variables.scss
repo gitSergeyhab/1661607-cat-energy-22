@@ -24,19 +24,18 @@ $basic-green-2: #5eaa2f;
 $desktop: 1440px;
 $tablet: 768px;
 
-
 :root {
-  --pad: 20px
+  --pad: 20px;
 }
 
-@media(min-width: $tablet) {
+@media (min-width: $tablet) {
   :root {
-    --pad: 30px
+    --pad: 30px;
   }
 }
 
-@media(min-width: $desktop) {
+@media (min-width: $desktop) {
   :root {
-    --pad: 110px
+    --pad: 110px;
   }
 }

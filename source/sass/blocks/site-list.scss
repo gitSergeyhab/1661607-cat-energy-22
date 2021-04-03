@@ -9,8 +9,9 @@
   box-sizing: border-box;
   width: 100%;
 
-  @media(min-width: $tablet) {
+  @media (min-width: $tablet) {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
@@ -28,7 +29,7 @@
   &:last-child {
     border-bottom: 1px solid $basic-black;
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
       border: none;
     }
   }
@@ -54,8 +55,9 @@
     opacity: 0.3;
   }
 
-  @media(min-width: $tablet) {
+  @media (min-width: $tablet) {
     border: none;
+
     &:not(:last-child) {
       margin-right: 34.5px;
     }
