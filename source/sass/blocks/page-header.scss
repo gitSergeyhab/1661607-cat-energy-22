@@ -8,6 +8,13 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
+
+  @media(min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 }
 
 .page-header__top {
@@ -25,6 +32,10 @@
   background-color: $basic-white;
   padding: 0;
   cursor: pointer;
+
+  @media(min-width: $tablet) {
+    display: none;
+  }
 }
 
 .page-header__nav-open {

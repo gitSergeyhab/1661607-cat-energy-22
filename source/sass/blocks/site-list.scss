@@ -4,9 +4,15 @@
   padding: 0;
   display: flex;
   // display: none;
+
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+
+  @media(min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .site-list__item {
@@ -21,6 +27,10 @@
 
   &:last-child {
     border-bottom: 1px solid $basic-black;
+
+    @media(min-width: $tablet) {
+      border: none;
+    }
   }
 
   & a {
@@ -42,5 +52,12 @@
 
   & a:active {
     opacity: 0.3;
+  }
+
+  @media(min-width: $tablet) {
+    border: none;
+    &:not(:last-child) {
+      margin-right: 34.5px;
+    }
   }
 }
