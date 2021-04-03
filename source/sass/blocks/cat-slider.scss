@@ -14,13 +14,13 @@
 .cat-slider__now-cat {
   display: block;
   position: absolute;
-  left: 30px;
+  left: 50px;
 }
 
 .cat-slider__past-cat-block {
   position: absolute;
   top: 0;
-  left: -20px;
+  // left: -20px;
   width: 50%;
   overflow: hidden;
   background-color: $again-gray-2;
