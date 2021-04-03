@@ -3,14 +3,18 @@
   flex-direction: column;
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid $again-gray-4;
 }
 
 .additional-card__title {
+  @include font-mix(16, 16, $dark-2);
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
 }
 
 .additional-card__portion-price {
+  @include font-mix(14, 14, $dark-gray, 400, "Arial");
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;

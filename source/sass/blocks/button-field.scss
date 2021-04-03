@@ -5,6 +5,7 @@
 }
 
 .button-field__comment {
+  @include font-mix(14, 16 ,$basic-black, 400," Aial");
   min-height: 58px;
   display: flex;
   align-items: center;

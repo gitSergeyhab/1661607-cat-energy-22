@@ -1,19 +1,20 @@
 .specification-table {
-  width: 50%;
-  height: 44px;
+  width: 100%;
+  min-height: 44px;
   box-sizing: border-box;
-  margin-bottom: 9px;
+
 
   & caption {
-    height: 41px;
-    margin-bottom: 18px;
+    padding-top: 19px;
+    min-height: 41px;
+    margin-bottom: 14px;
     text-align: left;
     width: 100px;
   }
 }
 
 .specification-table__link-title {
-  @include font-mix(16, 20);
+  @include font-mix(16, 20, $dark-2);
   text-decoration: none;
   text-transform: uppercase;
 
@@ -24,7 +25,7 @@
 
 
 .specification-table__cell {
-  @include font-mix(12, 16, $dark-gray, 400, "Arial");
+  @include font-mix(12, 0, $dark-gray, 400, "Arial");
 
   &--right {
     text-align: right;
