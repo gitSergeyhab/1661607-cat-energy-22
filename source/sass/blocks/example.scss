@@ -1,7 +1,7 @@
 .example {
   width: 100%;
   min-width: 320px;
-  padding: 27px 20px;
+  padding: 27px var(--pad);
   background-color: $again-gray-2;
   box-sizing: border-box;
 }

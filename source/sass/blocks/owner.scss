@@ -5,7 +5,7 @@
 .owner__legend {
   margin: 0;
   margin-bottom: 35px;
-  margin-right: -20px;
+  margin-right: calc(-1 * var(--pad));
   white-space: nowrap;
 }
 
