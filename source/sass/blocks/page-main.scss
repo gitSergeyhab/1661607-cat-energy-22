@@ -1,0 +1,29 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  background-color: $basic-white;
+}
+
+.page-main__nutrition {
+  margin-bottom: 20px;
+}
+
+.page-main__purpose,
+.page-main__catalog {
+  width: 100%;
+  min-width: 320px;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+  background-color: $basic-white;
+  box-sizing: border-box;
+}
+
+.page-main__title {
+  margin: 0;
+  padding: 27px var(--pad) 37px;
+  background-color: $basic-white;
+}

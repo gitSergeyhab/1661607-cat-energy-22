@@ -10,11 +10,12 @@
       "form": 'href="form.html"'
     })
 
+
     <main class="page-main">
       <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
-      <section class="functional-nutrition">
+      <section class="functional-nutrition page-main__nutrition">
         <div class="functional-nutrition__color-wrapper">
-          <h2 class="functional-nutrition__title">Функциональное питание для котов</h2>
+          <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
           <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
           <img class="functional-nutrition__drop-food" src="img/some/chicken-box.png" alt="коробка с кошачьей едой" width="280" height="270">
         </div>
@@ -95,10 +96,11 @@
         </p>
         <div class="example__slider cat-slider">
           <div class="cat-slider__images">
-            <img class="cat-slider__now-cat" src="img/some/conс-camp-cat.png" alt="Изображения кота сейчас - скелет" width="251" height="240">
+              <img class="cat-slider__now-cat" src="img/some/conс-camp-cat.png" alt="Изображения кота сейчас - скелет" width="251" height="240">
             <div class="cat-slider__past-cat-block">
               <img class="cat-slider__past-cat" src="img/some/fat-cat.png" alt="Изображения кота прежде - не влезает на страницу" width="311" height="232">
             </div>
+
           </div>
           <div class="cat-slider__interactive">
             <button class="cat-slider__button cat-slider__button--past">Было</button>
@@ -113,7 +115,9 @@
       </section>
     </main>
     @@include("html_components/footer.html", {
-      "index": ""
+      "index": "",
+      "color": "--color"
     })
   </body>
+
 </html>

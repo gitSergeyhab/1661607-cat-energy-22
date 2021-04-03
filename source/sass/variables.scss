@@ -1,0 +1,41 @@
+// color
+$basic-white: #ffffff;
+$basic-black: #000000;
+
+$dark: #111111;
+$dark-2: #222222;
+
+$basic-gray: #f2f2f2;
+$second-gray: #c4c4c4;
+$third-gray: #cdcdcd;
+$again-gray: #d9d9d9;
+$again-gray-2:#eaeaea;
+$again-gray-3: #d3d3d3;
+$again-gray-4: #ebebeb;
+$dark-gray: #444444;
+
+$basic-green: #68b738;
+
+$basic-green-2: #5eaa2f;
+
+
+//sizes
+
+$desktop: 1440px;
+$tablet: 768px;
+
+:root {
+  --pad: 20px;
+}
+
+@media (min-width: $tablet) {
+  :root {
+    --pad: 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  :root {
+    --pad: 110px;
+  }
+}

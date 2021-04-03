@@ -1,0 +1,14 @@
+.title-line {
+  @include font-mix(24, 24);
+  display: flex;
+
+  &::after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background-color: $basic-green;
+    margin-top: 17px;
+    margin-left: 22px;
+    flex-grow: 1;
+  }
+}

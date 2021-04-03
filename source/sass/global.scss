@@ -1,0 +1,59 @@
+.body {
+  width: 100vw;
+}
+
+.page__body {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visually-hidden {
+  @include hidden-mix();
+}
+
+.button {
+  @include font-mix(16, 20, $basic-white);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: $basic-white;
+  background-color: $basic-green;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.5);
+  }
+
+  &--plus {
+    background-color: $basic-gray;
+    color: $basic-black;
+  }
+}
+
+// text
+.main-text {
+  @include font-mix(36, 36);
+
+  @media (min-width: $tablet) {
+    @include font-mix(60, 60);
+  }
+}
+
+.label-text {
+  @include font-mix(16, 18);
+
+  @media (min-width: $tablet) {
+    @include font-mix(20, 30);
+  }
+}

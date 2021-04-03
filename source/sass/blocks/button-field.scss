@@ -1,0 +1,13 @@
+.button-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-field__comment {
+  @include font-mix(14, 16 ,$basic-black, 400," Aial");
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}

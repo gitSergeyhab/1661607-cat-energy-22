@@ -1,0 +1,16 @@
+.comment {
+  padding: 0;
+}
+
+.comment__legend {
+  margin: 0;
+  margin-bottom: 38px;
+  margin-right: calc(-1 * var(--pad));
+}
+
+.comment__field {
+  height: 151px;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}

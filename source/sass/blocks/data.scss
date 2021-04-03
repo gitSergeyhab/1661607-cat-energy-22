@@ -1,0 +1,42 @@
+.data {
+  display: flex;
+  flex-direction: column;
+}
+
+.data__label {
+  text-transform: uppercase;
+}
+
+.data__parameters {
+  margin-bottom: 24px;
+}
+
+.data__purposes {
+  margin-bottom: 26px;
+}
+
+.data__owner {
+  margin-bottom: 24px;
+}
+
+.data__comment {
+  margin-bottom: 23px;
+}
+
+.data__optional {
+  margin-bottom: 41px;
+}
+
+.data__input {
+  flex-grow: 1;
+  margin-left: 16px;
+  height: 45px;
+  width: 100px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  &--tel,
+  &--email {
+    margin-left: 11px;
+  }
+}

@@ -1,0 +1,19 @@
+.example {
+  width: 100%;
+  min-width: 320px;
+  padding: 27px var(--pad);
+  background-color: $again-gray-2;
+  box-sizing: border-box;
+}
+
+.example__title {
+  @include font-mix(36, 40);
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.example__text {
+  @include font-mix(14, 18, $dark-gray, 400, "Arial");
+  margin: 0;
+  margin-bottom: 25px;
+}

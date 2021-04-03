@@ -1,0 +1,20 @@
+.questionnaire {
+  background-color: $basic-white;
+  padding: 0 var(--pad) 11px;
+
+  & fieldset {
+    border: none;
+    border-bottom: 1px solid $basic-gray;
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.questionnaire__text {
+  @include font-mix(14, 18);
+  margin: 0;
+  margin-bottom: 39px;
+}

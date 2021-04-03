@@ -1,0 +1,90 @@
+.page-header {
+  @include font-mix(18, 24);
+  width: 100%;
+  min-width: 320px;
+  background-color: $basic-white;
+  padding: 0 var(--pad);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  @media (min-width: $tablet) {
+    min-height: 92px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 112px;
+    padding-top: 43px;
+  }
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+
+  @media (min-width: $tablet) {
+    margin-right: 30px;
+    // min-height: 92px;
+  }
+
+  // @media(min-width: $desktop) {
+  //   min-height: 112px;
+  // }
+}
+
+
+.page-header__nav-toggle {
+  width: 24px;
+  height: 17.5px;
+  border: none;
+  background-color: $basic-white;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__nav-open {
+  @include line;
+  display: block;
+  position: relative;
+
+  &::before {
+    @include line;
+    content: "";
+    position: absolute;
+    top: -6.5px;
+    left: 0;
+  }
+
+  &::after {
+    @include line;
+    content: "";
+    position: absolute;
+    top: 6.5px;
+    left: 0;
+  }
+}
+
+.page-header__nav-close {
+  @include line;
+  display: block;
+  transform: rotate(30deg);
+  position: relative;
+
+  &::before {
+    @include line;
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: rotate(-60deg);
+  }
+}
