@@ -5,6 +5,10 @@
   align-items: center;
   padding: 0 19px;
   box-sizing: border-box;
+  background-color: $basic-gray;
+  &--color {
+    background-color: $basic-white;
+  }
 }
 
 .footer-address__text,
