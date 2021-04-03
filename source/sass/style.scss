@@ -1,3 +1,5 @@
+
+@import "normalize.scss";
 @import "variables.scss";
 @import "fonts.scss";
 @import "mixins.scss";
@@ -26,6 +28,7 @@
 @import "blocks/index/purpose.scss";
 @import "blocks/index/metodology.scss";
 @import "blocks/index/example.scss";
+@import "blocks/index/progress.scss";
 @import "blocks/index/cat-slider.scss";
 
 // catalog

@@ -12,12 +12,25 @@
   }
 }
 
-.product-card__link-title {
+.specification-table__link-title {
+  @include font-mix(16, 20);
   text-decoration: none;
-  color: $basic-black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    @include font-mix(20, 24);
+  }
 }
 
-.specification-table__cell--right {
-  text-align: right;
+
+.specification-table__cell {
+  @include font-mix(12, 16, $dark-gray, 400, "Arial");
+
+  &--right {
+    text-align: right;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+  }
 }
