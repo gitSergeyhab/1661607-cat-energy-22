@@ -41,6 +41,10 @@
     text-transform: uppercase;
     box-sizing: border-box;
     border-bottom: 2px solid transparent;
+
+    @media (min-width: $desktop) {
+      color: $basic-white;
+    }
   }
 
   &--current a {

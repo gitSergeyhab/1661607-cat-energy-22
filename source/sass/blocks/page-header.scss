@@ -17,6 +17,7 @@
   }
 
   @media (min-width: $desktop) {
+    position: absolute;
     min-height: 112px;
     padding-top: 43px;
     width: $desktop;

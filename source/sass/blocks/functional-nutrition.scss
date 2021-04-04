@@ -3,15 +3,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    position: relative;
+  }
+
   @media (min-width: $desktop) {
     width: $desktop;
+    z-index: 2;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.functional-nutrition__text-element {
+  z-index: 1;
+  padding-top: 27px;
+  @media (min-width: $tablet) {
+    width: 420px;
+    // width: 55%;
+    padding-left: 117px;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+    // width: 420px;
+    padding-top: 223px;
+    padding-left: 190px;
   }
 }
 
 .functional-nutrition__title {
-  margin: 27px 0 25px;
-  border-bottom: 25px;
+  margin: 0;
+  margin-bottom: 25px;
   text-align: center;
+  @media (min-width: $tablet) {
+    text-align: left;
+    margin-bottom: 41px;
+  }
 }
 
 .functional-nutrition__text {
@@ -20,6 +49,11 @@
   margin: 0;
   margin-bottom: 29px;
   text-align: center;
+  @media (min-width: $tablet) {
+    @include font-mix(20, 20, $basic-black);
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 
 .functional-nutrition__color-wrapper {
@@ -42,15 +76,37 @@
     height: 302px;
     background-color: rgba($basic-green, 0.85);
   }
-}
 
-.functional-nutrition__title,
-.functional-nutrition__text {
-  z-index: 1;
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    background-image: none;
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 50%;
+    flex-direction: row;
+  }
 }
 
 .functional-nutrition__drop-food {
   z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 632px;
+    height: 609px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    left: 75%;
+    top: 141px;
+    height: 499px;
+    width: 518px;
+  }
 }
 
 .functional-nutrition__nocolor-wrapper {
@@ -60,8 +116,37 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  @media (min-width: $desktop) {
+    position: relative;
+    width: 50%;
+    height: 694px;
+    background-image: url("../img/some/model-cat--desktop.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 694px;
+      background-color:rgba($basic-green, 0.85);
+    }
+  }
 }
 
 .functional-nutrition__button {
   width: calc(100% - 40px);
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 250px;
+    left: 117px;
+    width: 244px;
+    height: 54px;
+    z-index: 2;
+  }
+
+  @media (min-width: $desktop) {
+    top: 450px;
+    left: 190px;
+  }
 }

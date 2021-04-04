@@ -6,6 +6,7 @@
   width: 100%;
   overflow: hidden;
   background-color: $basic-white;
+  overflow: visible;
 
   @media (min-width: $desktop) {
     width: $desktop;
@@ -14,6 +15,14 @@
 
 .page-main__nutrition {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 360px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 82px;
+  }
 }
 
 .page-main__purpose,
