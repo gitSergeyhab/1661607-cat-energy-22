@@ -34,6 +34,16 @@
   box-sizing: border-box;
 }
 
+.page-main__purpose {
+  @media (min-width: $tablet) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
 .page-main__title {
   margin: 0;
   padding: 27px var(--pad) 37px;

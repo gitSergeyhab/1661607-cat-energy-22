@@ -42,7 +42,9 @@
     box-sizing: border-box;
     border-bottom: 2px solid transparent;
     padding-bottom: 8px;
+  }
 
+  &--index a {
     @media (min-width: $desktop) {
       color: $basic-white;
     }
