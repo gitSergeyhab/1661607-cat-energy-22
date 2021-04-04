@@ -26,17 +26,6 @@
     top: -5px;
     left: 0;
   }
-
-  // &:checked::after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 13.5px;
-  //   height: 13.5px;
-  //   background-color: $basic-green;
-  //   border-radius: 50%;
-  //   top: -5px;
-  //   left: 0;
-  // }
 }
 
 .purposes__radio:checked ~ .purposes__label::after {
