@@ -49,7 +49,7 @@
   flex-shrink: 0;
   position: relative;
 
-    &::after {
+  &::after {
     content: "";
     position: absolute;
     display: block;

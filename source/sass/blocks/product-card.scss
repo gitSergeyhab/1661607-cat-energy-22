@@ -25,6 +25,7 @@
 
   &--plus {
     grid-template-columns: 1fr;
+
     @media (min-width: $tablet) {
       background-color: $basic-white;
     }

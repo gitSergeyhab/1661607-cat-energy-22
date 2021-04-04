@@ -8,7 +8,6 @@
   box-sizing: border-box;
   background-color: $basic-gray;
 
-
   &--color {
     background-color: $basic-white;
   }
@@ -33,6 +32,7 @@
 .footer-address__text,
 .footer-address__info {
   width: 140px;
+
   @media (min-width: $tablet) {
     width: 170px;
   }
@@ -47,7 +47,6 @@
   }
 }
 
-
 .footer-address__info {
   @include font-mix(14, 20, $dark-gray, 400, "Arial");
   display: flex;
@@ -56,19 +55,18 @@
   justify-content: center;
 
   @media (min-width: $tablet) {
+    @include font-mix(16, 20, $dark-gray, 400, "Arial");
     text-align: right;
     align-items: flex-end;
-    @include font-mix(16, 20, $dark-gray, 400, "Arial");
   }
-
 }
 
 .footer-address__address {
   margin: 0;
+
   @media (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-
 }
