@@ -4,6 +4,11 @@
   padding: 27px var(--pad);
   background-color: $again-gray-2;
   box-sizing: border-box;
+
+  @media (min-width: $desktop) {
+    background-color: $basic-gray;
+    width: $desktop;
+  }
 }
 
 .example__title {

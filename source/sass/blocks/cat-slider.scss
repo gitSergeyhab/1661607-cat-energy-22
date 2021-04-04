@@ -24,6 +24,10 @@
   width: 50%;
   overflow: hidden;
   background-color: $again-gray-2;
+
+  @media (min-width: $desktop) {
+    background-color: $basic-gray;
+  }
 }
 
 .cat-slider__interactive {
@@ -40,6 +44,10 @@
   text-transform: uppercase;
   cursor: pointer;
   background-color: $again-gray-2;
+
+  @media (min-width: $desktop) {
+    background-color: $basic-gray;
+  }
 }
 
 .cat-slider__range-container {

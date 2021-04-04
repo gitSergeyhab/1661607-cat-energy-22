@@ -19,6 +19,7 @@
   @media (min-width: $desktop) {
     min-height: 112px;
     padding-top: 43px;
+    width: $desktop;
   }
 }
 
@@ -30,12 +31,7 @@
 
   @media (min-width: $tablet) {
     margin-right: 30px;
-    // min-height: 92px;
   }
-
-  // @media(min-width: $desktop) {
-  //   min-height: 112px;
-  // }
 }
 
 

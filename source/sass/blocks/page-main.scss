@@ -6,6 +6,10 @@
   width: 100%;
   overflow: hidden;
   background-color: $basic-white;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 .page-main__nutrition {

@@ -5,4 +5,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet) {
+    width: 128px;
+    height: 24px;
+    border: none;
+  }
 }

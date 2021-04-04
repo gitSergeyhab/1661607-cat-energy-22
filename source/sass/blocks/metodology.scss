@@ -1,5 +1,10 @@
 .metodology {
   padding: 27px var(--pad) 22px;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    box-sizing: border-box;
+  }
 }
 
 .metodology__title {

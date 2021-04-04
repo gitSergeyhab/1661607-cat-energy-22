@@ -4,12 +4,24 @@
   box-sizing: border-box;
 
 
+  @media (min-width: $tablet) {
+    align-self: end;
+    margin-bottom: 33px;
+  }
+
+
   & caption {
     padding-top: 19px;
     min-height: 41px;
     margin-bottom: 14px;
     text-align: left;
     width: 100px;
+    @media (min-width: $tablet) {
+      width: 150px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 21px;
+    }
   }
 }
 
@@ -27,11 +39,20 @@
 .specification-table__cell {
   @include font-mix(12, 0, $dark-gray, 400, "Arial");
 
+
   &--right {
     text-align: right;
   }
 
   @media (min-width: $tablet) {
-    font-size: 16px;
+    @include font-mix(16, 16, $dark-gray, 400, "Arial");
+    border-bottom: 1px solid $third-gray;
+
+  }
+}
+
+.specification-table__row {
+  @media (min-width: $tablet) {
+    height: 32px;
   }
 }

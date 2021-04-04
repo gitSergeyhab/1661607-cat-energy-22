@@ -1,5 +1,9 @@
 .footer-location {
   width: 100%;
   background-color: $basic-white;
+
+  @media (min-width: $desktop) {
+    position: relative;
+  }
 }
 
