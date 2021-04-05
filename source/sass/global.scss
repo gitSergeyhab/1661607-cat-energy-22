@@ -1,7 +1,3 @@
-.body {
-  width: 100vw;
-}
-
 .page__body {
   background-color: gray;
   display: flex;
@@ -46,7 +42,7 @@
   @include font-mix(36, 36);
 
   @media (min-width: $tablet) {
-    @include font-mix(60, 60);
+    @include font-mix(60, 60, $basic-black);
   }
 }
 

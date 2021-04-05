@@ -1,22 +1,52 @@
 .purpose {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
 }
+
 
 .purpose__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .purpose__item {
   background-color: $basic-gray;
-  padding: 30px 20px 0;
+  padding: 30px 30px 0;
+  box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
 
-  &:last-child {
+  @media (min-width: $tablet) {
+    padding: 77px 298px 30px 52px;
+    margin-bottom: 30px;
+    min-height: 333px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 77px 52px 30px;
+    min-height: 374px;
+    width: 570px;
     margin: 0;
+    margin-bottom: 44px;
+
+    &:last-child {
+      margin-bottom: 44px;
+    }
   }
 
   &::before {
@@ -27,6 +57,21 @@
     background-color: $basic-green;
     border-radius: 50%;
     top: 24px;
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+      right: 62px;
+      top: 92px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      right: auto;
+      top: 47px;
+      left: 52px;
+    }
   }
 
   &::after {
@@ -34,7 +79,25 @@
     content: "";
     width: 100px;
     height: 100px;
-    left: -5px;
+    left: 0;
+
+    @media (min-width: $tablet) {
+      left: auto;
+      width: 80px;
+      height: 80px;
+      right: 132px;
+      top: 42px;
+      transform: scale(3.89);
+    }
+
+    @media (min-width: $desktop) {
+      right: auto;
+      width: 70px;
+      height: 70px;
+      left: 65px;
+      top: 42px;
+      transform: scale(2);
+    }
   }
 
   &:first-child::after {
@@ -42,6 +105,14 @@
     background-repeat: no-repeat;
     background-position: center;
     top: -2px;
+
+    @media (min-width: $tablet) {
+      top: 132px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 57px;
+    }
   }
 
   &:last-child::after {
@@ -49,6 +120,14 @@
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
+
+    @media (min-width: $tablet) {
+      top: 152px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 63px;
+    }
   }
 }
 
@@ -59,12 +138,29 @@
   margin-bottom: 29px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    @include font-mix(36, 36);
+    padding-left: 0;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+    padding-left: 52px;
+    margin-bottom: 73px;
+  }
 }
 
 .purpose__text {
   @include font-mix(14, 18, $dark-gray, 400, "Arial");
   margin: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    @include font-mix(16, 24, $basic-black, 400, "Arial");
+  }
 }
 
 .purpose__link {
@@ -74,9 +170,14 @@
   align-items: center;
   height: 57px;
   text-decoration: none;
-  border-top: 1px solid $dark-gray;
+  border-top: 1px solid $again-gray;
   position: relative;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    @include font-mix(20, 30);
+    border: none;
+  }
 
   &:active {
     opacity: 0.5;
@@ -90,6 +191,10 @@
     background-image: url("../img/arrows/arrow-short.svg");
     background-repeat: no-repeat;
     left: 100px;
+
+    @media (min-width: $tablet) {
+      left: 133px;
+    }
   }
 
   &:hover::after {

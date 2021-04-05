@@ -6,10 +6,22 @@
   width: 100%;
   overflow: hidden;
   background-color: $basic-white;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 .page-main__nutrition {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 360px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 82px;
+  }
 }
 
 .page-main__purpose,
@@ -20,6 +32,16 @@
   padding-right: var(--pad);
   background-color: $basic-white;
   box-sizing: border-box;
+}
+
+.page-main__purpose {
+  @media (min-width: $tablet) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .page-main__title {

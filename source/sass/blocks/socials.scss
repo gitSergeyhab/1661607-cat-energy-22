@@ -17,6 +17,10 @@
 .socials__item {
   margin-right: 34px;
 
+  @media (min-width: $tablet) {
+    margin-right: 29px;
+  }
+
   &:last-child {
     margin: 0;
   }

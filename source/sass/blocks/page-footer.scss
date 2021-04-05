@@ -1,4 +1,8 @@
 .page-footer {
   width: 100%;
   min-width: 320px;
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
 }

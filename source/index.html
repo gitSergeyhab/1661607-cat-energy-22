@@ -26,10 +26,10 @@
     <nav class="page-header__main-nav main-nav">
       <!-- <div class="main-nav__wrapper"> -->
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--current"><a>Главная</a></li>
+        <li class="site-list__item site-list__item--index site-list__item--current"><a>Главная</a></li>
 
-        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="site-list__item site-list__item--index"><a href="form.html">Подбор программы</a></li>
       </ul>
       <!-- </div> -->
     </nav>
@@ -41,13 +41,17 @@
     <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
     <section class="functional-nutrition page-main__nutrition">
       <div class="functional-nutrition__color-wrapper">
-        <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
-        <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
-        <img class="functional-nutrition__drop-food" src="img/some/chicken-box.png" alt="коробка с кошачьей едой" width="280" height="270">
+        <div class="functional-nutrition__text-element">
+          <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
+          <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
+        </div>
+        <img class="functional-nutrition__drop-food" src="img/some/chicken-box1.png" alt="коробка с кошачьей едой" width="280" height="270">
       </div>
       <div class="functional-nutrition__nocolor-wrapper">
-        <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a>
+        <!-- <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a> -->
       </div>
+
+      <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="purpose page-main__purpose">
@@ -74,22 +78,30 @@
       <h2 class="metodology__title">Как это работает</h2>
       <ul class="metodology__list">
         <li class="metodology__item">
-          Функциональное питание
-          содержит только полезные
-          питательные вещества.
+          <p class="metodology__text">
+            Функциональное питание
+            содержит только полезные
+            питательные вещества.
+          </p>
         </li>
         <li class="metodology__item">
-          Выпускается в виде порошка,
-          который нужно лишь залить
-          кипятком и готово.
+          <p class="metodology__text">
+            Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.
+          </p>
         </li>
         <li class="metodology__item">
-          Замените один-два приема
-          обычной еды на наше
-          функциональное питание.
+          <p class="metodology__text">
+            Замените один-два приема
+            обычной еды на наше
+            функциональное питание.
+          </p>
         </li>
         <li class="metodology__item">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          <p class="metodology__text">
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p>
         </li>
       </ul>
     </section>
@@ -151,7 +163,12 @@
         </div>
       </div>
       <div class="footer-location__map footer-map">
-        <iframe class="footer-location__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716382876!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616741750893!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" title="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" loading="lazy"></iframe>
+        <div class="footer-map__img-wrapper">
+          <img class="footer-map__img" src="img/maps/map-mobil.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
+          <img class="footer-map__img footer-map__img--tablet" src="img/maps/map-tablet.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
+          <img class="footer-map__img footer-map__img--desktop" src="img/maps/map-desk.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="1440" height="400">
+        </div>
+        <!-- <iframe class="footer-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716382876!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616741750893!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen=""  title="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" loading="lazy"></iframe> -->
       </div>
     </section>
     <section class="page-footer__contacts contacts">
