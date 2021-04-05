@@ -116,7 +116,7 @@
           <p class="progress__main">
             5 кг
           </p>
-          <p class="progress__text">
+          <p class="progress__text progress__text--kg">
             снижение веса
           </p>
         </li>
@@ -124,13 +124,13 @@
           <p class="progress__main">
             60 дней
           </p>
-          <p class="progress__text">
+          <p class="progress__text progress__text--days">
             затрачено времени
           </p>
         </li>
       </ul>
       <p class="example__price">
-        Затраты на питание: 15 000 РУБ.
+        Затраты на питание: <span class="example__price-num"></span> 15 000 РУБ.
       </p>
       <div class="example__slider cat-slider">
         <div class="cat-slider__images">
@@ -144,7 +144,9 @@
           <button class="cat-slider__button cat-slider__button--past">Было</button>
           <div class="cat-slider__range-container">
             <div class="cat-slider__range">
-              <div class="cat-slider__bar"></div>
+              <div class="cat-slider__bar">
+                <div class="cat-slider__toggle"></div>
+              </div>
             </div>
           </div>
           <button class="cat-slider__button cat-slider__button--now">Стало</button>

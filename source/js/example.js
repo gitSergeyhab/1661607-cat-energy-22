@@ -30,4 +30,9 @@ if (rangeField) {
     rangeBar.style.width = '1%'
     fatCat.style.width = '1%'
   })
+
+  window.addEventListener('resize', () => {
+    rangeBar.style.width = '50%';
+    fatCat.style.width = '50%';
+  })
 }

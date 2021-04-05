@@ -4,6 +4,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
+
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
 }
 
 .progress__item {
@@ -19,6 +23,12 @@
   align-items: center;
   padding-top: 14.5px;
   margin-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .progress__main {
@@ -26,6 +36,11 @@
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    @include font-mix(30, 37);
+    margin-bottom: 6px;
+  }
 }
 
 .progress__text {
@@ -37,11 +52,17 @@
   margin: 0;
   z-index: 1;
   background-color: $again-gray-2;
-}
 
-.example__price {
-  @include font-mix(14, 20);
-  margin: 0;
-  margin-bottom: 24px;
-  text-align: center;
+  @media (min-width: $tablet) {
+    @include font-mix(14, 14, $dark-gray, 400, "Arial");
+    background-color: $basic-white;
+
+    &--kg {
+      width: 114px;
+    }
+
+    &--days {
+      width: 142px;
+    }
+  }
 }
