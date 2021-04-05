@@ -1,5 +1,7 @@
 .page__body {
-  background-color: gray;
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: $basic-white;
   display: flex;
   flex-direction: column;
   align-items: center;
