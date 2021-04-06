@@ -44,6 +44,19 @@
   }
 }
 
+.page-main__metodology {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 69px;
+  }
+}
+
+
 .page-main__title {
   margin: 0;
   padding: 27px var(--pad) 37px;
