@@ -1,7 +1,7 @@
 const rangeField = document.querySelector('.cat-slider__range');
 if (rangeField) {
   const rangeBar = rangeField.querySelector('.cat-slider__bar');
-  const rangeFieldLen = rangeField.offsetWidth;
+  let rangeFieldLen = rangeField.offsetWidth; // ширина всей обласи для "тыка"
   let rangeBarLen = rangeBar.offsetWidth;
 
   const catsContainer = document.querySelector('.cat-slider__images');
@@ -18,6 +18,7 @@ if (rangeField) {
     fatCat.style.width = fatCatLen;
   })
 
+  // кнопки было, стало
   const btnPast = document.querySelector('.cat-slider__button--past');
   const btnNow = document.querySelector('.cat-slider__button--now');
 
@@ -31,8 +32,25 @@ if (rangeField) {
     fatCat.style.width = '1%'
   })
 
+  // вычисляю переход от mobil к tableе
+  let bigWindow = window.innerWidth > 767;
+  let marker = bigWindow; // чтоб было с чем сравнивать
+
   window.addEventListener('resize', () => {
-    rangeBar.style.width = '50%';
-    fatCat.style.width = '50%';
+    if (window.innerWidth < 768) {
+      bigWindow = false;
+    } else {
+      bigWindow = true;
+    }
+
+    // если предыдущее значение ширины окна по "другую сторону" от текущего,
+    // то сбрасываю значения
+    if(marker != bigWindow) {
+      rangeFieldLen = rangeField.offsetWidth;
+      rangeBarLen = rangeBar.offsetWidth;
+      rangeBar.style.width = '50%';
+      fatCat.style.width = '50%';
+      marker = bigWindow;
+    }
   })
 }

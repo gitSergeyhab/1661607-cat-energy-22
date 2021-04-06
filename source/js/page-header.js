@@ -9,8 +9,10 @@ if (window.innerWidth < 768) {
 window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
     menuList.style.display = 'none';
+    bigWindow = false; // for example.js
   } else {
     menuList.style.display = 'flex';
+    bigWindow = true; // for example.js
   }
 })
 
