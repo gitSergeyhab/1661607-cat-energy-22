@@ -17,4 +17,8 @@
   @include font-mix(14, 18);
   margin: 0;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    @include font-mix(20, 30);
+  }
 }

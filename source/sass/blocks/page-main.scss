@@ -50,15 +50,23 @@
   @media (min-width: $tablet) {
     margin-bottom: 0;
   }
-
-  // @media (min-width: $desktop) {
-  //   margin-bottom: 69px;
-  // }
 }
 
 
 .page-main__title {
   margin: 0;
-  padding: 27px var(--pad) 37px;
+  padding: 27px var(--pad) 0;
   background-color: $basic-white;
+
+  &--catalog {
+    margin-bottom: 41px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: $tablet) {
+      padding-top: 188px;
+    }
+  }
 }

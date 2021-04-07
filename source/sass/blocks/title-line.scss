@@ -2,6 +2,10 @@
   @include font-mix(24, 24);
   display: flex;
 
+  @media (min-width: $tablet) {
+    @include font-mix(36, 36);
+  }
+
   &::after {
     content: "";
     width: 200px;
@@ -25,32 +29,6 @@
     @media (min-width: $desktop) {
       width: 70px;
       height: 2px;
-      // margin-top: 17px;
-      // margin-right: 38.5px;
     }
   }
-
-  // @media (min-width: $tablet) {
-  //   @include font-mix(36, 36);
-
-  //   &::before {
-  //     content: "";
-  //     width: 30px;
-  //     height: 2px;
-  //     background-color: $basic-green;
-  //     margin-top: 17px;
-  //     margin-right: 38.5px;
-  //   }
-  // }
-
-  // @media (min-width: $desktop) {
-  //   &::before {
-  //     content: "";
-  //     width: 30px;
-  //     height: 2px;
-  //     background-color: $basic-green;
-  //     margin-top: 17px;
-  //     margin-right: 38.5px;
-  //   }
-  // }
 }
