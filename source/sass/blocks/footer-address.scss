@@ -59,6 +59,11 @@
     text-align: right;
     align-items: flex-end;
   }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 .footer-address__address {

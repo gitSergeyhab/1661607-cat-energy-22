@@ -48,12 +48,12 @@
   margin-bottom: 22px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 47px;
+    margin-bottom: 0;
   }
 
-  @media (min-width: $desktop) {
-    margin-bottom: 69px;
-  }
+  // @media (min-width: $desktop) {
+  //   margin-bottom: 69px;
+  // }
 }
 
 

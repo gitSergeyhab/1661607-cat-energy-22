@@ -1,4 +1,4 @@
-const rangeField = document.querySelector('.cat-slider__range');
+const rangeField = document.querySelector('.cat-slider__range-container');
 if (rangeField) {
   const rangeBar = rangeField.querySelector('.cat-slider__bar');
   let rangeFieldLen = rangeField.offsetWidth; // ширина всей обласи для "тыка"
@@ -53,4 +53,23 @@ if (rangeField) {
       marker = bigWindow;
     }
   })
+
+  toggle = rangeField.querySelector('.cat-slider__toggle');
+  
+  rangeField.addEventListener('mouseover', () => {
+    toggle.classList.add('cat-slider__toggle--hover')
+  })
+
+  rangeField.addEventListener('mouseleave', () => {
+    toggle.classList.remove('cat-slider__toggle--hover')
+  })
+  
+  rangeField.addEventListener('mousedown', () => {
+    toggle.classList.add('cat-slider__toggle--active')
+  })
+
+  rangeField.addEventListener('mouseup', () => {
+    toggle.classList.remove('cat-slider__toggle--active')
+  })
 }
+

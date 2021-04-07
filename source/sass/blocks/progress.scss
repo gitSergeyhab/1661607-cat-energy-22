@@ -1,12 +1,13 @@
 .progress {
   padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
+  row-gap: 10px;
 
   @media (min-width: $tablet) {
     width: 50%;
+    column-gap: 42px;
   }
 }
 
@@ -64,5 +65,9 @@
     &--days {
       width: 142px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $basic-gray;
   }
 }

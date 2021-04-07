@@ -6,6 +6,11 @@
   @media (min-width: $tablet) {
     background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $again-gray-2 191px, $again-gray-2 462px);
   }
+
+  @media (min-width: $desktop) {
+    width: 690px;
+    background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $again-gray-2 191px, $again-gray-2 462px);
+  }
 }
 
 .cat-slider__images {
@@ -16,7 +21,12 @@
 
   @media (min-width: $tablet) {
     width: 708px;
-    height: 620px;
+    height: 520px;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 33px;
   }
 }
 
@@ -26,22 +36,21 @@
   left: 50px;
 
   @media (min-width: $tablet) {
-    width: 650px;
-    height: 620px;
+    width: 545px;
+    height: 520px;
   }
 }
 
 .cat-slider__past-cat {
   @media (min-width: $tablet) {
-    width: 807px;
-    height: 620px;
+    width: 677px;
+    height: 520px;
   }
 }
 
 .cat-slider__past-cat-block {
   position: absolute;
   top: 0;
-  // left: -20px;
   width: 50%;
   overflow: hidden;
   background-color: $again-gray-2;
@@ -51,16 +60,19 @@
   }
 
   @media (min-width: $desktop) {
-    background-color: $basic-gray;
+    background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $basic-gray 191px, $basic-gray 433px);
+    height: 829px;
   }
 }
 
 .cat-slider__interactive {
   display: flex;
   align-items: center;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet) {
     margin-bottom: 65px;
+    z-index: 1;
   }
 }
 
@@ -72,10 +84,22 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: $again-gray-2;
+  background-color: transparent;
 
-  @media (min-width: $desktop) {
-    background-color: $basic-gray;
+  @media (min-width: $tablet) {
+    @include font-mix(20, 30);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 58%;
+      height: 1px;
+      // background-color: gray;
+      background: repeating-linear-gradient(to right, gray 0, gray 1px, $basic-white 1px, $basic-white 2px);
+      top: 37px;
+      left: 15px;
+    }
   }
 }
 
@@ -87,6 +111,7 @@
   padding: 4px 6px;
   box-sizing: border-box;
   margin: 0 2px;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     width: 428px;
@@ -94,13 +119,14 @@
     background-color: transparent;
     padding: 14px 0;
     box-sizing: border-box;
+    margin: 0 11px 0 14px;
   }
 }
 
 .cat-slider__range {
   width: 100%;
   height: 6px;
-  cursor: pointer;
+  // cursor: pointer;
 
   @media (min-width: $tablet) {
     background-color: $again-gray-5;
@@ -124,12 +150,33 @@
   @media (min-width: $tablet) {
     position: absolute;
     pointer-events: none;
-    width: 8px;
-    height: 8px;
-    border: 13px solid $basic-white;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $third-gray;
+    box-sizing: border-box;
     border-radius: 50%;
-    background-color: $basic-green;
-    top: -14px;
-    right: -14px;
+    background-color: $basic-white;
+    top: -13px;
+    right: -13px;
+    filter: drop-shadow(0 1px 3px rgba($basic-black, 0.16));
+
+    &--hover {
+      filter: drop-shadow(0 2px 4px rgba($basic-black, 0.19));
+    }
+
+    &--active {
+      border-color: $basic-green;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
+      border-radius: 50%;
+      top: 12px;
+      left: 12px;
+    }
   }
 }
