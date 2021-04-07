@@ -6,14 +6,14 @@
   grid-template-rows: auto 65px;
   border-top: 1px solid $again-gray-4;
   box-sizing: border-box;
-  // overflow: hidden;
+  justify-self: center;
 
   @media (min-width: $tablet) {
     width: 324px;
     min-height: 430px;
     background-color: $basic-gray;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 65px;
+    grid-template-rows: auto 80px;
     position: relative;
     margin-top: 140px;
     padding: 160px 37px 0;
@@ -29,6 +29,7 @@
 
     @media (min-width: $tablet) {
       background-color: $basic-white;
+      border: 2px solid $basic-gray;
     }
   }
 }
@@ -73,9 +74,21 @@
 }
 
 .product-card__title {
-  @include font-mix(16, 20, $dark-2);
+  @include font-mix(16, 20, $dark);
+  text-transform: uppercase;
+  text-align: center;
   margin: 0;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    @include font-mix(20, 24, $dark);
+    margin-bottom: 23px;
+  }
+
+  // @media (min-width: $desktop) {
+  //   margin-top: 19px;
+  //   margin-bottom: 23px;
+  // }
 }
 
 .product-card__plus {
@@ -93,6 +106,21 @@
     width: 30px;
     height: 2px;
     background-color: $again-gray-3;
+
+    @media (min-width: $tablet) {
+      width: 60px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 51px;
+    left: 130px;
+    width: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 92px;
   }
 }
 
@@ -100,4 +128,9 @@
   @include font-mix(12, 16, $dark-gray, 400, "Arial");
   margin: 0;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    @include font-mix(16, 18, $dark-gray, 400, "Arial");
+    text-align: center;
+  }
 }
