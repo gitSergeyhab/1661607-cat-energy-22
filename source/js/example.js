@@ -55,21 +55,20 @@ if (rangeField) {
   })
 
   toggle = rangeField.querySelector('.cat-slider__toggle');
-  
+
   rangeField.addEventListener('mouseover', () => {
-    toggle.classList.add('cat-slider__toggle--hover')
+    toggle.classList.add('cat-slider__toggle--hover');
   })
 
   rangeField.addEventListener('mouseleave', () => {
-    toggle.classList.remove('cat-slider__toggle--hover')
+    toggle.classList.remove('cat-slider__toggle--hover');
   })
-  
+
   rangeField.addEventListener('mousedown', () => {
-    toggle.classList.add('cat-slider__toggle--active')
+    toggle.classList.add('cat-slider__toggle--active');
   })
 
   rangeField.addEventListener('mouseup', () => {
-    toggle.classList.remove('cat-slider__toggle--active')
+    toggle.classList.remove('cat-slider__toggle--active');
   })
 }
-
