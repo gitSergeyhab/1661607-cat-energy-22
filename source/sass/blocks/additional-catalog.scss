@@ -3,20 +3,31 @@
   flex-direction: column;
   margin-bottom: 35px;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 76px;
+  }
+
   @media (min-width: $desktop) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 86px;
   }
 }
 
 .additional-catalog__title {
-  margin: 25px 0 36px;
+  margin: 0;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
+  margin-bottom: 36px;
   white-space: nowrap;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 80px;
+  }
+
   @media (min-width: $desktop) {
+    margin-bottom: 81px;
     width: 100vw;
   }
 }
