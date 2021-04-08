@@ -87,6 +87,15 @@
 .product-card__button-plus {
   background-color: $basic-gray;
   color: $basic-black;
+
+  &:hover {
+    background-color: $again-gray-4;
+  }
+
+  &:active {
+    background-color: $again-gray-4;
+    color: rgba($dark-gray, 0.3)
+  }
 }
 
 .product-card__wrapper-plus {
