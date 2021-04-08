@@ -12,6 +12,18 @@
 .optional__list {
   margin: 0;
   padding: 0;
+  display: grid;
+  row-gap: 24px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+    column-gap: 61px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
     padding-left: $form-tablet-left;
@@ -19,8 +31,10 @@
   }
 }
 
-.optional__item:not(:last-child) {
-  margin-bottom: 24px;
+.optional__item {
+  @media (min-width: $tablet) {
+    // width: 50%;
+  }
 }
 
 .optional__checkbox {
@@ -38,7 +52,7 @@
     width: 30px;
     border: 1px solid $third-gray;
     left: 0;
-    top: -6px;
+    top: -4px;
   }
 }
 
@@ -51,5 +65,5 @@
   background-repeat: no-repeat;
   background-position: center;
   left: 0;
-  top: -6px;
+  top: -4px;
 }

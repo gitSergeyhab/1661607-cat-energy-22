@@ -1,9 +1,11 @@
 .title-line {
   @include font-mix(24, 24);
   display: flex;
+  padding: 20px;
 
   @media (min-width: $tablet) {
     @include font-mix(36, 36);
+    padding: 0;
   }
 
   &::after {

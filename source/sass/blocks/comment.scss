@@ -10,10 +10,16 @@
 }
 
 .comment__field {
-  height: 151px;
+  min-height: 150.5px;
   width: 100%;
   box-sizing: border-box;
   text-transform: uppercase;
+  padding: 9px 12px 9px 15px;
+
+  @media (min-width: $tablet) {
+    min-height: 174px;
+    padding: 10px 19px;
+  }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
     margin-left: $form-tablet-left;

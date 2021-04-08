@@ -1,6 +1,12 @@
 .data {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .data__label {
@@ -9,6 +15,10 @@
 
 .data__parameters {
   margin-bottom: 24px;
+
+  @media (min-width: $desktop) {
+    width: 570px;
+  }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
     padding-left: $form-tablet-left;
@@ -24,6 +34,7 @@
   }
 
   @media (min-width: $desktop) {
+    width: 570px;
     margin-bottom: 69px;
   }
 
@@ -41,6 +52,7 @@
   }
 
   @media (min-width: $desktop) {
+    width: 100%;
     margin-bottom: 67px;
   }
 }
@@ -53,19 +65,32 @@
   }
 
   @media (min-width: $desktop) {
+    width: 100%;
     margin-bottom: 67px;
   }
 }
 
 .data__optional {
-  margin-bottom: 34px;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet) {
     margin-bottom: 54px;
   }
 
   @media (min-width: $desktop) {
+    width: 100%;
     margin-bottom: 61px;
+  }
+}
+
+.data__button-field {
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    padding-left: $form-tablet-left;
+    padding-right: $form-tablet-right;
   }
 }
 
@@ -76,9 +101,15 @@
   width: 100px;
   box-sizing: border-box;
   text-transform: uppercase;
+  padding: 13px 15px;
 
   &--tel,
   &--email {
     margin-left: 11px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 52px;
+    padding: 10px 20px;
   }
 }
