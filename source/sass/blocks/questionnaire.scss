@@ -11,6 +11,14 @@
     list-style: none;
     padding: 0;
   }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 62px;
+  }
 }
 
 .questionnaire__text {
@@ -20,5 +28,6 @@
 
   @media (min-width: $tablet) {
     @include font-mix(20, 30);
+    margin-bottom: 66px;
   }
 }

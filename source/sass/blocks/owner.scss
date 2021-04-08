@@ -8,6 +8,10 @@
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
   white-space: nowrap;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 76px;
+  }
 }
 
 .owner__list {

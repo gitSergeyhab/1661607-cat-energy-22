@@ -7,6 +7,10 @@
   margin-bottom: 38px;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
+
+  @media (min-width: $tablet) {
+    margin-bottom: 76px;
+  }
 }
 
 .comment__field {

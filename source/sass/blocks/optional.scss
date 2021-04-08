@@ -7,6 +7,10 @@
   margin-bottom: 39px;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
+
+  @media (min-width: $tablet) {
+    margin-bottom: 62px;
+  }
 }
 
 .optional__list {
