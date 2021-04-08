@@ -36,18 +36,33 @@
   }
 }
 
-.purposes__radio:checked ~ .purposes__label::after {
-  position: absolute;
-  content: "";
-  width: 13.5px;
-  height: 13.5px;
-  background-color: $basic-green;
-  border-radius: 50%;
-  top: 5px;
-  left: 8px;
-}
-
-
 .purposes__radio {
   @include hidden-mix();
+
+  &:checked ~ .purposes__label::after {
+    position: absolute;
+    content: "";
+    width: 13.5px;
+    height: 13.5px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    top: 5px;
+    left: 8px;
+  }
+
+  &:hover ~ .purposes__label::before {
+    border-color: $again-gray-8;
+  }
+
+  &:disabled ~ .purposes__label::before {
+    border-color: $again-gray-8;
+  }
+
+  &:disabled ~ .purposes__label {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .purposes__label::after {
+    opacity: 0.3;
+  }
 }
