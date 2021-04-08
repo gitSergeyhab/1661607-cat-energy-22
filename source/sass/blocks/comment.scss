@@ -15,6 +15,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   padding: 9px 12px 9px 15px;
+  border: 1px solid $again-gray-7;
 
   @media (min-width: $tablet) {
     min-height: 174px;
@@ -25,5 +26,17 @@
     margin-left: $form-tablet-left;
     margin-right: $form-tablet-right;
     width: calc(100% - 78px);
+  }
+
+  &:hover {
+    border-color: $third-gray;
+  }
+
+  &:focus {
+    border: 2px solid $third-gray;
+  }
+
+  &::placeholder {
+    color: $dark-gray;
   }
 }
