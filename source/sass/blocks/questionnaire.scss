@@ -9,14 +9,13 @@
 
   & ul {
     list-style: none;
-    padding: 0;
   }
 
   @media (min-width: $tablet) {
     padding-bottom: 72px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     padding-bottom: 62px;
   }
 }
@@ -29,5 +28,10 @@
   @media (min-width: $tablet) {
     @include font-mix(20, 30);
     margin-bottom: 66px;
+  }
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    padding-left: $form-tablet-left;
+    padding-right: $form-tablet-right;
   }
 }

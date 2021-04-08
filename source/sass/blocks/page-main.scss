@@ -82,5 +82,10 @@
       margin-bottom: 56px;
       padding-top: 187px;
     }
+
+    @media (min-width: $tablet) and (max-width: 1439px) {
+      padding-left: 71px;
+      padding-right: 67px;
+    }
   }
 }

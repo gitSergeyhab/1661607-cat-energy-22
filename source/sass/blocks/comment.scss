@@ -1,7 +1,3 @@
-.comment {
-  padding: 0;
-}
-
 .comment__legend {
   margin: 0;
   margin-bottom: 38px;
@@ -18,4 +14,10 @@
   width: 100%;
   box-sizing: border-box;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-left: $form-tablet-left;
+    margin-right: $form-tablet-right;
+    width: calc(100% - 78px);
+  }
 }

@@ -1,15 +1,12 @@
-.purposes {
+.purposes__list {
   padding: 28px 0 25px;
   border-bottom: 1px solid $again-gray;
+  margin: 0;
 
   @media (min-width: $tablet) {
     border: 1px solid $again-gray-7;
     padding: 30px 28px;
   }
-}
-
-.purposes__list {
-  margin: 0;
 }
 
 .purposes__item:not(:last-child) {
