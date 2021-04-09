@@ -1,9 +1,16 @@
 .metodology {
   padding: 27px var(--pad) 0;
 
+  @media (min-width: $tablet) {
+    padding-bottom: 47px;
+    border-bottom: 1px solid $again-gray-6;
+  }
+
   @media (min-width: $desktop) {
+    padding-bottom: 11px;
     width: $desktop;
     box-sizing: border-box;
+    border: none;
   }
 }
 

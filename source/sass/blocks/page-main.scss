@@ -48,17 +48,44 @@
   margin-bottom: 22px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 47px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 69px;
+    margin-bottom: 0;
   }
 }
 
 
 .page-main__title {
   margin: 0;
-  padding: 27px var(--pad) 37px;
+  padding: 27px var(--pad) 0;
   background-color: $basic-white;
+
+  &--catalog {
+    margin-bottom: 41px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 22px;
+      padding-top: 188px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 37px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 56px;
+      padding-top: 187px;
+    }
+
+    @media (min-width: $tablet) and (max-width: 1439px) {
+      padding-left: 71px;
+      padding-right: 67px;
+    }
+  }
 }

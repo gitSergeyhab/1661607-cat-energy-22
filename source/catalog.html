@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи: каталог</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,7 +44,7 @@
 
 
   <main class="page-main">
-    <h1 class="page-main__title main-text">Каталог продукции</h1>
+    <h1 class="page-main__title page-main__title--catalog main-text">Каталог продукции</h1>
     <section class="main-catalog page-main__catalog">
       <h2 class="visually-hidden">Основной каталог</h2>
       <ul class="main-catalog__list">
@@ -231,8 +237,8 @@
         </li>
 
         <li class="main-catalog__item product-card product-card--plus">
+          <a href="#" class="product-card__plus"></a>
           <a href="#" class="product-card__wrapper-plus">
-            <div class="product-card__plus"></div>
             <h3 class="product-card__title">
               Показать еще 100500 товаров
             </h3>
@@ -240,8 +246,7 @@
               На самом деле вкусов гораздо больше!
             </p>
           </a>
-
-          <a class="product-card__button button button--plus" href="#">Показать все</a>
+          <a class="product-card__button-plus button" href="#">Показать все</a>
         </li>
       </ul>
     </section>

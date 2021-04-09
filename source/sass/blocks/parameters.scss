@@ -1,12 +1,24 @@
 .parameters {
-  padding: 0;
   margin: 0;
   border-bottom: 1px solid $again-gray;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
 }
 
 .parameters__list {
   margin: 0;
   margin-bottom: 24px;
+  padding-left: 0;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 69px;
+  }
 }
 
 .parameters__item {
@@ -15,6 +27,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
 
   &:last-child {
     margin-bottom: 0;

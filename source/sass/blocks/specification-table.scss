@@ -2,6 +2,7 @@
   border-collapse: collapse;
   width: 100%;
   min-height: 44px;
+  border: none;
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
@@ -21,6 +22,7 @@
       text-align: center;
       margin: auto;
       margin-bottom: 21px;
+      padding: 0;
     }
   }
 }

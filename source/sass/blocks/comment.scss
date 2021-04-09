@@ -1,16 +1,42 @@
-.comment {
-  padding: 0;
-}
-
 .comment__legend {
   margin: 0;
   margin-bottom: 38px;
   margin-right: calc(-1 * var(--pad));
+  margin-left: calc(-1 * var(--pad));
+
+  @media (min-width: $tablet) {
+    margin-bottom: 76px;
+  }
 }
 
 .comment__field {
-  height: 151px;
+  min-height: 150.5px;
   width: 100%;
   box-sizing: border-box;
   text-transform: uppercase;
+  padding: 9px 12px 9px 15px;
+  border: 1px solid $again-gray-7;
+
+  @media (min-width: $tablet) {
+    min-height: 174px;
+    padding: 10px 19px;
+  }
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-left: $form-tablet-left;
+    margin-right: $form-tablet-right;
+    width: calc(100% - 78px);
+  }
+
+  &:hover {
+    border-color: $third-gray;
+  }
+
+  &:focus {
+    border: 2px solid $third-gray;
+  }
+
+  &::placeholder {
+    color: $dark-gray;
+  }
 }

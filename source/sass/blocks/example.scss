@@ -1,22 +1,41 @@
 .example {
   width: 100%;
   min-width: 320px;
-  padding: 27px var(--pad);
+  padding-top: 27px;
   background-color: $again-gray-2;
   box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    background-color: $basic-white;
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    display: flex;
+    padding-top: 0;
+  }
+}
+
+.example__text-block {
+  padding: 0 var(--pad);
 
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 43px;
-    background: linear-gradient(to bottom, $basic-white 0, $basic-white 619px, $again-gray-2 619px, $again-gray-2 1081px);
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop) {
-    background-color: $basic-gray;
-    width: $desktop;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 0;
+    width: 570px;
+    margin-bottom: 0;
+    background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $basic-gray 191px, $basic-gray 462px);
   }
 }
 
@@ -30,6 +49,11 @@
     width: 100%;
     margin-bottom: 63px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 58px;
+    margin-bottom: 146px;
+  }
 }
 
 .example__text {
@@ -41,6 +65,12 @@
     @include font-mix(16, 24, $dark-gray, 400, "Arial");
     height: 72px;
     margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    height: auto;
+    width: 437px;
+    margin-bottom: 69px;
   }
 }
 
@@ -57,6 +87,11 @@
     text-align: right;
     margin: 0;
   }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .example__price-num {
@@ -64,10 +99,23 @@
     display: block;
     margin-top: 9px;
   }
+
+  @media (min-width: $desktop) {
+    display: inline-block;
+    margin-left: 63px;
+  }
 }
 
 .example__slider {
-  @media (min-width: $tablet) {
-    margin-top: 64px;
+  @media (min-width: $desktop) {
+    padding-right: 70px;
+  }
+}
+
+.example__progress {
+  margin: 0;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
   }
 }

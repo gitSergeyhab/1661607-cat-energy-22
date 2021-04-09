@@ -4,6 +4,14 @@
   padding-top: 13px;
   padding-bottom: 19px;
   border-top: 1px solid $again-gray-4;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    padding: 0;
+  }
 }
 
 .additional-card__title {
@@ -11,6 +19,15 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    @include font-mix(29, 20);
+  }
+
+  @media (min-width: $desktop) {
+    width: 324px;
+    margin: 0;
+  }
 }
 
 .additional-card__portion-price {
@@ -19,7 +36,23 @@
   justify-content: space-between;
   margin-bottom: 15px;
 
+  @media (min-width: $tablet) {
+    @include font-mix(16, 20, $dark-gray, 400, "Arial");
+  }
+
+  @media (min-width: $desktop) {
+    width: 325px;
+    margin: 0;
+    margin-right: 38px;
+  }
+
   & p {
     margin: 0;
+  }
+}
+
+.additional-card__button {
+  @media (min-width: $desktop) {
+    width: 234px;
   }
 }
