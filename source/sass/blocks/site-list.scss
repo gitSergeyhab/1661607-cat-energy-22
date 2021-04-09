@@ -13,6 +13,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-end;
+  }
+
+  &--index {
+    @media (min-width: $desktop) {
+      width: 600px;
+    }
   }
 }
 
@@ -34,44 +41,49 @@
     }
   }
 
-  & a {
-    display: block;
-    text-decoration: none;
-    color: $basic-black;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 8px;
-    padding-top: 8px;
+  @media (min-width: $tablet) {
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:not(:last-child) {
+      margin-right: 34.5px;
+    }
+  }
+}
+
+.site-list__link {
+  display: block;
+  text-decoration: none;
+  color: $basic-black;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+  padding-top: 8px;
+
+  &--current {
+    border-color: $basic-green;
   }
 
-  &--index a {
+  &--index {
     @media (min-width: $desktop) {
       color: $basic-white;
     }
   }
 
-  &--current a {
-    border-color: $basic-green;
-
+  &--current.site-list__link--index {
     @media (min-width: $desktop) {
+      color: $basic-white;
       border-color: $basic-white;
     }
   }
 
-  & a:hover {
+  &:hover {
     opacity: 0.6;
   }
 
-  & a:active {
+  &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: $tablet) {
-    border: none;
-
-    &:not(:last-child) {
-      margin-right: 34.5px;
-    }
   }
 }

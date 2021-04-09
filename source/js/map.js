@@ -1,6 +1,6 @@
 function showMap(windowSize) {
-  console.log(windowSize)
 
+  // мои костыли ->
   const markerSize = () => {
     if (windowSize < 2) return [57, 53];
     return [115, 106];
@@ -20,6 +20,8 @@ function showMap(windowSize) {
     if ((numMarker == 1 && windowSize < 3) || (numMarker == 2 && windowSize == 3)) return 'img/icons/map-logo-marker.png';
     return '';
   }
+  // <- мои костыли
+
 
   var myMap = new ymaps.Map('map', {
 
@@ -47,9 +49,9 @@ function showMap(windowSize) {
 
   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
-      hintContent: 'Мы Тута!',
+      hintContent: 'Кэт энерджи',
 
-      balloonContent: 'Это красивая метка'
+      balloonContent: ''
 
   }, {
 
@@ -61,7 +63,6 @@ function showMap(windowSize) {
 
       // Своё изображение иконки метки.
 
-      // iconImageHref: 'img/icons/map-logo-marker.png',
       iconImageHref: srcMaker(1),
 
 
@@ -80,9 +81,9 @@ function showMap(windowSize) {
 
   myPlacemarkWithContent = new ymaps.Placemark([59.938635, 30.323118], {
 
-    hintContent: 'Собственный значок метки с контентом',
+    hintContent: 'Кэт энерджи',
 
-    balloonContent: 'А эта — новогодняя',
+    balloonContent: '',
 
     iconContent: '12'
 
@@ -119,7 +120,6 @@ function showMap(windowSize) {
 });
 
 
-
   myMap.geoObjects
 
       .add(myPlacemark)
@@ -128,6 +128,7 @@ function showMap(windowSize) {
 
 }
 
+// мои костыли ->
 const windowSizer = () => {
   if (window.innerWidth > 1439) return 3;
   if (window.innerWidth > 767) return 2;
@@ -136,7 +137,6 @@ const windowSizer = () => {
 
 const map = document.querySelector('#map')
 let windowSize = windowSizer();
-
 
 ymaps.ready(() => showMap(windowSize));
 
@@ -149,3 +149,4 @@ window.addEventListener('resize', () => {
     windowSize = windowSizeNow;
   }
 })
+// <-мои костыли

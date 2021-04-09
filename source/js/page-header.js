@@ -28,10 +28,10 @@ menuBtn.addEventListener('click', () => {
     }
 })
 
-const links = document.querySelectorAll('.site-list__item a');
+const links = document.querySelectorAll('.site-list__link');
 links.forEach(link => {
-  link.parentNode.classList.remove('site-list__item--current');
+  link.classList.remove('site-list__link--current');
   if(!link.href) {
-    link.parentNode.classList.add('site-list__item--current');
+    link.classList.add('site-list__link--current');
   }
 })
