@@ -18,7 +18,7 @@
 
 .functional-nutrition__text-element {
   z-index: 1;
-  padding-top: 27px;
+  padding-top: 30px;
 
   @media (min-width: $tablet) {
     width: 420px;
@@ -99,7 +99,7 @@
   @media (min-width: $tablet) {
     width: 632px;
     height: 609px;
-    padding-left: 50px;
+    padding-left: 70px;
   }
 
   @media (min-width: $desktop) {
@@ -136,14 +136,14 @@
 }
 
 .functional-nutrition__button {
-  // @include Oswald(14, 18);
   font-size: 14px;
   width: calc(100% - 40px);
 
   @media (min-width: $tablet) {
+    @include Oswald(20, 20, $basic-white);
     position: absolute;
-    top: 250px;
-    left: 117px;
+    top: 258px;
+    left: 110px;
     width: 244px;
     height: 54px;
     z-index: 2;

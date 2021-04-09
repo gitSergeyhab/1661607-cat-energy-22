@@ -15,9 +15,10 @@
 
   @media (min-width: $tablet) {
     width: 174px;
+    padding-bottom: 10px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     width: 202px;
   }
 }

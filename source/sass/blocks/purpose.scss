@@ -28,7 +28,7 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 77px 298px 30px 52px;
+    padding: 77px 315px 45px 52px;
     margin-bottom: 30px;
     min-height: 333px;
 
@@ -85,9 +85,8 @@
       left: auto;
       width: 80px;
       height: 80px;
-      right: 132px;
+      right: 125px;
       top: 42px;
-      transform: scale(3.89);
     }
 
     @media (min-width: $desktop) {
@@ -107,7 +106,8 @@
     top: -2px;
 
     @media (min-width: $tablet) {
-      top: 132px;
+      top: 135px;
+      transform: scale(3.9);
     }
 
     @media (min-width: $desktop) {
@@ -123,6 +123,7 @@
 
     @media (min-width: $tablet) {
       top: 152px;
+      transform: scale(3.99);
     }
 
     @media (min-width: $desktop) {
@@ -160,6 +161,7 @@
 
   @media (min-width: $tablet) {
     @include Arial(16, 24, $basic-black);
+    margin-bottom: 36px;
   }
 }
 

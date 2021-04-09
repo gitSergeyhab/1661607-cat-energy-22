@@ -12,13 +12,17 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  width: 115px;
 }
 
 .socials__item {
   margin-right: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet) {
-    margin-right: 29px;
+    margin-right: 28px;
   }
 
   &:last-child {
@@ -28,20 +32,40 @@
 
 .socials__link {
   display: block;
-  width: 23px;
-  height: 23px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  background-size: contain;
 
   &--vk {
     background-image: url("../img/socials/icon_vk.svg");
+    width: 22px;
+    height: 12px;
+
+    @media (min-width: $tablet) {
+      width: 29px;
+      height: 17px;
+    }
   }
 
   &--ig {
     background-image: url("../img/socials/icon_ig.svg");
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet) {
+      width: 23px;
+      height: 23px;
+    }
   }
 
   &--fb {
     background-image: url("../img/socials/icon_fb.svg");
+    width: 10px;
+    height: 18px;
+
+    @media (min-width: $tablet) {
+      width: 19px;
+      height: 27px;
+    }
   }
 }
