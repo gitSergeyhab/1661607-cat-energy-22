@@ -32,7 +32,7 @@ const formHtml = () => htmlProto('form');
 
 // js
 
-const scriptList = ['source/js/example.js', 'source/js/page-header.js']
+const scriptList = ['source/js/example.js', 'source/js/page-header.js', 'source/js/map.js']
 const scripts = () => {
   return src(scriptList)
     .pipe(concat('script.js'))

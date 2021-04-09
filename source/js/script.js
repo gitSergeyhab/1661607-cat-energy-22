@@ -110,3 +110,155 @@ links.forEach(link => {
     link.parentNode.classList.add('site-list__item--current');
   }
 })
+
+function showMap(windowSize) {
+  console.log(windowSize)
+
+  const markerSize = () => {
+    if (windowSize < 2) return [57, 53];
+    return [115, 106];
+  }
+
+  const markerOffset = () => {
+    if (windowSize < 2) return [-24, -53];
+    return [-57, -106];
+  }
+
+  const centerMarker = () => {
+    if (windowSize == 3) return [59.939135, 30.318518];
+    return [59.938635, 30.323118];
+  }
+
+  const srcMaker = (numMarker) => {
+    if ((numMarker == 1 && windowSize < 3) || (numMarker == 2 && windowSize == 3)) return 'img/icons/map-logo-marker.png';
+    return '';
+  }
+
+  var myMap = new ymaps.Map('map', {
+
+      center: centerMarker(),
+
+      zoom: 16
+
+  }, {
+
+      searchControlProvider: 'yandex#search'
+
+  }),
+
+
+
+  // Создаём макет содержимого.
+
+  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+
+  ),
+
+
+
+  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+      hintContent: 'Мы Тута!',
+
+      balloonContent: 'Это красивая метка'
+
+  }, {
+
+      // Опции.
+
+      // Необходимо указать данный тип макета.
+
+      iconLayout: 'default#image',
+
+      // Своё изображение иконки метки.
+
+      // iconImageHref: 'img/icons/map-logo-marker.png',
+      iconImageHref: srcMaker(1),
+
+
+
+      // Размеры метки.
+
+      iconImageSize: markerSize(),
+
+      // Смещение левого верхнего угла иконки относительно
+
+      // её "ножки" (точки привязки).
+
+      iconImageOffset: markerOffset()
+
+  }),
+
+  myPlacemarkWithContent = new ymaps.Placemark([59.938635, 30.323118], {
+
+    hintContent: 'Собственный значок метки с контентом',
+
+    balloonContent: 'А эта — новогодняя',
+
+    iconContent: '12'
+
+}, {
+
+    // Опции.
+
+    // Необходимо указать данный тип макета.
+
+    iconLayout: 'default#imageWithContent',
+
+    // Своё изображение иконки метки.
+
+    iconImageHref: srcMaker(2),
+
+    // Размеры метки.
+
+    iconImageSize: markerSize(),
+
+    // Смещение левого верхнего угла иконки относительно
+
+    // её "ножки" (точки привязки).
+
+    iconImageOffset: markerOffset(),
+
+    // Смещение слоя с содержимым относительно слоя с картинкой.
+
+    iconContentOffset: [15, 15],
+
+    // Макет содержимого.
+
+    iconContentLayout: MyIconContentLayout
+
+});
+
+
+
+  myMap.geoObjects
+
+      .add(myPlacemark)
+
+      .add(myPlacemarkWithContent);
+
+}
+
+const windowSizer = () => {
+  if (window.innerWidth > 1439) return 3;
+  if (window.innerWidth > 767) return 2;
+  return 1;
+}
+
+const map = document.querySelector('#map')
+let windowSize = windowSizer();
+
+
+ymaps.ready(() => showMap(windowSize));
+
+window.addEventListener('resize', () => {
+  const windowSizeNow = windowSizer();
+  if (windowSizeNow != windowSize) {
+    const ymapsBlock = map.querySelector('ymaps');
+    ymapsBlock.remove();
+    ymaps.ready(() => showMap(windowSizeNow));
+    windowSize = windowSizeNow;
+  }
+})
