@@ -22,3 +22,21 @@
   color: $color;
   font-style: normal;
 }
+
+@mixin Oswald($size, $height, $color: inherit, $weight: 400) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: $weight;
+  font-size: #{$size}px;
+  line-height: #{$height}px;
+  color: $color;
+  font-style: normal;
+}
+
+@mixin Arial($size, $height, $color: inherit, $weight: 400) {
+  font-family: "Arial", sans-serif;
+  font-weight: $weight;
+  font-size: #{$size}px;
+  line-height: #{$height}px;
+  color: $color;
+  font-style: normal;
+}

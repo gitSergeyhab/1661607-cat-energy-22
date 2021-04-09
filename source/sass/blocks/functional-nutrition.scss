@@ -44,14 +44,14 @@
 }
 
 .functional-nutrition__text {
-  @include font-mix(14, 14);
+  @include Oswald(14, 14);
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 20, $basic-black);
+    @include Oswald(20, 20, $basic-black);
     text-align: left;
     margin-bottom: 20px;
   }
@@ -113,7 +113,7 @@
 
 .functional-nutrition__nocolor-wrapper {
   background-color: $basic-white;
-  min-height: 178px;
+  min-height: 138px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -136,6 +136,8 @@
 }
 
 .functional-nutrition__button {
+  // @include Oswald(14, 18);
+  font-size: 14px;
   width: calc(100% - 40px);
 
   @media (min-width: $tablet) {

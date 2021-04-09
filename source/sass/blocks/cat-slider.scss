@@ -16,7 +16,7 @@
 .cat-slider__images {
   height: 232px;
   width: 311px;
-  margin-bottom: 23px;
+  margin-bottom: 33px;
   position: relative;
 
   @media (min-width: $tablet) {
@@ -51,6 +51,7 @@
 .cat-slider__past-cat-block {
   position: absolute;
   top: 0;
+  left: -4px;
   width: 50%;
   overflow: hidden;
   background-color: $again-gray-2;

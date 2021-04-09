@@ -22,7 +22,7 @@
 
 .purpose__item {
   background-color: $basic-gray;
-  padding: 30px 30px 0;
+  padding: 30px 33px 0 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
@@ -79,7 +79,7 @@
     content: "";
     width: 100px;
     height: 100px;
-    left: 0;
+    left: -2px;
 
     @media (min-width: $tablet) {
       left: auto;
@@ -132,15 +132,15 @@
 }
 
 .purpose__title {
-  @include font-mix(24, 37);
-  padding-left: 12px;
+  @include Oswald(24, 37);
+  padding-left: 71px;
   margin: 0;
   margin-bottom: 29px;
-  text-align: center;
+  // text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(36, 36);
+    @include Oswald(36, 36);
     padding-left: 0;
     text-align: left;
     margin-bottom: 24px;
@@ -154,17 +154,17 @@
 }
 
 .purpose__text {
-  @include font-mix(14, 18, $dark-gray, 400, "Arial");
+  @include Arial(14, 18, $dark-gray);
   margin: 0;
   margin-bottom: 23px;
 
   @media (min-width: $tablet) {
-    @include font-mix(16, 24, $basic-black, 400, "Arial");
+    @include Arial(16, 24, $basic-black);
   }
 }
 
 .purpose__link {
-  @include font-mix(16, 16);
+  @include Oswald(16, 16);
   width: 100%;
   display: flex;
   align-items: center;
@@ -175,7 +175,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 30);
+    @include Oswald(20, 30);
     border: none;
   }
 
@@ -205,18 +205,3 @@
     opacity: 0.5;
   }
 }
-
-
-// @media (min-width: $tablet) {
-//   .purpose__title {
-//     @include font-mix(36, 36);
-//     padding-left: 0;
-//     text-align: start;
-//     // margin: 0;
-//     // text-transform: uppercase;
-//   }
-//   .purpose__text {
-//     @include font-mix(16, 24, $basic-black, 400, "Arial");
-//     margin-bottom: 23px;
-//   }
-// }

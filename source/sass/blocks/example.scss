@@ -78,7 +78,7 @@
   @include font-mix(14, 20);
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   text-align: center;
 
   @media (min-width: $tablet) {
@@ -114,6 +114,7 @@
 
 .example__progress {
   margin: 0;
+  margin-bottom: 7px;
 
   @media (min-width: $desktop) {
     margin-bottom: 60px;
