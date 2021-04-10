@@ -1,7 +1,8 @@
 .title-line {
   @include font-mix(24, 24);
   display: flex;
-  padding: 20px;
+  padding-left: 20px;
+  // padding-right: 20px;
 
   @media (min-width: $tablet) {
     @include font-mix(36, 36);
@@ -13,7 +14,7 @@
     width: 200px;
     height: 2px;
     background-color: $basic-green;
-    margin-top: 17px;
+    margin-top: 14px;
     margin-left: 22px;
     flex-grow: 1;
   }

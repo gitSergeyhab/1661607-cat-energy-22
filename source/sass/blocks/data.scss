@@ -45,7 +45,8 @@
 }
 
 .data__owner {
-  margin-bottom: 24px;
+  // margin-bottom: 24px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet) {
     margin-bottom: 65px;
@@ -58,7 +59,9 @@
 }
 
 .data__comment {
-  margin-bottom: 23.5px;
+  // margin-bottom: 23px;
+  margin-bottom: 21px;
+
 
   @media (min-width: $tablet) {
     margin-bottom: 65px;

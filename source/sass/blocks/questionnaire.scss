@@ -22,6 +22,7 @@
 
 .questionnaire__text {
   @include font-mix(14, 18);
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
 
