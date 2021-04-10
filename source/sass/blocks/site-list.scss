@@ -24,23 +24,15 @@
 }
 
 .site-list__item {
-  border-top: 1px solid $basic-black;
+  border-top: 1px solid $again-gray-7;
   box-sizing: border-box;
   margin-left: -20px;
   margin-right: -20px;
   display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 13.5px;
+  padding-bottom: 13.5px;
   justify-content: center;
   text-align: center;
-
-  &:last-child {
-    border-bottom: 1px solid $basic-black;
-
-    @media (min-width: $tablet) {
-      border: none;
-    }
-  }
 
   @media (min-width: $tablet) {
     border: none;

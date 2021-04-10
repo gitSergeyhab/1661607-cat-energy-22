@@ -6,6 +6,11 @@
   width: 100%;
   overflow: hidden;
   background-color: $basic-white;
+  border-top: 1px solid $again-gray-7;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
 
   @media (min-width: $desktop) {
     width: $desktop;
