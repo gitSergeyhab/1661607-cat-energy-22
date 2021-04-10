@@ -1,5 +1,5 @@
 .page-header {
-  @include font-mix(18, 24);
+  @include Oswald(20, 20, $basic-black, 500);
   width: 100%;
   min-width: 320px;
   background-color: $basic-white;
@@ -10,16 +10,18 @@
   justify-content: start;
 
   @media (min-width: $tablet) {
-    min-height: 92px;
+    @include Oswald(18, 24);
+    min-height: 110px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop) {
+    @include Oswald(20, 30);
     position: absolute;
     min-height: 112px;
-    padding-top: 43px;
+    padding-top: 52px;
     width: $desktop;
   }
 }
@@ -74,7 +76,7 @@
 .page-header__nav-close {
   @include line;
   display: block;
-  transform: rotate(30deg);
+  transform: rotate(45deg);
   position: relative;
 
   &::before {
@@ -82,6 +84,6 @@
     content: "";
     position: absolute;
     left: 0;
-    transform: rotate(-60deg);
+    transform: rotate(-90deg);
   }
 }

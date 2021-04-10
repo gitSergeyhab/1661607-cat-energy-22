@@ -18,7 +18,7 @@
 
 .functional-nutrition__text-element {
   z-index: 1;
-  padding-top: 27px;
+  padding-top: 30px;
 
   @media (min-width: $tablet) {
     width: 420px;
@@ -44,14 +44,14 @@
 }
 
 .functional-nutrition__text {
-  @include font-mix(14, 14);
+  @include Oswald(14, 14);
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 20, $basic-black);
+    @include Oswald(20, 20, $basic-black);
     text-align: left;
     margin-bottom: 20px;
   }
@@ -99,7 +99,7 @@
   @media (min-width: $tablet) {
     width: 632px;
     height: 609px;
-    padding-left: 50px;
+    padding-left: 70px;
   }
 
   @media (min-width: $desktop) {
@@ -108,12 +108,13 @@
     top: 141px;
     height: 499px;
     width: 518px;
+    padding-left: 55px;
   }
 }
 
 .functional-nutrition__nocolor-wrapper {
   background-color: $basic-white;
-  min-height: 178px;
+  min-height: 138px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -136,19 +137,21 @@
 }
 
 .functional-nutrition__button {
+  font-size: 14px;
   width: calc(100% - 40px);
 
   @media (min-width: $tablet) {
+    @include Oswald(20, 20, $basic-white);
     position: absolute;
-    top: 250px;
-    left: 117px;
+    top: 258px;
+    left: 110px;
     width: 244px;
     height: 54px;
     z-index: 2;
   }
 
   @media (min-width: $desktop) {
-    top: 450px;
+    top: 455px;
     left: 190px;
   }
 }

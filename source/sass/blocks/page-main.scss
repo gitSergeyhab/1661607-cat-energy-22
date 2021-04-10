@@ -6,6 +6,11 @@
   width: 100%;
   overflow: hidden;
   background-color: $basic-white;
+  border-top: 1px solid $again-gray-7;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
 
   @media (min-width: $desktop) {
     width: $desktop;
@@ -36,7 +41,7 @@
 
 .page-main__purpose {
   @media (min-width: $tablet) {
-    margin-bottom: 18px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $desktop) {
@@ -45,7 +50,7 @@
 }
 
 .page-main__metodology {
-  margin-bottom: 22px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -55,7 +60,7 @@
 
 .page-main__title {
   margin: 0;
-  padding: 27px var(--pad) 0;
+  padding: 30px var(--pad) 0;
   background-color: $basic-white;
 
   &--catalog {
@@ -73,6 +78,7 @@
 
   &--form {
     margin-bottom: 37px;
+    padding-top: 25px;
 
     @media (min-width: $tablet) {
       margin-bottom: 54px;

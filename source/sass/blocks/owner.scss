@@ -1,18 +1,18 @@
 .owner__legend {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 69px;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
   white-space: nowrap;
 
   @media (min-width: $tablet) {
-    margin-bottom: 76px;
+    margin-bottom: 88px;
   }
 }
 
 .owner__list {
   display: grid;
-  row-gap: 14px;
+  row-gap: 14.1px;
   grid-template-rows: 45px 45px;
   margin: 0;
   padding: 0;
@@ -20,6 +20,11 @@
   @media (min-width: $tablet) and (max-width: 1439px) {
     padding-left: $form-tablet-left;
     padding-right: $form-tablet-right;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
   }
 }
 

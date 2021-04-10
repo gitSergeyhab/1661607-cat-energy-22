@@ -12,6 +12,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e1f3696f-8a32-49af-b287-06e90086e936" type="text/javascript"></script>
 </head>
 
 <body class="page__body">
@@ -20,7 +22,7 @@
       <a class="page-header__logo logo" aria-label="логотип Кэт-энерджи">
         <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
         <img class="logo__img logo__img--tablet" src="img/logos/logo-tablet.svg" alt="логотип Кэт-энерджи: картинка" width="62" height="52">
-        <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="72" height="69">
+        <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59">
         <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
       </a>
       <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
@@ -31,11 +33,16 @@
     </div>
     <nav class="page-header__main-nav main-nav">
       <!-- <div class="main-nav__wrapper"> -->
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--index site-list__item--current"><a>Главная</a></li>
-
-        <li class="site-list__item site-list__item--index"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="site-list__item site-list__item--index"><a href="form.html">Подбор программы</a></li>
+      <ul class="main-nav__list site-list site-list--index">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--index site-list__link--current">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--index" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--index" href="form.html">Подбор программы</a>
+        </li>
       </ul>
       <!-- </div> -->
     </nav>
@@ -144,7 +151,7 @@
         <div class="cat-slider__images">
           <img class="cat-slider__now-cat" src="img/some/conс-camp-cat.png" alt="Изображения кота сейчас - скелет" width="251" height="240">
           <div class="cat-slider__past-cat-block">
-            <img class="cat-slider__past-cat" src="img/some/fat-cat.png" alt="Изображения кота прежде - не влезает на страницу" width="311" height="232">
+            <img class="cat-slider__past-cat" src="img/some/fat-cat.png" alt="Изображения кота прежде - не влезает на страницу" width="311" height="242">
           </div>
 
         </div>
@@ -166,18 +173,20 @@
     <section class="page-footer__location footer-location">
       <h2 class="visually-hidden">Расположение компании</h2>
       <div class="footer-location__address footer-address footer-address--color">
-        <div class="footer-address__text">Приглашаем к сотрудничеству дилеров!</div>
+        <div class="footer-address__text">Приглашаем <br> к сотрудничеству дилеров!</div>
         <div class="footer-address__info">
           <p class="footer-address__address">ул. Большая Конюшенная, д. 19/8</p>
           <p class="footer-address__address">Санкт-Питербург</p>
         </div>
       </div>
-      <div class="footer-location__map footer-map">
-        <div class="footer-map__img-wrapper">
+
+      <div class="footer-location__map footer-map" id="map">
+        <h3 class="visually-hidden">Карта: адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</h3>
+        <!-- <div class="footer-map__img-wrapper">
           <img class="footer-map__img" src="img/maps/map-mobil.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
           <img class="footer-map__img footer-map__img--tablet" src="img/maps/map-tablet.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
           <img class="footer-map__img footer-map__img--desktop" src="img/maps/map-desk.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="1440" height="400">
-        </div>
+      </div> -->
         <!-- <iframe class="footer-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716382876!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616741750893!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen=""  title="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" loading="lazy"></iframe> -->
       </div>
     </section>
@@ -202,10 +211,10 @@
       <div class="contacts__developer developer">
         <div class="developer__wrapper">
           <a class="developer__logo-text" href="#">
-            <img class="developer__img" src="img/logos/academy-text.svg" alt="лого HTML-Academy" width="114" height="18">
+            <img class="developer__img-text" src="img/logos/academy-text.svg" alt="лого HTML-Academy" width="114" height="18">
           </a>
           <a class="developer__logo-img" href="#">
-            <img class="developer__img" src="img/logos/academy-img.svg" alt="лого HTML-Academy-2" width="27" height="34">
+            <img class="developer__img-img" src="img/logos/academy-img.svg" alt="лого HTML-Academy-2" width="27" height="34">
           </a>
         </div>
       </div>

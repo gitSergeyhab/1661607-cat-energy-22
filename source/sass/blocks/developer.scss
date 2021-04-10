@@ -4,6 +4,7 @@
   justify-content: center;
 
   @media (min-width: $tablet) {
+
     width: 160px;
   }
 }
@@ -17,6 +18,23 @@
   border-top: 1px solid $again-gray;
 
   @media (min-width: $tablet) {
+    justify-content: flex-end;
     border: none;
   }
+}
+
+.developer__img-text,
+.developer__logo-text {
+  width: 114px;
+  height: 18px;
+
+  @media (min-width: $tablet) {
+    margin-right: 22px;
+  }
+}
+
+.developer__img-img,
+.developer__logo-img {
+  width: 27px;
+  height: 34px;
 }

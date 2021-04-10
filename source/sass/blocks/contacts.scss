@@ -5,10 +5,12 @@
   background-color: $basic-gray;
   padding-left: var(--pad);
   padding-right: var(--pad);
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
     min-height: 150px;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 8px;
   }
 }

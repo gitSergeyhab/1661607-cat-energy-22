@@ -22,13 +22,13 @@
 
 .purpose__item {
   background-color: $basic-gray;
-  padding: 30px 30px 0;
+  padding: 30px 33px 0 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 77px 298px 30px 52px;
+    padding: 77px 315px 45px 52px;
     margin-bottom: 30px;
     min-height: 333px;
 
@@ -42,10 +42,10 @@
     min-height: 374px;
     width: 570px;
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 60px;
 
     &:last-child {
-      margin-bottom: 44px;
+      margin-bottom: 60px;
     }
   }
 
@@ -79,15 +79,14 @@
     content: "";
     width: 100px;
     height: 100px;
-    left: 0;
+    left: -2px;
 
     @media (min-width: $tablet) {
       left: auto;
       width: 80px;
       height: 80px;
-      right: 132px;
+      right: 125px;
       top: 42px;
-      transform: scale(3.89);
     }
 
     @media (min-width: $desktop) {
@@ -96,7 +95,6 @@
       height: 70px;
       left: 65px;
       top: 42px;
-      transform: scale(2);
     }
   }
 
@@ -107,11 +105,13 @@
     top: -2px;
 
     @media (min-width: $tablet) {
-      top: 132px;
+      top: 135px;
+      transform: scale(3.9);
     }
 
     @media (min-width: $desktop) {
-      top: 57px;
+      top: 55px;
+      transform: scale(1.95);
     }
   }
 
@@ -123,48 +123,55 @@
 
     @media (min-width: $tablet) {
       top: 152px;
+      transform: scale(3.99);
     }
 
     @media (min-width: $desktop) {
-      top: 63px;
+      top: 60px;
+      transform: scale(2);
     }
   }
 }
 
 .purpose__title {
-  @include font-mix(24, 37);
-  padding-left: 12px;
+  @include Oswald(24, 37);
+  padding-left: 71px;
   margin: 0;
   margin-bottom: 29px;
-  text-align: center;
+  // text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(36, 36);
+    @include Oswald(36, 36);
     padding-left: 0;
     text-align: left;
     margin-bottom: 24px;
   }
 
   @media (min-width: $desktop) {
-    text-align: center;
-    padding-left: 52px;
+    // text-align: center;
+    padding-left: 162px;
     margin-bottom: 73px;
   }
 }
 
 .purpose__text {
-  @include font-mix(14, 18, $dark-gray, 400, "Arial");
+  @include Arial(14, 18, $dark-gray);
   margin: 0;
   margin-bottom: 23px;
 
   @media (min-width: $tablet) {
-    @include font-mix(16, 24, $basic-black, 400, "Arial");
+    @include Arial(16, 24, $basic-black);
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 13px;
   }
 }
 
 .purpose__link {
-  @include font-mix(16, 16);
+  @include Oswald(16, 16);
   width: 100%;
   display: flex;
   align-items: center;
@@ -175,7 +182,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 30);
+    @include Oswald(20, 30);
     border: none;
   }
 
@@ -205,18 +212,3 @@
     opacity: 0.5;
   }
 }
-
-
-// @media (min-width: $tablet) {
-//   .purpose__title {
-//     @include font-mix(36, 36);
-//     padding-left: 0;
-//     text-align: start;
-//     // margin: 0;
-//     // text-transform: uppercase;
-//   }
-//   .purpose__text {
-//     @include font-mix(16, 24, $basic-black, 400, "Arial");
-//     margin-bottom: 23px;
-//   }
-// }

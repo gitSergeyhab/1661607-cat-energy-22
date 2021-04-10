@@ -7,8 +7,14 @@
   justify-content: center;
 
   @media (min-width: $tablet) {
+    padding: 0;
     width: 128px;
     height: 24px;
     border: none;
   }
+}
+
+.logo-text__img {
+  width: 128px;
+  height: 24px;
 }
