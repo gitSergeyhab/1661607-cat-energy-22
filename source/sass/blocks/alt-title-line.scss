@@ -18,15 +18,26 @@
     @include Oswald(36, 36);
     top: -24px;
     left: 32px;
-    padding-left: 39px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     br {
       display: none;
     }
   }
 
-  @media (min-width: $tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
+  @media (min-width: $desktop) {
+    left: 70px;
+  }
+
+  &--catalog {
+    padding-left: 0;
+    line-height: 24px;
+    top: -15px;
+
+    @media (min-width: $tablet) {
+      padding-left: 37px;
+      padding-right: 36px;
+    }
   }
 }

@@ -4,13 +4,23 @@
   padding-top: 13px;
   padding-bottom: 19px;
   border-top: 1px solid $again-gray-4;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 28px 38px;
+    border-left: 1px solid $again-gray-4;
+    border-right: 1px solid $again-gray-4;
+  }
 
   @media (min-width: $desktop) {
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     height: 72px;
     padding: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 
@@ -38,6 +48,8 @@
 
   @media (min-width: $tablet) {
     @include font-mix(16, 20, $dark-gray, 400, "Arial");
+    display: grid;
+    grid-template-columns: 1fr 90px;
   }
 
   @media (min-width: $desktop) {
@@ -48,6 +60,14 @@
 
   & p {
     margin: 0;
+
+    @media (min-width: $tablet) {
+      justify-self: end;
+    }
+
+    @media (min-width: $desktop) {
+      justify-self: start;
+    }
   }
 }
 
