@@ -21,6 +21,11 @@
     padding-left: $form-tablet-left;
     padding-right: $form-tablet-right;
   }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+  }
 }
 
 .owner__item {
