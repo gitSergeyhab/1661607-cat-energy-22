@@ -42,10 +42,10 @@
     min-height: 374px;
     width: 570px;
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 60px;
 
     &:last-child {
-      margin-bottom: 44px;
+      margin-bottom: 60px;
     }
   }
 
@@ -95,7 +95,6 @@
       height: 70px;
       left: 65px;
       top: 42px;
-      transform: scale(2);
     }
   }
 
@@ -111,7 +110,8 @@
     }
 
     @media (min-width: $desktop) {
-      top: 57px;
+      top: 55px;
+      transform: scale(1.95);
     }
   }
 
@@ -127,7 +127,8 @@
     }
 
     @media (min-width: $desktop) {
-      top: 63px;
+      top: 60px;
+      transform: scale(2);
     }
   }
 }
@@ -148,8 +149,8 @@
   }
 
   @media (min-width: $desktop) {
-    text-align: center;
-    padding-left: 52px;
+    // text-align: center;
+    padding-left: 162px;
     margin-bottom: 73px;
   }
 }
@@ -162,6 +163,10 @@
   @media (min-width: $tablet) {
     @include Arial(16, 24, $basic-black);
     margin-bottom: 36px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 13px;
   }
 }
 

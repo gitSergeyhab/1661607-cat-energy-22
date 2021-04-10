@@ -1,5 +1,5 @@
 .page-header {
-  @include font-mix(18, 24);
+  @include Oswald(18, 24);
   width: 100%;
   min-width: 320px;
   background-color: $basic-white;
@@ -17,9 +17,10 @@
   }
 
   @media (min-width: $desktop) {
+    @include Oswald(20, 30);
     position: absolute;
     min-height: 112px;
-    padding-top: 43px;
+    padding-top: 52px;
     width: $desktop;
   }
 }

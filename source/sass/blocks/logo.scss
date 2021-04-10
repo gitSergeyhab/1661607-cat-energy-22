@@ -20,6 +20,8 @@
 
   @media (min-width: $desktop) {
     width: 202px;
+    padding-bottom: 0;
+    // padding-top: 10px;
   }
 }
 
@@ -49,5 +51,12 @@
     &--desktop {
       display: block;
     }
+  }
+}
+
+.logo__text {
+  @media (min-width: $desktop) {
+    width: 120px;
+    height: 21px;
   }
 }

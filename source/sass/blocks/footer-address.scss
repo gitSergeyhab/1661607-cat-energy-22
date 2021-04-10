@@ -22,7 +22,7 @@
     z-index: 1;
     top: 95px;
     transform: translateX(-150%);
-    left: 66%;
+    left: 67%;
     width: 570px;
     padding: 0 89px 0 76px;
     background-color: $basic-white;
@@ -73,5 +73,9 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 15px;
   }
 }
