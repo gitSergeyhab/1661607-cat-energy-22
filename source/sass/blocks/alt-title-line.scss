@@ -1,0 +1,32 @@
+.title-line {
+  width: 100vw;
+  height: 2px;
+  background-color: $basic-green;
+  position: relative;
+}
+
+.title-line__text {
+  @include Oswald(24, 26);
+  margin: 0;
+  position: absolute;
+  top: -16px;
+  background-color: $basic-white;
+  padding-left: var(--pad);
+  padding-right: 23px;
+
+  @media (min-width: $tablet) {
+    @include Oswald(36, 36);
+    top: -24px;
+    left: 32px;
+    padding-left: 39px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

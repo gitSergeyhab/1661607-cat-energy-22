@@ -1,11 +1,11 @@
 .comment__legend {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 46px;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
 
   @media (min-width: $tablet) {
-    margin-bottom: 76px;
+    margin-bottom: 88px;
   }
 }
 

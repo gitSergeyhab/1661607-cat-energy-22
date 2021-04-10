@@ -60,7 +60,7 @@
 
 .page-main__title {
   margin: 0;
-  padding: 27px var(--pad) 0;
+  padding: 30px var(--pad) 0;
   background-color: $basic-white;
 
   &--catalog {
@@ -78,6 +78,7 @@
 
   &--form {
     margin-bottom: 37px;
+    padding-top: 25px;
 
     @media (min-width: $tablet) {
       margin-bottom: 54px;

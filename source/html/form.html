@@ -27,11 +27,11 @@
                 <input class="data__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
               </li>
               <li class="parameters__item">
-                <label class="data__label" for="cat-weight">Вес(кг):*</label>
+                <label class="data__label" for="cat-weight">Вес (кг):*</label>
                 <input class="data__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
               </li>
               <li class="parameters__item">
-                <label class="data__label" for="cat-age">Возраст(лет):</label>
+                <label class="data__label" for="cat-age">Возраст (лет):</label>
                 <input class="data__input" id="cat-age" type="number" name="cat-age" placeholder="7">
               </li>
             </ul>
@@ -56,7 +56,9 @@
           </div>
 
           <div class="data__owner owner">
-            <h3 class="owner__legend title-line title-line--owner">Контактные данные <br> (владельца кота)</h3>
+            <div class="owner__legend title-line">
+              <h3 class="title-line__text title-line__text--owner">Контактные данные<br> (владельца кота)</h3>
+            </div>
             <ul class="owner__list label-text">
               <li class="owner__item">
                 <label class="data__label" for="email">E-MAIL:*</label>
@@ -70,13 +72,17 @@
           </div>
 
           <div class="data__comment comment">
-            <h3 class="comment__legend title-line title-line--comment">Комментарий</h3>
+            <div class="comment__legend title-line">
+              <h3 class="title-line__text title-line__text--comment">Комментарий</h3>
+            </div>
             <label class="visually-hidden" for="data__comment">Поле для ввода комментария</label>
             <textarea class="comment__field label-text" name="data__comment" id="data__comment" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
           <div class="data__optional optional">
-            <h3 class="optional__legend title-line title-line--optional">Дополнительно</h3>
+            <div class="optional__legend title-line">
+              <h3 class="title-line__text title-line__text--optional">Дополнительно</h3>
+            </div>
             <ul class="optional__list label-text">
               <li class="optional__item">
                 <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener">

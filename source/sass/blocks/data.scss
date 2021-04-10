@@ -27,15 +27,15 @@
 }
 
 .data__purposes {
-  margin-bottom: 26px;
+  margin-bottom: 42px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 75px;
+    margin-bottom: 99px;
   }
 
   @media (min-width: $desktop) {
     width: 570px;
-    margin-bottom: 69px;
+    margin-bottom: 93px;
   }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
@@ -45,31 +45,29 @@
 }
 
 .data__owner {
-  // margin-bottom: 24px;
-  margin-bottom: 26px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 65px;
+    margin-bottom: 89px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin-bottom: 67px;
+    margin-bottom: 91px;
   }
 }
 
 .data__comment {
-  // margin-bottom: 23px;
-  margin-bottom: 21px;
+  margin-bottom: 35px;
 
 
   @media (min-width: $tablet) {
-    margin-bottom: 65px;
+    margin-bottom: 89px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin-bottom: 67px;
+    margin-bottom: 92px;
   }
 }
 
