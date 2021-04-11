@@ -33,8 +33,6 @@
 .page-main__catalog {
   width: 100%;
   min-width: 320px;
-  padding-left: var(--pad);
-  padding-right: var(--pad);
   background-color: $basic-white;
   box-sizing: border-box;
 }
@@ -49,6 +47,14 @@
   }
 }
 
+.page-main__catalog {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
 .page-main__metodology {
   margin-bottom: 39px;
 
@@ -60,7 +66,7 @@
 
 .page-main__title {
   margin: 0;
-  padding: 30px var(--pad) 0;
+  padding: 25px var(--pad) 0;
   background-color: $basic-white;
 
   &--catalog {
@@ -68,6 +74,7 @@
 
     @media (min-width: $tablet) {
       margin-bottom: 24px;
+      padding-top: 30px;
     }
 
     @media (min-width: $desktop) {

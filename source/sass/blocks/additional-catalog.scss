@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
 
   @media (min-width: $tablet) {
     margin-bottom: 76px;
+    justify-content: center;
   }
 
   @media (min-width: $desktop) {
@@ -19,11 +22,11 @@
   margin: 0;
   margin-right: calc(-1 * var(--pad));
   margin-left: calc(-1 * var(--pad));
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   white-space: nowrap;
 
   @media (min-width: $tablet) {
-    margin-bottom: 80px;
+    margin-bottom: 92px;
   }
 
   @media (min-width: $desktop) {
@@ -39,6 +42,10 @@
   border-bottom: 1px solid $again-gray-4;
   margin-bottom: 39px;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 65px;
+  }
+
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: column;
@@ -48,6 +55,7 @@
 }
 
 .additional-catalog__offer {
+  @include Arial(16, 20);
   background-color: $basic-green;
   background-image: url("../img/some/cat-from-machine.png");
   background-position: center;
@@ -61,7 +69,14 @@
   justify-content: center;
   position: relative;
 
+  @media (min-width: $tablet) {
+    background-image: url("../img/some/cat-from-machine-long.png");
+    min-height: 200px;
+    padding: 0;
+  }
+
   @media (min-width: $desktop) {
+    background-image: url("../img/some/cat-from-machine.png");
     width: 245px;
   }
 
@@ -72,6 +87,11 @@
     height: 80px;
     background-image: url("../img/icons/icon_gift.svg");
     top: 58px;
+
+    @media (min-width: $tablet) {
+      top: 64px;
+      left: 93px;
+    }
   }
 }
 
@@ -81,4 +101,12 @@
   color: $basic-white;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet) {
+    padding-left: 423px;
+    padding-right: 124px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
 }
