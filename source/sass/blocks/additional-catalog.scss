@@ -30,7 +30,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 81px;
+    // margin-bottom: 81px;
     width: 100vw;
   }
 }
@@ -58,10 +58,11 @@
   @include Arial(16, 20);
   background-color: $basic-green;
   background-image: url("../img/some/cat-from-machine.png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 289px;
+  height: 289px;
   padding-top: 186px;
   padding-bottom: 30px;
   box-sizing: border-box;
@@ -71,13 +72,16 @@
 
   @media (min-width: $tablet) {
     background-image: url("../img/some/cat-from-machine-long.png");
-    min-height: 200px;
+    height: 200px;
     padding: 0;
   }
 
   @media (min-width: $desktop) {
     background-image: url("../img/some/cat-from-machine.png");
     width: 245px;
+    height: 289px;
+    padding-top: 186px;
+    padding-bottom: 30px;
   }
 
   &::after {
@@ -92,11 +96,16 @@
       top: 64px;
       left: 93px;
     }
+
+    @media (min-width: $desktop) {
+      top: 58px;
+      left: auto;
+    }
   }
 }
 
 .additional-catalog__text {
-  width: 57%;
+  width: 161px;
   text-align: center;
   color: $basic-white;
   margin: 0;
@@ -106,6 +115,13 @@
     padding-left: 423px;
     padding-right: 124px;
     text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    text-align: center;
     display: flex;
     align-items: center;
   }
