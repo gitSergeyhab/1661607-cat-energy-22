@@ -56,9 +56,11 @@
   }
 
   @media (min-width: $desktop) {
-    width: 325px;
+    width: 290px;
+    grid-template-columns: 1fr 45px;
     margin: 0;
     margin-right: 38px;
+    padding-top: 7px;
   }
 
   & p {
@@ -76,6 +78,6 @@
 
 .additional-card__button {
   @media (min-width: $desktop) {
-    width: 234px;
+    width: 244px;
   }
 }
