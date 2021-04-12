@@ -31,9 +31,9 @@
   }
 
   &--catalog {
-    padding-left: 0;
     line-height: 24px;
     top: -15px;
+    padding-left: 20px;
 
     @media (min-width: $tablet) {
       padding-left: 37px;
