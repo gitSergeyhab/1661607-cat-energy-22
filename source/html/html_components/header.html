@@ -1,9 +1,14 @@
 <header class="page-header">
   <div class="page-header__top">
     <a class="page-header__logo logo" @@index aria-label="логотип Кэт-энерджи">
-      <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+        <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+      </picture>
+      <!-- <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
       <img class="logo__img logo__img--tablet" src="img/logos/logo-tablet.svg" alt="логотип Кэт-энерджи: картинка" width="62" height="52">
-      <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59">
+      <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59"> -->
       <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
     </a>
     <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
@@ -16,7 +21,7 @@
     <!-- <div class="main-nav__wrapper"> -->
       <ul class="main-nav__list site-list site-list--@@style">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--@@style site-list__link--current" @@index >Главная</a>
+          <a class="site-list__link site-list__link--@@style" @@index >Главная</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link site-list__link--@@style" @@catalog >Каталог продукции</a>

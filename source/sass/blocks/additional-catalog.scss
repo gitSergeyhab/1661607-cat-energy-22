@@ -56,7 +56,8 @@
 .additional-catalog__offer {
   @include Arial(16, 20);
   background-color: $basic-green;
-  background-image: url("../img/some/cat-from-machine.png");
+  // background-image: url("../img/some/cat-from-machine.png");
+  background-image: url("../img/some/machine-cat-mobile@1x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,18 +70,30 @@
   justify-content: center;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/some/machine-cat-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet) {
-    background-image: url("../img/some/cat-from-machine-long.png");
+    background-image: url("../img/some/machine-cat-tablet@1x.jpg");
     height: 200px;
     padding: 0;
   }
 
+  @media (min-width: $tablet) and (min-resolution: 2dppx) {
+    background-image: url("../img/some/machine-cat-tablet@2x.jpg");
+  }
+
   @media (min-width: $desktop) {
-    background-image: url("../img/some/cat-from-machine-desk.png");
+    background-image: url("../img/some/machine-cat-desktop@1x.jpg");
     width: 245px;
     height: 289px;
     padding-top: 186px;
     padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) and (min-resolution: 2dppx) {
+    background-image: url("../img/some/machine-cat-desktop@2x.jpg");
   }
 
   &::after {

@@ -17,6 +17,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: var(--pad);
+    padding-right: var(--pad);
   }
 }
 

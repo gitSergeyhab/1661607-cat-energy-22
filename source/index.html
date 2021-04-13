@@ -20,9 +20,14 @@
   <header class="page-header">
     <div class="page-header__top">
       <a class="page-header__logo logo" aria-label="логотип Кэт-энерджи">
-        <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
-        <img class="logo__img logo__img--tablet" src="img/logos/logo-tablet.svg" alt="логотип Кэт-энерджи: картинка" width="62" height="52">
-        <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+          <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+        </picture>
+        <!-- <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
+      <img class="logo__img logo__img--tablet" src="img/logos/logo-tablet.svg" alt="логотип Кэт-энерджи: картинка" width="62" height="52">
+      <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59"> -->
         <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
       </a>
       <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
@@ -35,7 +40,7 @@
       <!-- <div class="main-nav__wrapper"> -->
       <ul class="main-nav__list site-list site-list--index">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--index site-list__link--current">Главная</a>
+          <a class="site-list__link site-list__link--index">Главная</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link site-list__link--index" href="catalog.html">Каталог продукции</a>
@@ -53,15 +58,18 @@
   <main class="page-main">
     <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
     <section class="functional-nutrition page-main__nutrition">
-      <div class="functional-nutrition__color-wrapper">
+      <div class="functional-nutrition__text-wrapper">
         <div class="functional-nutrition__text-element">
           <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
           <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
         </div>
-        <img class="functional-nutrition__drop-food" src="img/some/chicken-box1.png" alt="коробка с кошачьей едой" width="280" height="270">
+        <picture class="functional-nutrition__z-index">
+          <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.png 1x, img/promo/promo-product-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.jpg 1x, img/promo/promo-product-tablet@2x.jpg 2x">
+          <img class="functional-nutrition__drop-food" src="img/promo/promo-product-mobile@1x.png" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="коробка с кошачьей едой" width="280" height="270">
+        </picture>
       </div>
-      <div class="functional-nutrition__nocolor-wrapper">
-        <!-- <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a> -->
+      <div class="functional-nutrition__notext-wrapper">
       </div>
 
       <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a>
@@ -149,11 +157,16 @@
       </div>
       <div class="example__slider cat-slider">
         <div class="cat-slider__images">
-          <img class="cat-slider__now-cat" src="img/some/conс-camp-cat.png" alt="Изображения кота сейчас - скелет" width="251" height="240">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.png 1x, img/example/dead-cat-tablet@2x.png 2x">
+            <img class="cat-slider__now-cat" src="img/example/dead-cat-mobile@1x.png" srcset="img/example/dead-cat-mobile@2x.png 2x" alt="Изображения кота - СТАЛО" width="251" height="240">
+          </picture>
           <div class="cat-slider__past-cat-block">
-            <img class="cat-slider__past-cat" src="img/some/fat-cat.png" alt="Изображения кота прежде - не влезает на страницу" width="311" height="242">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/example/fat-cat-tablet@1x.png 1x, img/example/fat-cat-tablet@2x.png 2x">
+              <img class="cat-slider__past-cat" src="img/example/fat-cat-mobile@1x.png" srcset="img/example/fat-cat-mobile@2x.png 2x" alt="Изображения кота прежде - БЫЛО" width="311" height="242">
+            </picture>
           </div>
-
         </div>
         <div class="cat-slider__interactive">
           <button class="cat-slider__button cat-slider__button--past">Было</button>

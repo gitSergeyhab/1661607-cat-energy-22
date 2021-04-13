@@ -57,10 +57,10 @@
   }
 }
 
-.functional-nutrition__color-wrapper {
+.functional-nutrition__text-wrapper {
   height: 302px;
   width: 100%;
-  background-image: url("../img/some/model-cat.jpg");
+  background-image: url("../img/promo/promo-cat-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -91,15 +91,18 @@
     width: 50%;
     flex-direction: row;
   }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/promo-cat-mobile@2x.jpg");
+  }
 }
 
 .functional-nutrition__drop-food {
   z-index: 1;
 
   @media (min-width: $tablet) {
-    width: 632px;
+    width: 709px;
     height: 609px;
-    padding-left: 70px;
   }
 
   @media (min-width: $desktop) {
@@ -107,12 +110,11 @@
     left: 75%;
     top: 141px;
     height: 499px;
-    width: 518px;
-    padding-left: 55px;
+    width: 552px;
   }
 }
 
-.functional-nutrition__nocolor-wrapper {
+.functional-nutrition__notext-wrapper {
   background-color: $basic-white;
   min-height: 138px;
   width: 100%;
@@ -124,7 +126,7 @@
     position: relative;
     width: 50%;
     height: 694px;
-    background-image: url("../img/some/model-cat--desktop.jpg");
+    background-image: url("../img/promo/promo-cat-desktop@1x.jpg");
 
     &::after {
       content: "";
@@ -133,6 +135,10 @@
       height: 694px;
       background-color: rgba($basic-green, 0.85);
     }
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: $desktop) {
+    background-image: url("../img/promo/promo-cat-desktop@2x.jpg");
   }
 }
 
@@ -154,4 +160,8 @@
     top: 455px;
     left: 190px;
   }
+}
+
+.functional-nutrition__z-index {
+  z-index: 1;
 }
