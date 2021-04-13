@@ -56,3 +56,5 @@ git clone SSH-адрес_вашего_форка
 
 [check-image]: https://github.com/htmlacademy-adaptive/1661607-cat-energy-22/workflows/Project%20check/badge.svg?branch=master
 [check-url]: https://github.com/htmlacademy-adaptive/1661607-cat-energy-22/actions
+
+### этот комментарий - единственное изменение)
