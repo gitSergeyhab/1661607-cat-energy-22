@@ -15,15 +15,18 @@
     <main class="page-main">
       <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
       <section class="functional-nutrition page-main__nutrition">
-        <div class="functional-nutrition__color-wrapper">
+        <div class="functional-nutrition__text-wrapper">
           <div class="functional-nutrition__text-element">
             <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
             <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
           </div>
-          <img class="functional-nutrition__drop-food" src="img/some/chicken-box1.png" alt="коробка с кошачьей едой" width="280" height="270">
+          <picture class="functional-nutrition__z-index">
+            <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.png 1x, img/promo/promo-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.jpg 1x, img/promo/promo-product-tablet@2x.jpg 2x">
+            <img class="functional-nutrition__drop-food" src="img/promo/promo-product-mobile@1x.png" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="коробка с кошачьей едой" width="280" height="270">
+          </picture>
         </div>
-        <div class="functional-nutrition__nocolor-wrapper">
-          <!-- <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a> -->
+        <div class="functional-nutrition__notext-wrapper">
         </div>
 
         <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a>
