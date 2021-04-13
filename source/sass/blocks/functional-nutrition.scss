@@ -137,7 +137,7 @@
     }
   }
 
-  @media (min-resolution: 2dppx) and (min-width: $desktop){
+  @media (min-resolution: 2dppx) and (min-width: $desktop) {
     background-image: url("../img/promo/promo-cat-desktop@2x.jpg");
   }
 }

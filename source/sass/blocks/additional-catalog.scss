@@ -70,12 +70,11 @@
   justify-content: center;
   position: relative;
 
-  @media (min-resolution: 2dppx){
+  @media (min-resolution: 2dppx) {
     background-image: url("../img/some/machine-cat-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet) {
-    // background-image: url("../img/some/cat-from-machine-long.png");
     background-image: url("../img/some/machine-cat-tablet@1x.jpg");
     height: 200px;
     padding: 0;
@@ -86,7 +85,6 @@
   }
 
   @media (min-width: $desktop) {
-    // background-image: url("../img/some/cat-from-machine-desk.png");
     background-image: url("../img/some/machine-cat-desktop@1x.jpg");
     width: 245px;
     height: 289px;
