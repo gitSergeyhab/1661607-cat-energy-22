@@ -123,12 +123,22 @@
     border-color: $third-gray;
   }
 
+  &:focus ~ .owner__phone,
+  &:focus ~ .owner__envelope {
+    stroke: $basic-green;
+  }
+
   &:focus {
     border: 2px solid $third-gray;
   }
 
   &--error {
     border: 2px solid $error;
+  }
+
+  &--error ~ .owner__phone,
+  &--error ~ .owner__envelope {
+    stroke: $error;
   }
 
   &::placeholder {

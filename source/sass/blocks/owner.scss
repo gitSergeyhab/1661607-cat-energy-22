@@ -35,4 +35,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.owner__phone {
+  position: absolute;
+  right: 13px;
+
+  @media (min-width: $tablet) {
+    right: 16px;
+  }
+}
+
+.owner__envelope {
+  stroke: $dark-2;
+  position: absolute;
+  right: 17px;
+
+  @media (min-width: $tablet) {
+    right: 20.5px;
+  }
 }
