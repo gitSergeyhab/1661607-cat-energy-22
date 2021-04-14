@@ -10,22 +10,30 @@
 }
 
 .button-field__comment {
-  @include font-mix(14, 16 ,$basic-black, 400," Aial");
+  @include Arial(14, 16);
   min-height: 58px;
   display: flex;
   align-items: center;
   margin: 0;
 
   @media (min-width: $tablet) {
-    @include font-mix(16, 16 ,$basic-black, 400," Aial");
+    @include Arial(16, 16);
     width: 50%;
   }
 }
 
 .button-field__button {
+  @include Oswald(16, 20, $basic-white);
+
   @media (min-width: $tablet) {
+    @include Oswald(20, 20, $basic-white);
     width: 50%;
     margin-right: 61px;
     height: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    @include Oswald(20, 20, $basic-white);
+    margin-right: 81px;
   }
 }

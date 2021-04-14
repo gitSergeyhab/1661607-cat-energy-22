@@ -20,10 +20,12 @@
   @media (min-width: $tablet) and (max-width: 1439px) {
     padding-left: $form-tablet-left;
     padding-right: $form-tablet-right;
+    row-gap: 27px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     column-gap: 78px;
   }
 }

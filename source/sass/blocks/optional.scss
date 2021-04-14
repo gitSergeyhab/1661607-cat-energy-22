@@ -6,7 +6,7 @@
   margin-left: calc(-1 * var(--pad));
 
   @media (min-width: $tablet) {
-    margin-bottom: 74px;
+    margin-bottom: 73px;
   }
 
   @media (min-width: $desktop) {
@@ -27,6 +27,7 @@
   }
 
   @media (min-width: $desktop) {
+    width: 1240px;
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -49,6 +50,11 @@
     background-position: center;
     left: 0;
     top: -4px;
+
+    @media (min-width: $tablet) {
+      height: 40px;
+      width: 40px;
+    }
   }
 
 
@@ -69,13 +75,23 @@
   padding-left: 46px;
   position: relative;
 
+  @media (min-width: $tablet) {
+    padding-left: 56px;
+  }
+
   &::before {
     position: absolute;
     content: "";
     height: 30px;
     width: 30px;
     border: 1px solid $third-gray;
+    box-sizing: border-box;
     left: 0;
     top: -4px;
+
+    @media (min-width: $tablet) {
+      height: 40px;
+      width: 40px;
+    }
   }
 }
