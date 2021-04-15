@@ -30,7 +30,7 @@
   margin-bottom: 42px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 99px;
+    margin-bottom: 97px;
   }
 
   @media (min-width: $desktop) {
@@ -48,12 +48,12 @@
   margin-bottom: 39px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 89px;
+    margin-bottom: 94px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin-bottom: 91px;
+    margin-bottom: 88px;
   }
 }
 
@@ -62,12 +62,12 @@
 
 
   @media (min-width: $tablet) {
-    margin-bottom: 89px;
+    margin-bottom: 82px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin-bottom: 92px;
+    margin-bottom: 84px;
   }
 }
 
@@ -75,12 +75,12 @@
   margin-bottom: 41px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 54px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    margin-bottom: 61px;
+    margin-bottom: 66px;
   }
 }
 
@@ -107,7 +107,11 @@
 
   &--tel,
   &--email {
-    margin-left: 11px;
+    margin-left: 16px;
+
+    @media (min-width: $desktop) {
+      margin-left: 17.5px;
+    }
   }
 
   @media (min-width: $tablet) {
@@ -119,12 +123,22 @@
     border-color: $third-gray;
   }
 
+  &:focus ~ .owner__phone,
+  &:focus ~ .owner__envelope {
+    stroke: $basic-green;
+  }
+
   &:focus {
     border: 2px solid $third-gray;
   }
 
   &--error {
     border: 2px solid $error;
+  }
+
+  &--error ~ .owner__phone,
+  &--error ~ .owner__envelope {
+    stroke: $error;
   }
 
   &::placeholder {

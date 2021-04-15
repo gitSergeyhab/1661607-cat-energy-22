@@ -20,10 +20,12 @@
   @media (min-width: $tablet) and (max-width: 1439px) {
     padding-left: $form-tablet-left;
     padding-right: $form-tablet-right;
+    row-gap: 27px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     column-gap: 78px;
   }
 }
@@ -33,4 +35,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.owner__phone {
+  position: absolute;
+  right: 13px;
+
+  @media (min-width: $tablet) {
+    right: 16px;
+  }
+}
+
+.owner__envelope {
+  stroke: $dark-2;
+  position: absolute;
+  right: 17px;
+
+  @media (min-width: $tablet) {
+    right: 20.5px;
+  }
 }
