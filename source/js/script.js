@@ -257,7 +257,7 @@ window.addEventListener('resize', () => {
   const windowSizeNow = windowSizer();
   if (windowSizeNow != windowSize) {
     const ymapsBlock = map.querySelector('ymaps');
-    ymapsBlock.remove();
+    if (ymapsBlock) ymapsBlock.remove();
     ymaps.ready(() => showMap(windowSizeNow));
     windowSize = windowSizeNow;
   }

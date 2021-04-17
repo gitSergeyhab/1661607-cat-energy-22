@@ -25,19 +25,17 @@
           <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
           <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
         </picture>
-        <!-- <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
-      <img class="logo__img logo__img--tablet" src="img/logos/logo-tablet.svg" alt="логотип Кэт-энерджи: картинка" width="62" height="52">
-      <img class="logo__img logo__img--desktop" src="img/logos/logo-desktop.svg" alt="логотип Кэт-энерджи: картинка" width="73" height="59"> -->
-        <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
+        <svg class="logo__text" role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+        <!-- <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18"> -->
       </a>
       <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
-        <!-- <span class="page-header__nav-open"></span> -->
         <span class="js-span-btn"></span>
 
       </button>
     </div>
     <nav class="page-header__main-nav main-nav">
-      <!-- <div class="main-nav__wrapper"> -->
       <ul class="main-nav__list site-list site-list--index">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--index">Главная</a>
@@ -64,8 +62,12 @@
           <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
         </div>
         <picture class="functional-nutrition__z-index">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.webp 1x, img/promo/promo-product-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x(1).webp 1x, img/promo/promo-product-tablet@2x(1).webp 2x">
+          <source type="image/webp" srcset="img/promo/promo-product-mobile@1x.webp 1x, img/promo/promo-product-mobile@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.png 1x, img/promo/promo-product-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.jpg 1x, img/promo/promo-product-tablet@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.png 1x, img/promo/promo-product-tablet@2x.png 2x">
           <img class="functional-nutrition__drop-food" src="img/promo/promo-product-mobile@1x.png" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="коробка с кошачьей едой" width="280" height="270">
         </picture>
       </div>
@@ -158,11 +160,17 @@
       <div class="example__slider cat-slider">
         <div class="cat-slider__images">
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.webp 1x, img/example/dead-cat-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/example/dead-cat-mobile@1x.webp 1x, img/example/dead-cat-mobile@2x.webp 2x">
+
             <source media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.png 1x, img/example/dead-cat-tablet@2x.png 2x">
             <img class="cat-slider__now-cat" src="img/example/dead-cat-mobile@1x.png" srcset="img/example/dead-cat-mobile@2x.png 2x" alt="Изображения кота - СТАЛО" width="251" height="240">
           </picture>
           <div class="cat-slider__past-cat-block">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-cat-tablet@1x.webp 1x, img/example/fat-cat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/fat-cat-mobile@1x.webp 1x, img/example/fat-cat-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/example/fat-cat-tablet@1x.png 1x, img/example/fat-cat-tablet@2x.png 2x">
               <img class="cat-slider__past-cat" src="img/example/fat-cat-mobile@1x.png" srcset="img/example/fat-cat-mobile@2x.png 2x" alt="Изображения кота прежде - БЫЛО" width="311" height="242">
             </picture>
@@ -206,28 +214,48 @@
     <section class="page-footer__contacts contacts">
       <h2 class="visually-hidden">связь с компанией</h2>
       <a class="contacts__logo logo-text">
-        <img class="logo-text__img" src="img/logos/logo-text.svg" alt="еще логотип Кэт-энерджи" width="101" height="18">
+
+        <svg class="logo-text__img" role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+        <!-- <img class="logo-text__img" src="img/logos/logo-text.svg" alt="еще логотип Кэт-энерджи" width="101" height="18"> -->
       </a>
       <div class="contacts__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#" aria-label="ссылка Вконтакте"></a>
+            <a href="#" aria-label="ссылка Вконтакте">
+              <svg class="socials__link socials__link--vk" viewBox="0 0 23 13" width="23" height="13">
+                <use href="img/sprite.svg#icon_vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="#" aria-label="ссылка Инстаграмм"></a>
+            <a href="#" aria-label="ссылка Инстаграмм">
+              <svg class="socials__link socials__link--ig" viewBox="0 0 16 16" width="16" height="16">
+                <use href="img/sprite.svg#icon_ig"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук"></a>
+            <a class="socials__link socials__link--fb" href="#" aria-label="ссылка Фэйсбук">
+              <svg class="socials__link socials__link--fb" viewBox="0 0 13 20" width="13" height="20">
+                <use xlink:href="img/sprite.svg#icon_fb"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
       <div class="contacts__developer developer">
         <div class="developer__wrapper">
           <a class="developer__logo-text" href="#">
-            <img class="developer__img-text" src="img/logos/academy-text.svg" alt="лого HTML-Academy" width="114" height="18">
+            <svg class="developer__img-text" role="img" viewBox="0 0 113 16" width="114" height="18" aria-label="лого HTML-Academy">
+              <use href="img/sprite.svg#academy-text"></use>
+            </svg>
           </a>
           <a class="developer__logo-img" href="#">
-            <img class="developer__img-img" src="img/logos/academy-img.svg" alt="лого HTML-Academy-2" width="27" height="34">
+            <svg class="developer__img-img" role="img" width="27" height="34" viewBox="0 0 27 34" aria-label="лого HTML-Academy-2">
+              <use href="img/sprite.svg#academy-img"></use>
+            </svg>
           </a>
         </div>
       </div>

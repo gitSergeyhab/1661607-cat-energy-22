@@ -61,6 +61,7 @@
   height: 302px;
   width: 100%;
   background-image: url("../img/promo/promo-cat-mobile@1x.jpg");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -94,6 +95,14 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/promo/promo-cat-mobile@2x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: $tablet) {
+    background-image: none;
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: $desktop) {
+    background-image: url("../img/promo/promo-cat-desktop@2x.jpg");
   }
 }
 

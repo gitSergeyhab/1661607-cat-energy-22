@@ -36,10 +36,19 @@
   background-position: center;
   background-size: contain;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &--vk {
-    background-image: url("../img/socials/icon_vk.svg");
+    // background-image: url("../img/socials/icon_vk.svg");
     width: 22px;
     height: 12px;
+    fill: $again-gray-666;
+
+    &:hover {
+      fill: $basic-green;
+    }
 
     @media (min-width: $tablet) {
       width: 29px;
@@ -48,9 +57,14 @@
   }
 
   &--ig {
-    background-image: url("../img/socials/icon_ig.svg");
+    // background-image: url("../img/socials/icon_ig.svg");
     width: 16px;
     height: 16px;
+    fill: $again-gray-666;
+
+    &:hover {
+      fill: $basic-green;
+    }
 
     @media (min-width: $tablet) {
       width: 23px;
@@ -59,9 +73,14 @@
   }
 
   &--fb {
-    background-image: url("../img/socials/icon_fb.svg");
+    // background-image: url("../img/socials/icon_fb.svg");
     width: 10px;
     height: 18px;
+    stroke: $again-gray-666;
+
+    &:hover {
+      stroke: $basic-green;
+    }
 
     @media (min-width: $tablet) {
       width: 19px;

@@ -38,3 +38,19 @@
   width: 27px;
   height: 34px;
 }
+
+.developer__img-img {
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__img-text {
+  &:active {
+    opacity: 0.3;
+  }
+}
