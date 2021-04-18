@@ -43,6 +43,12 @@
       margin-right: 36px;
     }
   }
+
+  @media (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
 }
 
 .site-list__link {
@@ -54,6 +60,10 @@
   border-bottom: 2px solid transparent;
   padding-bottom: 8px;
   padding-top: 8px;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 5px;
+  }
 
   &--current {
     border-color: $basic-green;

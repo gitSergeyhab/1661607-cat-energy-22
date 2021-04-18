@@ -39,23 +39,28 @@
 }
 
 .footer-address__text {
-  @include font-mix(16, 18, $dark);
+  @include Oswald(16, 20, $dark);
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 27, $dark);
+    @include Oswald(20, 27, $dark);
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 5px;
+    line-height: 25px;
   }
 }
 
 .footer-address__info {
-  @include font-mix(14, 20, $dark-gray, 400, "Arial");
+  @include Arial(14, 20, $dark-gray);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 
   @media (min-width: $tablet) {
-    @include font-mix(16, 20, $dark-gray, 400, "Arial");
+    @include Arial(16, 20, $dark-gray);
     text-align: right;
     align-items: flex-end;
   }
@@ -63,6 +68,7 @@
   @media (min-width: $desktop) {
     text-align: left;
     align-items: flex-start;
+    padding-top: 5px;
   }
 }
 

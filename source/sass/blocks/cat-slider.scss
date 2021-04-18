@@ -27,7 +27,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 33px;
+    margin-bottom: 28px;
   }
 }
 
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: $desktop) {
-    width: 51%;
+    width: 51.6%;
     left: 0;
     background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $basic-gray 191px, $basic-gray 433px);
     height: 829px;
@@ -204,5 +204,9 @@
       top: 12px;
       left: 12px;
     }
+  }
+
+  @media (min-width: $tablet) {
+    right: -20px;
   }
 }
