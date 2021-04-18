@@ -23,7 +23,7 @@
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
     row-gap: 42px;
-    column-gap: 61px;
+    column-gap: 58px;
   }
 
   @media (min-width: $desktop) {
@@ -76,7 +76,7 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    padding-left: 56px;
+    padding-left: 58px;
   }
 
   &::before {

@@ -61,6 +61,10 @@
   padding-bottom: 8px;
   padding-top: 8px;
 
+  @media (min-width: $tablet) {
+    padding-bottom: 6.5px;
+  }
+
   @media (min-width: $desktop) {
     padding-bottom: 5px;
   }

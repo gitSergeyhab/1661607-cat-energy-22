@@ -48,7 +48,7 @@
   margin-bottom: 39px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 94px;
+    margin-bottom: 91px;
   }
 
   @media (min-width: $desktop) {
@@ -62,7 +62,7 @@
 
 
   @media (min-width: $tablet) {
-    margin-bottom: 82px;
+    margin-bottom: 83px;
   }
 
   @media (min-width: $desktop) {
@@ -107,14 +107,31 @@
 
   &--name {
     margin-left: 14.5px;
+    @media (min-width: $tablet) {
+      margin-left: 16px;
+    }
+  }
+
+  &--weight {
+    @media (min-width: $tablet) {
+      margin-left: 20px;
+    }
   }
 
   &--email {
     margin-left: 11px;
+
+    @media (min-width: $tablet) {
+      margin-left: 17.5px;
+    }
   }
 
   &--tel {
     margin-left: 8px;
+
+    @media (min-width: $tablet) {
+      margin-left: 12px;
+    }
   }
 
   // &--tel,
