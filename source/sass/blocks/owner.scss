@@ -8,6 +8,10 @@
   @media (min-width: $tablet) {
     margin-bottom: 90px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 88px;
+  }
 }
 
 .owner__list {
