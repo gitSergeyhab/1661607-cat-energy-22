@@ -12,11 +12,12 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 115px;
+  padding-right: 8px;
+  // width: 115px;
 }
 
 .socials__item {
-  margin-right: 34px;
+  margin-right: 39px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,8 +75,8 @@
 
   &--fb {
     // background-image: url("../img/socials/icon_fb.svg");
-    width: 10px;
-    height: 18px;
+    width: 12px;
+    height: 20px;
     stroke: $again-gray-666;
 
     &:hover {

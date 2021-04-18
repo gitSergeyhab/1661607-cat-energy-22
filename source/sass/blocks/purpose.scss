@@ -24,7 +24,7 @@
 
 .purpose__item {
   background-color: $basic-gray;
-  padding: 30px 33px 0 20px;
+  padding: 31px 33px 0 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
@@ -58,7 +58,8 @@
     height: 50px;
     background-color: $basic-green;
     border-radius: 50%;
-    top: 24px;
+    top: 25px;
+    left: 23px;
 
     @media (min-width: $tablet) {
       width: 200px;
@@ -180,8 +181,10 @@
   height: 57px;
   text-decoration: none;
   border-top: 1px solid $again-gray;
+  box-sizing: border-box;
   position: relative;
   text-transform: uppercase;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet) {
     @include Oswald(20, 30);
