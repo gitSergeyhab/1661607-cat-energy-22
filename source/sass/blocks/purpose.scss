@@ -7,7 +7,6 @@
   }
 }
 
-
 .purpose__list {
   list-style: none;
   padding: 0;
@@ -30,12 +29,13 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 77px 315px 45px 52px;
+    padding: 77px 280px 40px 52px;
     margin-bottom: 30px;
     min-height: 333px;
 
     &:last-child {
       margin-bottom: 0;
+      padding-right: 315px;
     }
   }
 
@@ -66,6 +66,7 @@
       height: 200px;
       right: 62px;
       top: 92px;
+      left: auto;
     }
 
     @media (min-width: $desktop) {
@@ -148,7 +149,7 @@
     @include Oswald(36, 36);
     padding-left: 0;
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop) {
@@ -165,10 +166,10 @@
 
   @media (min-width: $tablet) {
     @include Arial(16, 24, $basic-black);
-    margin-bottom: 36px;
+    margin-bottom: 41px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     margin-bottom: 13px;
   }
 }
@@ -205,7 +206,8 @@
     left: 100px;
 
     @media (min-width: $tablet) {
-      left: 133px;
+      position: relative;
+      left: 25px;
     }
   }
 

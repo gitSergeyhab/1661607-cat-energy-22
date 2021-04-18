@@ -14,7 +14,7 @@ if (rangeField) {
   rangeField.addEventListener('mouseup', (evt) => {
     rangeBarLen = evt.offsetX;
     rangeBar.style.width = rangeBarLen + 'px';
-    const fatCatLen = Math.floor(rangeBarLen / rangeFieldLen * catsContainer.offsetWidth) + "px";
+    const fatCatLen = Math.floor(rangeBarLen / rangeFieldLen * catsContainer.offsetWidth) + 'px';
     fatCat.style.width = fatCatLen;
   })
 
