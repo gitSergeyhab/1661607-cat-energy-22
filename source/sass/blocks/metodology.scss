@@ -1,5 +1,5 @@
 .metodology {
-  padding: 10px var(--pad) 0;
+  padding: 5px var(--pad) 0;
 
   @media (min-width: $tablet) {
     padding-bottom: 47px;
@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 11px;
+    padding-bottom: 14px;
     width: $desktop;
     box-sizing: border-box;
     border: none;
@@ -36,7 +36,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 37px;
-    column-gap: 48px;
+    column-gap: 58px;
   }
 
   @media (min-width: $desktop) {

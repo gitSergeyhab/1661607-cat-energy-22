@@ -13,4 +13,8 @@
     justify-content: space-between;
     padding-bottom: 8px;
   }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 0;
+  }
 }

@@ -18,10 +18,11 @@
 
 .functional-nutrition__text-element {
   z-index: 1;
-  padding-top: 30px;
+  padding-top: 26px;
 
   @media (min-width: $tablet) {
     width: 420px;
+    padding-top: 31px;
     padding-left: 117px;
     align-self: flex-start;
   }
@@ -116,7 +117,8 @@
 
   @media (min-width: $desktop) {
     position: absolute;
-    left: 75%;
+    // left: 75%;
+    left: 558px;
     top: 141px;
     height: 499px;
     width: 552px;
@@ -158,7 +160,7 @@
   @media (min-width: $tablet) {
     @include Oswald(20, 20, $basic-white);
     position: absolute;
-    top: 258px;
+    top: 261px;
     left: 110px;
     width: 244px;
     height: 54px;

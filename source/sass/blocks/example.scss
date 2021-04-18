@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet) {
     background-color: $basic-white;
-    padding-top: 40px;
+    padding-top: 42px;
   }
 
   @media (min-width: $desktop) {
@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 58px;
+    margin-top: 53px;
     // margin-bottom: 146px;
     margin-bottom: 148px;
   }
@@ -67,6 +67,7 @@
     @include font-mix(16, 24, $dark-gray, 400, "Arial");
     height: 72px;
     margin-bottom: 54px;
+    padding-right: 22px;
   }
 
   @media (min-width: $desktop) {
@@ -80,7 +81,7 @@
   @include font-mix(14, 20);
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
   text-align: center;
 
   @media (min-width: $tablet) {

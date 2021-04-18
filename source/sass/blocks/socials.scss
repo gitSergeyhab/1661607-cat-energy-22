@@ -12,11 +12,16 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 115px;
+  padding-right: 8px;
+
+  @media (min-width: $tablet) {
+    padding-left: 28px;
+    padding-bottom: 5px;
+  }
 }
 
 .socials__item {
-  margin-right: 34px;
+  margin-right: 39px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +46,6 @@
   }
 
   &--vk {
-    // background-image: url("../img/socials/icon_vk.svg");
     width: 22px;
     height: 12px;
     fill: $again-gray-666;
@@ -57,7 +61,6 @@
   }
 
   &--ig {
-    // background-image: url("../img/socials/icon_ig.svg");
     width: 16px;
     height: 16px;
     fill: $again-gray-666;
@@ -73,9 +76,8 @@
   }
 
   &--fb {
-    // background-image: url("../img/socials/icon_fb.svg");
-    width: 10px;
-    height: 18px;
+    width: 12px;
+    height: 20px;
     stroke: $again-gray-666;
 
     &:hover {

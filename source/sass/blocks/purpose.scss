@@ -7,7 +7,6 @@
   }
 }
 
-
 .purpose__list {
   list-style: none;
   padding: 0;
@@ -24,18 +23,19 @@
 
 .purpose__item {
   background-color: $basic-gray;
-  padding: 30px 33px 0 20px;
+  padding: 31px 33px 0 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 77px 315px 45px 52px;
+    padding: 77px 280px 40px 52px;
     margin-bottom: 30px;
     min-height: 333px;
 
     &:last-child {
       margin-bottom: 0;
+      padding-right: 315px;
     }
   }
 
@@ -44,10 +44,11 @@
     min-height: 374px;
     width: 570px;
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 66px;
 
     &:last-child {
-      margin-bottom: 60px;
+      margin-bottom: 66px;
+      padding: 77px 52px 30px;
     }
   }
 
@@ -58,13 +59,15 @@
     height: 50px;
     background-color: $basic-green;
     border-radius: 50%;
-    top: 24px;
+    top: 25px;
+    left: 23px;
 
     @media (min-width: $tablet) {
       width: 200px;
       height: 200px;
       right: 62px;
       top: 92px;
+      left: auto;
     }
 
     @media (min-width: $desktop) {
@@ -147,13 +150,13 @@
     @include Oswald(36, 36);
     padding-left: 0;
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop) {
     // text-align: center;
     padding-left: 162px;
-    margin-bottom: 73px;
+    margin-bottom: 75px;
   }
 }
 
@@ -164,11 +167,11 @@
 
   @media (min-width: $tablet) {
     @include Arial(16, 24, $basic-black);
-    margin-bottom: 36px;
+    margin-bottom: 41px;
   }
 
-  @media (min-width: $tablet) {
-    margin-bottom: 13px;
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
   }
 }
 
@@ -180,8 +183,10 @@
   height: 57px;
   text-decoration: none;
   border-top: 1px solid $again-gray;
+  box-sizing: border-box;
   position: relative;
   text-transform: uppercase;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet) {
     @include Oswald(20, 30);
@@ -202,7 +207,8 @@
     left: 100px;
 
     @media (min-width: $tablet) {
-      left: 133px;
+      position: relative;
+      left: 25px;
     }
   }
 
