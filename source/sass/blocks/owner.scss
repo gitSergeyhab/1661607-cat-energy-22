@@ -6,6 +6,10 @@
   white-space: nowrap;
 
   @media (min-width: $tablet) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop) {
     margin-bottom: 88px;
   }
 }
@@ -53,6 +57,6 @@
   right: 17px;
 
   @media (min-width: $tablet) {
-    right: 20.5px;
+    right: 18px;
   }
 }
