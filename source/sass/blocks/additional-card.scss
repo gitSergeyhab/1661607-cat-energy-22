@@ -40,6 +40,7 @@
   @media (min-width: $desktop) {
     width: 324px;
     margin: 0;
+    padding-bottom: 3px;
   }
 }
 
@@ -80,5 +81,6 @@
 .additional-card__button {
   @media (min-width: $desktop) {
     width: 244px;
+    margin-bottom: 2px;
   }
 }

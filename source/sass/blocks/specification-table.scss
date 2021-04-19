@@ -11,6 +11,11 @@
     margin-bottom: 32px;
   }
 
+  @media (min-width: $desktop) {
+    width: 99%;
+    margin-left: 3px;
+  }
+
   & caption {
     padding-top: 19px;
     min-height: 41px;
@@ -39,24 +44,16 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  & br,
-  & span {
-    display: none;
-  }
-
   @media (min-width: $tablet) {
     @include Oswald(20, 24);
     display: inline-block;
     width: 150px;
-
-    & br,
-    & span {
-      display: inline;
-    }
+    padding-left: 4px;
   }
 
   @media (min-width: $desktop) {
     @include Oswald(20, 22);
+    padding-left: 2px;
   }
 }
 

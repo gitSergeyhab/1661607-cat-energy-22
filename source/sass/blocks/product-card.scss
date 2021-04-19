@@ -67,6 +67,11 @@
       width: 168px;
       height: 206px;
     }
+
+    @media (min-width: $desktop) {
+      width: 172px;
+      height: 202px;
+    }
   }
 }
 
@@ -141,6 +146,10 @@
     @include Oswald(20, 24, $dark);
     margin-bottom: 23px;
     width: 136px;
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 22px;
   }
 }
 
