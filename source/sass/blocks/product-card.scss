@@ -70,6 +70,14 @@
   justify-content: center;
   align-items: center;
 
+  &--small {
+    padding-top: 30px;
+  }
+
+  &--chicken500 {
+    padding-top: 10px;
+  }
+
   @media (min-width: $tablet) {
     align-items: flex-end;
     margin-bottom: 30px;
