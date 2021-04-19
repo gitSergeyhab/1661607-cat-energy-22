@@ -14,18 +14,18 @@
   & caption {
     padding-top: 19px;
     min-height: 41px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     text-align: left;
     width: 100px;
 
     @media (min-width: $tablet) {
       width: auto;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       padding: 0;
     }
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       width: auto;
       text-align: center;
       margin-bottom: 14px;
@@ -39,10 +39,20 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  & br,
+  & span {
+    display: none;
+  }
+
   @media (min-width: $tablet) {
     @include Oswald(20, 24);
     display: inline-block;
     width: 150px;
+
+    & br,
+    & span {
+      display: inline;
+    }
   }
 
   @media (min-width: $desktop) {

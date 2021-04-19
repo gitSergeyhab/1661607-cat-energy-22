@@ -20,7 +20,7 @@
     grid-template-rows: 160px 190px 80px;
 
     align-self: center;
-    margin-top: 140px;
+    margin-top: 140.25px;
     padding: 0 37px;
     border: none;
   }
@@ -61,6 +61,13 @@
       height: 196px;
     }
   }
+
+  &--chicken1000 {
+    @media (min-width: $tablet) {
+      width: 168px;
+      height: 206px;
+    }
+  }
 }
 
 .product-card__link-img {
@@ -78,9 +85,14 @@
     padding-top: 10px;
   }
 
+
   @media (min-width: $tablet) {
     align-items: flex-end;
     margin-bottom: 30px;
+
+    &--chicken1000 {
+      margin-bottom: 20px;
+    }
   }
 
   @media (min-width: $desktop) {
