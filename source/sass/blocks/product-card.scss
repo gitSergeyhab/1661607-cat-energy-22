@@ -20,7 +20,7 @@
     grid-template-rows: 160px 190px 80px;
 
     align-self: center;
-    margin-top: 140px;
+    margin-top: 140.25px;
     padding: 0 37px;
     border: none;
   }
@@ -61,6 +61,18 @@
       height: 196px;
     }
   }
+
+  &--chicken1000 {
+    @media (min-width: $tablet) {
+      width: 168px;
+      height: 206px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 172px;
+      height: 202px;
+    }
+  }
 }
 
 .product-card__link-img {
@@ -70,9 +82,22 @@
   justify-content: center;
   align-items: center;
 
+  &--small {
+    padding-top: 30px;
+  }
+
+  &--chicken500 {
+    padding-top: 10px;
+  }
+
+
   @media (min-width: $tablet) {
     align-items: flex-end;
     margin-bottom: 30px;
+
+    &--chicken1000 {
+      margin-bottom: 20px;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -121,6 +146,10 @@
     @include Oswald(20, 24, $dark);
     margin-bottom: 23px;
     width: 136px;
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 22px;
   }
 }
 

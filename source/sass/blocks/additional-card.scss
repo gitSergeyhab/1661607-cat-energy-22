@@ -1,8 +1,9 @@
 .additional-card {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-left: 1px;
+  padding-bottom: 16px;
   border-top: 1px solid $again-gray-4;
   box-sizing: border-box;
 
@@ -10,7 +11,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 26px 38px 27px;
+    padding: 26px 38px 26px;
     border-left: 1px solid $again-gray-4;
     border-right: 1px solid $again-gray-4;
   }
@@ -39,6 +40,7 @@
   @media (min-width: $desktop) {
     width: 324px;
     margin: 0;
+    padding-bottom: 3px;
   }
 }
 
@@ -79,5 +81,6 @@
 .additional-card__button {
   @media (min-width: $desktop) {
     width: 244px;
+    margin-bottom: 2px;
   }
 }

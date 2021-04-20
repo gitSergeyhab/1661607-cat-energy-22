@@ -39,5 +39,10 @@
       padding-left: 37px;
       padding-right: 36px;
     }
+
+    @media (min-width: $desktop) {
+      top: -17px;
+      padding-left: 39px;
+    }
   }
 }

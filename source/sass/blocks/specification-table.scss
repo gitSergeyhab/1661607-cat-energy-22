@@ -11,21 +11,26 @@
     margin-bottom: 32px;
   }
 
+  @media (min-width: $desktop) {
+    width: 99%;
+    margin-left: 3px;
+  }
+
   & caption {
     padding-top: 19px;
     min-height: 41px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     text-align: left;
     width: 100px;
 
     @media (min-width: $tablet) {
       width: auto;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       padding: 0;
     }
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       width: auto;
       text-align: center;
       margin-bottom: 14px;
@@ -43,10 +48,12 @@
     @include Oswald(20, 24);
     display: inline-block;
     width: 150px;
+    padding-left: 4px;
   }
 
   @media (min-width: $desktop) {
     @include Oswald(20, 22);
+    padding-left: 2px;
   }
 }
 
