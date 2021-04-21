@@ -1,14 +1,20 @@
-// const gulp = require("gulp");
-const {src, dest, series, watch} = require('gulp');
+const {src, dest, series, parallel, watch} = require('gulp');
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
+const csso = require('postcss-csso');
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const includer = require('gulp-file-include');
 const beautify = require('gulp-beautify').html;
 const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore');
+const rename = require('gulp-rename');
+const del = require('del');
+// const uglify = require('gulp-uglify'); // падает без бабеля от ес6
 
 
 // html
@@ -22,13 +28,14 @@ const htmlProto = (fileName) => {
       end_with_newline: true,
       indent_size: 2
     }))
-    .pipe(dest('source'))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('build'))
     .pipe(sync.stream())
 }
 
-const indexHtml = () => htmlProto('index');
-const catalogHtml = () => htmlProto('catalog');
-const formHtml = () => htmlProto('form');
+const index = () => htmlProto('index');
+const catalog = () => htmlProto('catalog');
+const form = () => htmlProto('form');
 
 // js
 
@@ -36,9 +43,11 @@ const scriptList = ['source/js/example.js', 'source/js/page-header.js', 'source/
 const scripts = () => {
   return src(scriptList)
     .pipe(concat('script.js'))
-    .pipe(dest('source/js'))
+    // .pipe(uglify())
+    .pipe(dest('build/js'))
     .pipe(sync.stream())
 }
+exports.scripts = scripts;
 
 // Styles
 
@@ -48,21 +57,77 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      // csso()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(dest("source/css"))
+    .pipe(dest("build/css"))
     .pipe(sync.stream());
 }
-
 exports.styles = styles;
+
+//images
+const images = () => {
+  return src('source/img/**/*.{png,jpg,svg}')
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 4}),
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(dest('build/img'))
+}
+exports.images = images;
+
+const webPs = () => {
+  return src('source/img/**/*.{png,jpg}')
+  .pipe(webp({quality: 80}))
+  .pipe(dest('build/img'))
+}
+exports.webPs = webPs;
+
+const sprite = () => {
+  return src('source/img/for_sprite/*.svg')
+  .pipe(imagemin([imagemin.svgo()]))
+  .pipe(svgstore())
+  .pipe(rename('sprite.svg'))
+  .pipe(dest('build/img'))
+}
+exports.sprite = sprite;
+
+// COPY
+
+const copyBuild = done => {
+  src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/manifest.webmanifest'
+  ], {base: 'source'})
+  .pipe(dest('build'))
+  done();
+}
+exports.copyBuild = copyBuild;
+
+const copyWork = done => {
+  src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/manifest.webmanifest',
+    'source/img/**/*.{png,jpg,svg}'
+  ], {base: 'source'})
+  .pipe(dest('build'))
+  done();
+}
+exports.copyWork = copyWork;
+
+
+const clean = () => del('build');
 
 // Server
 
-const server = (done) => {
+const server = done => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -76,14 +141,12 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  // gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  // gulp.watch("source/*.html").on("change", sync.reload);
-  watch('source/html/**/*.html', indexHtml);
-  watch('source/html/**/*.html', catalogHtml);
-  watch('source/html/**/*.html', formHtml);
-  watch(['source/js/**/*.js', '!source/js/script.js'], scripts)
+  watch('source/html/**/*.html', index);
+  watch('source/html/**/*.html', catalog);
+  watch('source/html/**/*.html', form);
+  watch('source/js/**/*.js', scripts)
   watch("source/sass/**/*.scss", styles);
 }
 
-
-exports.default = series(indexHtml, catalogHtml, scripts, formHtml, styles, server, watcher);
+exports.build = series(clean, parallel(index, catalog, form), copyBuild, parallel(images, webPs, sprite), scripts, styles);
+exports.default = series(clean, parallel(index, catalog, form), copyWork, parallel(webPs, sprite), scripts, styles, server, watcher);
