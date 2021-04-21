@@ -8,13 +8,14 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const includer = require('gulp-file-include');
 const beautify = require('gulp-beautify').html;
+const htmlmin = require('gulp-htmlmin');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const rename = require('gulp-rename');
 const del = require('del');
-// const uglify = require('gulp-uglify'); // падает без бабеля от ес6
+const uglify = require('gulp-uglify-es').default;
 
 
 // html
@@ -24,11 +25,11 @@ const htmlProto = (fileName) => {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(beautify({
-      end_with_newline: true,
-      indent_size: 2
-    }))
-    // .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(beautify({
+    //   end_with_newline: true,
+    //   indent_size: 2
+    // }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('build'))
     .pipe(sync.stream())
 }
@@ -37,17 +38,19 @@ const index = () => htmlProto('index');
 const catalog = () => htmlProto('catalog');
 const form = () => htmlProto('form');
 
+
 // js
 
 const scriptList = ['source/js/example.js', 'source/js/page-header.js', 'source/js/map.js']
 const scripts = () => {
   return src(scriptList)
     .pipe(concat('script.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(dest('build/js'))
     .pipe(sync.stream())
 }
 exports.scripts = scripts;
+
 
 // Styles
 
@@ -58,7 +61,7 @@ const styles = () => {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
-      // csso()
+      csso()
     ]))
     .pipe(sourcemap.write("."))
     .pipe(dest("build/css"))
@@ -66,7 +69,9 @@ const styles = () => {
 }
 exports.styles = styles;
 
+
 //images
+
 const images = () => {
   return src('source/img/**/*.{png,jpg,svg}')
   .pipe(imagemin([
@@ -94,6 +99,7 @@ const sprite = () => {
 }
 exports.sprite = sprite;
 
+
 // COPY
 
 const copyBuild = done => {
@@ -120,7 +126,10 @@ const copyWork = done => {
 exports.copyWork = copyWork;
 
 
+// clean
+
 const clean = () => del('build');
+
 
 // Server
 
@@ -137,6 +146,7 @@ const server = done => {
 }
 
 exports.server = server;
+
 
 // Watcher
 
