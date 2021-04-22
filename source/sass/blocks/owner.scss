@@ -54,6 +54,7 @@
 .owner__envelope {
   stroke: $dark-2;
   position: absolute;
+  fill: none;
   right: 17px;
 
   @media (min-width: $tablet) {
