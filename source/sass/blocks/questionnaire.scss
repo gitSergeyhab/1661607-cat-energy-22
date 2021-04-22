@@ -21,13 +21,13 @@
 }
 
 .questionnaire__text {
-  @include font-mix(14, 18);
+  @include Oswald(14, 18);
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 30);
+    @include Oswald(20, 30);
     margin-bottom: 66px;
   }
 

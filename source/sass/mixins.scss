@@ -14,15 +14,6 @@
   background-color: $basic-black;
 }
 
-@mixin font-mix($size, $height, $color: inherit, $weight: 400, $family: "Oswald") {
-  font-family: $family, "Arial", sans-serif;
-  font-weight: $weight;
-  font-size: #{$size}px;
-  line-height: #{$height}px;
-  color: $color;
-  font-style: normal;
-}
-
 @mixin Oswald($size, $height, $color: inherit, $weight: 400) {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: $weight;
