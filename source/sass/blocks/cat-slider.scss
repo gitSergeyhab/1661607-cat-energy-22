@@ -173,7 +173,10 @@
 }
 
 .cat-slider__toggle {
+  display: none;
+
   @media (min-width: $tablet) {
+    display: block;
     position: absolute;
     pointer-events: none;
     width: 34px;

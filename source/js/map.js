@@ -1,3 +1,4 @@
+document.querySelector('.footer-location__no-js-text').style.display = 'none';
 function showMap(windowSize) {
 
   // мои костыли ->

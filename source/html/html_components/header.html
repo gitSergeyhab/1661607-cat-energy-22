@@ -1,15 +1,17 @@
 <header class="page-header">
   <div class="page-header__top">
-    <a class="page-header__logo logo" @@index aria-label="логотип Кэт-энерджи">
+    <a class="page-header__logo logo" @@index aria-label="логотип Кэт-энерджи / перейти на главную страницу">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
         <img class="logo__img" src="img/logos/logo-img.svg" alt="логотип Кэт-энерджи: картинка" width="33" height="38">
       </picture>
-      <svg class="logo__text" role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
+      <!--
+        firefox отображает некорректно
+         <svg class="logo__text" role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
         <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-      <!-- <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18"> -->
+      </svg> -->
+      <img class="logo__text" src="img/logos/logo-text.svg" alt="логотип Кэт-энерджи: текст" width="101" height="18">
     </a>
     <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню">
       <span class="js-span-btn"></span>
