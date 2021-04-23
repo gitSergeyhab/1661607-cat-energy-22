@@ -95,7 +95,7 @@
 }
 
 .cat-slider__button {
-  @include font-mix(16, 20);
+  @include Oswald(16, 20);
   width: 70px;
   height: 40px;
   padding: 4px 10px;
@@ -116,7 +116,7 @@
   }
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 30);
+    @include Oswald(20, 30);
   }
 
   &:hover::after,
@@ -173,7 +173,10 @@
 }
 
 .cat-slider__toggle {
+  display: none;
+
   @media (min-width: $tablet) {
+    display: block;
     position: absolute;
     pointer-events: none;
     width: 34px;

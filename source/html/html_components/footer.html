@@ -8,9 +8,10 @@
         <p class="footer-address__address">Санкт-Питербург</p>
       </div>
     </div>
-
+    <h2 class="footer-location__no-js-text"> При включенном js тут будет интерактивная Карта: адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8 ... а пока наслаждайтесь созерцанием зеленого квадрата</h2>
     <div class="footer-location__map footer-map" id="map">
       <h3 class="visually-hidden">Карта: адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</h3>
+
       <!-- <div class="footer-map__img-wrapper">
           <img class="footer-map__img" src="img/maps/map-mobil.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
           <img class="footer-map__img footer-map__img--tablet" src="img/maps/map-tablet.jpg" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="768" height="400">
@@ -21,12 +22,13 @@
   </section>
   <section class="page-footer__contacts contacts">
     <h2 class="visually-hidden">связь с компанией</h2>
-    <a class="contacts__logo logo-text"  @@index>
+    <a class="contacts__logo logo-text"  @@index aria-label="перейти на главную страницу">
 
-      <svg class="logo-text__img"  role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
+      <!-- firefox отображает некорректно
+        <svg class="logo-text__img"  role="img" viewBox="0 0 101 18" width="101" height="18" aria-label="логотип Кэт-энерджи: текст">
         <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-            <!-- <img class="logo-text__img" src="img/logos/logo-text.svg" alt="еще логотип Кэт-энерджи" width="101" height="18"> -->
+      </svg> -->
+            <img class="logo-text__img" src="img/logos/logo-text.svg" alt="еще логотип Кэт-энерджи" width="101" height="18">
     </a>
     <div class="contacts__socials socials">
       <ul class="socials__list">
@@ -55,12 +57,12 @@
     </div>
     <div class="contacts__developer developer">
       <div class="developer__wrapper">
-        <a class="developer__logo-text" href="#">
+        <a class="developer__logo-text" href="#" aria-label="ссылка на HTML-Academy">
           <svg class="developer__img-text" role="img" viewBox="0 0 113 16" width="114" height="18" aria-label="лого HTML-Academy">
             <use href="img/sprite.svg#academy-text"></use>
           </svg>
         </a>
-        <a class="developer__logo-img" href="#" >
+        <a class="developer__logo-img" href="#" aria-label="ссылка на HTML-Academy">
           <svg class="developer__img-img" role="img" width="27" height="34" viewBox="0 0 27 34" aria-label="лого HTML-Academy-2">
             <use href="img/sprite.svg#academy-img"></use>
           </svg>

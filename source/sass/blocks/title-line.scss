@@ -1,37 +1,48 @@
-// .title-line {
-//   @include font-mix(24, 24);
-//   display: flex;
-//   padding-left: 20px;
-//   // padding-right: 20px;
+.title-line {
+  width: 100vw;
+  height: 2px;
+  background-color: $basic-green;
+  position: relative;
+}
 
-//   @media (min-width: $tablet) {
-//     @include font-mix(36, 36);
-//     padding: 0;
-//   }
+.title-line__text {
+  @include Oswald(24, 26);
+  margin: 0;
+  position: absolute;
+  top: -16px;
+  background-color: $basic-white;
+  padding-left: var(--pad);
+  padding-right: 23px;
 
-//   &::after {
-//     content: "";
-//     width: 200px;
-//     height: 2px;
-//     background-color: $basic-green;
-//     margin-top: 14px;
-//     margin-left: 22px;
-//     flex-grow: 1;
-//   }
+  @media (min-width: $tablet) {
+    @include Oswald(36, 36);
+    top: -23px;
+    left: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
 
-//   &::before {
-//     @media (min-width: $tablet) {
-//       content: "";
-//       width: 30px;
-//       height: 2px;
-//       background-color: $basic-green;
-//       margin-top: 17px;
-//       margin-right: 38.5px;
-//     }
+    br {
+      display: none;
+    }
+  }
 
-//     @media (min-width: $desktop) {
-//       width: 70px;
-//       height: 2px;
-//     }
-//   }
-// }
+  @media (min-width: $desktop) {
+    left: 70px;
+  }
+
+  &--catalog {
+    line-height: 24px;
+    top: -15px;
+    padding-left: 20px;
+
+    @media (min-width: $tablet) {
+      padding-left: 37px;
+      padding-right: 36px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -17px;
+      padding-left: 39px;
+    }
+  }
+}

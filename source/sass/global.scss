@@ -12,7 +12,7 @@
 }
 
 .button {
-  @include font-mix(16, 20, $basic-white);
+  @include Oswald(16, 20, $basic-white);
   width: 100%;
   height: 40px;
   display: flex;
@@ -41,17 +41,17 @@
 
 // text
 .main-text {
-  @include font-mix(36, 36);
+  @include Oswald(36, 36);
 
   @media (min-width: $tablet) {
-    @include font-mix(60, 60, $basic-black);
+    @include Oswald(60, 60, $basic-black);
   }
 }
 
 .label-text {
-  @include font-mix(16, 18);
+  @include Oswald(16, 18);
 
   @media (min-width: $tablet) {
-    @include font-mix(20, 30);
+    @include Oswald(20, 30);
   }
 }

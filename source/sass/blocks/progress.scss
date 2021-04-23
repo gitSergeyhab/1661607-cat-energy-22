@@ -34,19 +34,19 @@
 }
 
 .progress__main {
-  @include font-mix(24, 24);
+  @include Oswald(24, 24);
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-mix(30, 37);
+    @include Oswald(30, 37);
     margin-bottom: 7px;
   }
 }
 
 .progress__text {
-  @include font-mix(12, 12, $dark-gray, 400, "Arial");
+  @include Arial(12, 12, $dark-gray);
   width: 87px;
   padding: 4px;
   box-sizing: border-box;
@@ -56,7 +56,7 @@
   background-color: $again-gray-2;
 
   @media (min-width: $tablet) {
-    @include font-mix(14, 14, $dark-gray, 400, "Arial");
+    @include Arial(14, 14, $dark-gray);
     background-color: $basic-white;
 
     &--kg {

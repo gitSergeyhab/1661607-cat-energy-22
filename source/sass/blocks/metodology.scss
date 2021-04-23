@@ -15,12 +15,12 @@
 }
 
 .metodology__title {
-  @include font-mix(36, 40);
+  @include Oswald(36, 40);
   margin: 0;
   margin-bottom: 38px;
 
   @media (min-width: $tablet) {
-    @include font-mix(60, 60);
+    @include Oswald(60, 60);
     margin-bottom: 32px;
   }
 }
@@ -109,11 +109,11 @@
 }
 
 .metodology__text {
-  @include font-mix(14, 18, $dark-gray, 400, "Arial");
+  @include Arial(14, 18, $dark-gray);
   margin: 0;
 
   @media (min-width: $tablet) {
-    @include font-mix(16, 24, $dark-gray, 400, "Arial");
+    @include Arial(16, 24, $dark-gray);
     width: 245px;
   }
 }
