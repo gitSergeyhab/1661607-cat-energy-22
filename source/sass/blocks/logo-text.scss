@@ -1,10 +1,11 @@
 .logo-text {
-  padding-top: 37px;
-  padding-bottom: 30px;
+  padding-top: 39px;
+  padding-bottom: 31px;
   border-bottom: 1px solid $again-gray;
   width: 100%;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
     padding: 0;

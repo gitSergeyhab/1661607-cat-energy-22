@@ -5,10 +5,6 @@
   align-items: center;
   position: relative;
 
-  // @media (min-width: $tablet) {
-  //   position: relative;
-  // }
-
   @media (min-width: $desktop) {
     width: $desktop;
     z-index: 2;
@@ -121,7 +117,6 @@
 
   @media (min-width: $desktop) {
     position: absolute;
-    // left: 75%;
     left: 558px;
     top: 141px;
     height: 499px;

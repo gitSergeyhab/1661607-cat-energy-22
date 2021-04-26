@@ -16,7 +16,6 @@
     background-color: $basic-gray;
     box-sizing: border-box;
     grid-template-columns: 1fr;
-    // grid-template-rows: 160px auto 80px;
     grid-template-rows: 160px 190px 80px;
 
     align-self: center;
@@ -36,7 +35,6 @@
     align-self: center;
 
     @media (min-width: $tablet) {
-      // grid-template-rows: 160px auto 80px;
       grid-template-rows: 160px 190px 80px;
       background-color: $basic-white;
       border: 2px solid $basic-gray;

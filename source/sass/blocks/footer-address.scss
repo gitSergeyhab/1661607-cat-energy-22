@@ -43,7 +43,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include Oswald(20, 27, $dark);
+    @include Oswald(20, 25, $dark);
   }
 
   @media (min-width: $desktop) {
