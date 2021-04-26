@@ -21,7 +21,6 @@
   @media (min-width: $desktop) {
     width: 202px;
     padding-bottom: 0;
-    // padding-top: 10px;
   }
 }
 
@@ -39,36 +38,6 @@
     height: 59px;
   }
 }
-
-
-// .logo__img {
-//   &--tablet,
-//   &--desktop {
-//     display: none;
-//   }
-
-//   @media (min-width: $tablet) {
-//     &,
-//     &--desktop {
-//       display: none;
-//     }
-
-//     &--tablet {
-//       display: block;
-//     }
-//   }
-
-//   @media (min-width: $desktop) {
-//     &,
-//     &--tablet {
-//       display: none;
-//     }
-
-//     &--desktop {
-//       display: block;
-//     }
-//   }
-// }
 
 .logo__text {
   @media (min-width: $desktop) {

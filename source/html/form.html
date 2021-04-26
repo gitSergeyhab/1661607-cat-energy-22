@@ -1,130 +1,132 @@
 <!DOCTYPE html>
-<html  lang="ru" class="page">
-  @@include("html_components/head.html", {
-    "page": "Кэт энерджи: подбор программы"
+<html lang="ru" class="page">
+@@include("html_components/head.html", {
+"page": "Кэт энерджи: подбор программы"
+})
+
+<body class="page__body">
+  @@include("html_components/header.html", {
+  "index": 'href="index.html"',
+  "catalog": 'href="catalog.html"',
+  "form": '',
+  "style": "form"
   })
-  <body class="page__body">
-    @@include("html_components/header.html", {
-      "index": 'href="index.html"',
-      "catalog": 'href="catalog.html"',
-      "form": '',
-      "style": "form"
-    })
 
-    <main class="page-main">
-      <h1 class="page-main__title page-main__title--form main-text">Подбор программы</h1>
-      <section class="page-main__questionnaire questionnaire">
-        <h2 class="visually-hidden">Анкета</h2>
-        <p class="questionnaire__text">
-          Заполните анкету, и мы подберем <br>
-          программу питания для вашего кота
-        </p>
-        <form class="questionnaire__data data" action="https://echo.htmlacademy.ru" method="post">
-          <div class="data__parameters parameters">
-            <ul class="parameters__list label-text">
-              <li class="parameters__item">
-                <label class="data__label" for="cat-name">Имя:*</label>
-                <input class="data__input data__input--name" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
-              </li>
-              <li class="parameters__item">
-                <label class="data__label" for="cat-weight">Вес (кг):*</label>
-                <input class="data__input data__input--weight" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
-              </li>
-              <li class="parameters__item">
-                <label class="data__label" for="cat-age">Возраст (лет):</label>
-                <input class="data__input" id="cat-age" type="number" name="cat-age" placeholder="7">
-              </li>
-            </ul>
-          </div>
+  <main class="page-main">
+    <h1 class="page-main__title page-main__title--form main-text">Подбор программы</h1>
+    <section class="page-main__questionnaire questionnaire">
+      <h2 class="visually-hidden">Анкета</h2>
+      <p class="questionnaire__text">
+        Заполните анкету, и мы подберем <br>
+        программу питания для вашего кота
+      </p>
+      <form class="questionnaire__data data" action="https://echo.htmlacademy.ru" method="post">
+        <div class="data__parameters parameters">
+          <ul class="parameters__list label-text">
+            <li class="parameters__item">
+              <label class="data__label" for="cat-name">Имя:*</label>
+              <input class="data__input data__input--name" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            </li>
+            <li class="parameters__item">
+              <label class="data__label" for="cat-weight">Вес (кг):*</label>
+              <input class="data__input data__input--weight" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
+            </li>
+            <li class="parameters__item">
+              <label class="data__label" for="cat-age">Возраст (лет):</label>
+              <input class="data__input" id="cat-age" type="number" name="cat-age" placeholder="7">
+            </li>
+          </ul>
+        </div>
 
-          <div class="data__purposes purposes">
-            <ul class="purposes__list label-text">
-              <li class="purposes__item">
-                <input class="purposes__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose">
-                <label class="data__label purposes__label" for="weight-lose">Похудение</label>
-              </li>
-              <li class="purposes__item">
-                <input class="purposes__radio" type="radio" name="purpose" value="weight-gain" id="weight-gain">
-                <label class="data__label
+        <div class="data__purposes purposes">
+          <ul class="purposes__list label-text">
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose">
+              <label class="data__label purposes__label" for="weight-lose">Похудение</label>
+            </li>
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="weight-gain" id="weight-gain">
+              <label class="data__label
                 purposes__label" for="weight-gain">Набор массы</label>
-              </li>
-              <li class="purposes__item">
-                <input class="purposes__radio" type="radio" name="purpose" value="advice" id="advice">
-                <label class="data__label purposes__label" for="advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
+            </li>
+            <li class="purposes__item">
+              <input class="purposes__radio" type="radio" name="purpose" value="advice" id="advice">
+              <label class="data__label purposes__label" for="advice">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="data__owner owner">
+          <div class="owner__legend title-line">
+            <h3 class="title-line__text title-line__text--owner">Контактные данные&#160;<br>(владельца кота)</h3>
           </div>
+          <ul class="owner__list label-text">
+            <li class="owner__item">
+              <label class="data__label" for="email">E-MAIL:*</label>
+              <input class="data__input data__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
 
-          <div class="data__owner owner">
-            <div class="owner__legend title-line">
-              <h3 class="title-line__text title-line__text--owner">Контактные данные<br> (владельца кота)</h3>
-            </div>
-            <ul class="owner__list label-text">
-              <li class="owner__item">
-                <label class="data__label" for="email">E-MAIL:*</label>
-                <input class="data__input data__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <svg class="owner__envelope" viewBox="0 0 20 15" width="20" height="15">
+                <use href="img/sprite.svg#icon_email"></use>
+              </svg>
 
-                <svg class="owner__envelope" viewBox="0 0 20 15" width="20" height="15">
-                  <use href="img/sprite.svg#icon_email"></use>
-                </svg>
+            </li>
+            <li class="owner__item">
+              <label class="data__label" for="tel">Телефон:*</label>
+              <input class="data__input data__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
 
-              </li>
-              <li class="owner__item">
-                <label class="data__label" for="tel">Телефон:*</label>
-                <input class="data__input data__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              <svg class="owner__phone" width="20" height="21" viewBox="0 0 20 21">
+                <use href="img/sprite.svg#icon_phone"></use>
+              </svg>
 
-                <svg class="owner__phone" width="20" height="21" viewBox="0 0 20 21" >
-                  <use href="img/sprite.svg#icon_phone"></use>
-                </svg>
+            </li>
+          </ul>
+        </div>
 
-              </li>
-            </ul>
+        <div class="data__comment comment">
+          <div class="comment__legend title-line">
+            <h3 class="title-line__text title-line__text--comment">Комментарий</h3>
           </div>
+          <label class="visually-hidden" for="data__comment">Поле для ввода комментария</label>
+          <textarea class="comment__field label-text" name="data__comment" id="data__comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
 
-          <div class="data__comment comment">
-            <div class="comment__legend title-line">
-              <h3 class="title-line__text title-line__text--comment">Комментарий</h3>
-            </div>
-            <label class="visually-hidden" for="data__comment">Поле для ввода комментария</label>
-            <textarea class="comment__field label-text" name="data__comment" id="data__comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <div class="data__optional optional">
+          <div class="optional__legend title-line">
+            <h3 class="title-line__text title-line__text--optional">Дополнительно</h3>
           </div>
+          <ul class="optional__list label-text">
+            <li class="optional__item">
+              <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener">
+              <label class="data__label optional__label" for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="optional__item">
+              <input class="optional__checkbox" type="checkbox" name="water" id="water">
+              <label class="data__label optional__label" for="water">Питьевая вода</label>
+            </li>
+            <li class="optional__item">
+              <input class="optional__checkbox" type="checkbox" name="milk" id="milk">
+              <label class="data__label optional__label" for="milk">Молоко</label>
+            </li>
+            <li class="optional__item">
+              <input class="optional__checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <label class="data__label optional__label" for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </div>
 
-          <div class="data__optional optional">
-            <div class="optional__legend title-line">
-              <h3 class="title-line__text title-line__text--optional">Дополнительно</h3>
-            </div>
-            <ul class="optional__list label-text">
-              <li class="optional__item">
-                <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener">
-                <label class="data__label optional__label" for="sweetener">Сахарозаменитель</label>
-              </li>
-              <li class="optional__item">
-                <input class="optional__checkbox" type="checkbox" name="water" id="water">
-                <label class="data__label optional__label" for="water">Питьевая вода</label>
-              </li>
-              <li class="optional__item">
-                <input class="optional__checkbox" type="checkbox" name="milk" id="milk">
-                <label class="data__label optional__label" for="milk">Молоко</label>
-              </li>
-              <li class="optional__item">
-                <input class="optional__checkbox" type="checkbox" name="vitamins" id="vitamins">
-                <label class="data__label optional__label" for="vitamins">Витамины</label>
-              </li>
-            </ul>
-          </div>
+        <div class="data__button-field button-field">
+          <button class="button button-field__button" type="submit">Отправить заявку</button>
+          <p class="button-field__comment">* — Обязательные поля</p>
+        </div>
 
-          <div class="data__button-field button-field">
-            <button class="button button-field__button" type="submit">Отправить заявку</button>
-            <p class="button-field__comment">* — Обязательные поля</p>
-          </div>
+      </form>
+    </section>
+  </main>
 
-        </form>
-      </section>
-    </main>
+  @@include("html_components/footer.html", {
+  "index": 'href="index.html"',
+  "color": ""
+  })
+</body>
 
-    @@include("html_components/footer.html", {
-      "index": 'href="index.html"',
-      "color": ""
-    })
-  </body>
 </html>
