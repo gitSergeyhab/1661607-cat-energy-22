@@ -161,12 +161,12 @@
     border: 2px solid $third-gray;
   }
 
-  &--error {
+  &:invalid {
     border: 2px solid $error;
   }
 
-  &--error ~ .owner__phone,
-  &--error ~ .owner__envelope {
+  &:invalid ~ .owner__phone,
+  &:invalid ~ .owner__envelope {
     stroke: $error;
   }
 
