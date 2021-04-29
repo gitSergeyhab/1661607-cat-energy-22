@@ -2,6 +2,12 @@
   width: 100%;
   min-width: 320px;
 
+  // @media (min-width: $desktop) {
+  //   width: $desktop;
+  // }
+}
+
+.page-footer__wrapper {
   @media (min-width: $desktop) {
     width: $desktop;
   }

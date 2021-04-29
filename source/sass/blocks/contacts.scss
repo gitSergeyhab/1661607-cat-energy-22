@@ -1,8 +1,11 @@
 .contacts {
+  background-color: $basic-gray;
+}
+
+.contacts__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $basic-gray;
   padding-left: var(--pad);
   padding-right: var(--pad);
   box-sizing: border-box;
@@ -16,5 +19,7 @@
 
   @media (min-width: $desktop) {
     padding-bottom: 0;
+    width: $desktop;
+    margin: auto;
   }
 }

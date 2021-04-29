@@ -1,0 +1,27 @@
+.button {
+  @include Oswald(16, 20, $basic-white);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: $basic-white;
+  background-color: $basic-green;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.5);
+  }
+
+  &--plus {
+    background-color: $basic-gray;
+    color: $basic-black;
+  }
+}

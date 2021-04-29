@@ -12,6 +12,8 @@
     box-sizing: border-box;
     border: none;
   }
+
+  counter-reset: number;
 }
 
 .metodology__title {
@@ -57,13 +59,8 @@
   @media (min-width: $tablet) {
     padding-left: 0;
     padding-top: 151px;
-    width: 305px;
     min-height: 280px;
     align-items: flex-start;
-  }
-
-  @media (min-width: $tablet) {
-    width: auto;
   }
 
   &::before,
@@ -91,19 +88,27 @@
   }
 
   &:first-child::after {
-    background-image: url("../img/how_working/icon_leaf.svg");
+    background-image: url("../img/how-working/icon-leaf.svg");
   }
 
   &:nth-child(2)::after {
-    background-image: url("../img/how_working/icon_tub.svg");
+    background-image: url("../img/how-working/icon-tub.svg");
   }
 
   &:nth-child(3)::after {
-    background-image: url("../img/how_working/icon_eat.svg");
+    background-image: url("../img/how-working/icon-eat.svg");
   }
 
   &:last-child::after {
-    background-image: url("../img/how_working/icon_alarm.svg");
+    background-image: url("../img/how-working/icon-alarm.svg");
+  }
+
+  & br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
   }
 }
 
@@ -114,5 +119,19 @@
   @media (min-width: $tablet) {
     @include Arial(16, 24, $dark-gray);
     width: 245px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      counter-increment: number;
+      content: counter(number);
+
+      position: absolute;
+      top: -150px;
+      left: 116px;
+
+      @include Oswald(280, 280, $basic-gray);
+      z-index: -1;
+    }
   }
 }

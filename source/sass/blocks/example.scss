@@ -1,3 +1,5 @@
+$lin-grad-example: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $basic-gray 191px, $basic-gray 462px);
+
 .example {
   width: 100%;
   min-width: 320px;
@@ -7,13 +9,20 @@
 
   @media (min-width: $tablet) {
     background-color: $basic-white;
-    padding-top: 42px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    background: $lin-grad-example;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop) {
     width: $desktop;
     display: flex;
-    padding-top: 0;
   }
 }
 
@@ -35,7 +44,7 @@
     padding-right: 0;
     width: 590px;
     margin-bottom: 0;
-    background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $basic-gray 191px, $basic-gray 462px);
+    background: $lin-grad-example;
   }
 }
 
@@ -120,5 +129,16 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 60px;
+  }
+}
+
+.example__side {
+  @media (min-width: $desktop) {
+    background-color: $lin-grad-example;
+    width: 100%;
+
+    &--right {
+      background: linear-gradient(to bottom, $basic-white 0, $basic-white 191px, $again-gray-2 191px, $again-gray-2 462px);
+    }
   }
 }

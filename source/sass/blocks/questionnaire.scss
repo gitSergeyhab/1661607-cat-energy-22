@@ -17,6 +17,9 @@
 
   @media (min-width: $desktop) {
     padding-bottom: 82px;
+    width: $desktop;
+    box-sizing: border-box;
+    margin: auto;
   }
 }
 

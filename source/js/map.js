@@ -23,110 +23,66 @@ function showMap(windowSize) {
   }
   // <- мои костыли
 
-
   var myMap = new ymaps.Map('map', {
-
       center: centerMarker(),
-
       zoom: 16
-
   }, {
-
       searchControlProvider: 'yandex#search'
-
   }),
 
-
-
   // Создаём макет содержимого.
-
   MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-
       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-
   ),
 
-
-
   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
       hintContent: 'Кэт энерджи',
-
       balloonContent: ''
-
   }, {
-
       // Опции.
-
       // Необходимо указать данный тип макета.
-
       iconLayout: 'default#image',
 
       // Своё изображение иконки метки.
-
       iconImageHref: srcMaker(1),
 
-
-
       // Размеры метки.
-
       iconImageSize: markerSize(),
 
       // Смещение левого верхнего угла иконки относительно
-
       // её "ножки" (точки привязки).
-
       iconImageOffset: markerOffset()
-
   }),
 
   myPlacemarkWithContent = new ymaps.Placemark([59.938635, 30.323118], {
-
     hintContent: 'Кэт энерджи',
-
     balloonContent: '',
-
     iconContent: '12'
-
 }, {
 
     // Опции.
-
     // Необходимо указать данный тип макета.
-
     iconLayout: 'default#imageWithContent',
 
     // Своё изображение иконки метки.
-
     iconImageHref: srcMaker(2),
 
     // Размеры метки.
-
     iconImageSize: markerSize(),
 
     // Смещение левого верхнего угла иконки относительно
-
     // её "ножки" (точки привязки).
-
     iconImageOffset: markerOffset(),
 
     // Смещение слоя с содержимым относительно слоя с картинкой.
-
     iconContentOffset: [15, 15],
 
     // Макет содержимого.
-
     iconContentLayout: MyIconContentLayout
-
 });
-
-
   myMap.geoObjects
-
       .add(myPlacemark)
-
       .add(myPlacemarkWithContent);
-
 }
 
 // мои костыли ->

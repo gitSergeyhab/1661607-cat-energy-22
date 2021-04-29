@@ -11,9 +11,12 @@
   @media (min-width: $tablet) {
     border: none;
   }
+}
 
+.page-main__wrapper {
   @media (min-width: $desktop) {
     width: $desktop;
+    margin: auto;
   }
 }
 
@@ -31,7 +34,7 @@
 
 .page-main__purpose,
 .page-main__catalog {
-  width: 100%;
+  // width: 100%;
   min-width: 320px;
   background-color: $basic-white;
   box-sizing: border-box;

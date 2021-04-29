@@ -1,11 +1,11 @@
 const {src, dest, series, parallel, watch} = require('gulp');
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
 const csso = require('postcss-csso');
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
+const autoprefixer = require('autoprefixer');
+const sync = require('browser-sync').create();
 const includer = require('gulp-file-include');
 const beautify = require('gulp-beautify').html;
 const htmlmin = require('gulp-htmlmin');
@@ -55,7 +55,7 @@ exports.scripts = scripts;
 // Styles
 
 const styles = () => {
-  return src("source/sass/style.scss")
+  return src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -63,8 +63,8 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("."))
-    .pipe(dest("build/css"))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('build/css'))
     .pipe(sync.stream());
 }
 exports.styles = styles;
@@ -91,7 +91,7 @@ const webPs = () => {
 exports.webPs = webPs;
 
 const sprite = () => {
-  return src('source/img/for_sprite/*.svg')
+  return src('source/img/for-sprite/*.svg')
   .pipe(imagemin([imagemin.svgo()]))
   .pipe(svgstore())
   .pipe(rename('sprite.svg'))
@@ -155,7 +155,7 @@ const watcher = () => {
   watch('source/html/**/*.html', catalog);
   watch('source/html/**/*.html', form);
   watch('source/js/**/*.js', scripts)
-  watch("source/sass/**/*.scss", styles);
+  watch('source/sass/**/*.scss', styles);
 }
 
 exports.build = series(clean, parallel(index, catalog, form), copyBuild, parallel(images, webPs, sprite), scripts, styles);

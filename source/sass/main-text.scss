@@ -1,0 +1,7 @@
+.main-text {
+  @include Oswald(36, 36);
+
+  @media (min-width: $tablet) {
+    @include Oswald(60, 60, $basic-black);
+  }
+}
