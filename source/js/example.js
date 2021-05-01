@@ -83,4 +83,3 @@ if (rangeField) {
     rangeBar.classList.remove('cat-slider__js--active');
   })
 }
-

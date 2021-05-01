@@ -87,7 +87,7 @@
     background-position: center;
   }
 
-  &--leaf:after {
+  &--leaf::after {
     background-image: url("../img/how-working/icon-leaf.svg");
   }
 

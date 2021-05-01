@@ -7,7 +7,7 @@
     content: "";
     top: 139px;
     left: 134px;
-    background-image: url('../img/icons/map-logo-marker.png');
+    background-image: url("../img/icons/map-logo-marker.png");
     background-repeat: no-repeat;
     background-size: contain;
     height: 53px;
@@ -38,6 +38,7 @@
     width: 768px;
     height: 400px;
   }
+
   @media (min-width: $desktop) {
     width: 1440px;
     height: 400px;
