@@ -24,7 +24,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 360px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
@@ -86,7 +86,7 @@
 
     @media (min-width: $desktop) {
       margin-bottom: 22px;
-      padding-top: 188px;
+      padding-top: 69px;
     }
   }
 

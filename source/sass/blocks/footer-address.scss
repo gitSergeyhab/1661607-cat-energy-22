@@ -21,8 +21,7 @@
     position: absolute;
     z-index: 1;
     top: 95px;
-    transform: translateX(-150%);
-    left: 67%;
+    left: calc(50% - 610px);
     width: 570px;
     padding: 0 89px 0 76px;
     background-color: $basic-white;

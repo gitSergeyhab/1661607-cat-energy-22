@@ -1,0 +1,45 @@
+.no-js-map {
+  height: 362px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 139px;
+    left: 134px;
+    background-image: url('../img/icons/map-logo-marker.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 53px;
+    width: 57px;
+  }
+
+  @media (min-width: $tablet) {
+    height: 400px;
+
+    &::after {
+      top: 146px;
+      left: 333px;
+      height: 106px;
+      width: 113px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      top: 131px;
+      left: 908px;
+    }
+  }
+}
+
+.no-js-map__img {
+  @media (min-width: $tablet) {
+    width: 768px;
+    height: 400px;
+  }
+  @media (min-width: $desktop) {
+    width: 1440px;
+    height: 400px;
+  }
+}

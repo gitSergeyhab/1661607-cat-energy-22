@@ -1,7 +1,9 @@
 .footer-map {
+  display: block;
+  margin: auto;
   width: 100%;
   height: 362px;
-  background-color: $basic-green;
+  background-color: $basic-gray;
   overflow: hidden;
   display: flex;
   justify-content: center;

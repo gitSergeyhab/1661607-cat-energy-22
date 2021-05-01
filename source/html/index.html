@@ -15,39 +15,36 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Кэт энерджи. Главная страница</h1>
-    <section class="functional-nutrition page-main__nutrition page-main__wrapper">
+    <section class="functional-nutrition page-main__nutrition">
       <div class="functional-nutrition__text-wrapper">
-        <div class="functional-nutrition__text-element">
-          <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
-          <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
-        </div>
-        <picture class="functional-nutrition__z-index">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.webp 1x, img/promo/promo-product-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.webp 1x, img/promo/promo-product-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/promo/promo-product-mobile@1x.webp 1x, img/promo/promo-product-mobile@2x.webp 2x">
-
-          <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.png 1x, img/promo/promo-product-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.png 1x, img/promo/promo-product-tablet@2x.png 2x">
-          <img class="functional-nutrition__drop-food" src="img/promo/promo-product-mobile@1x.png" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="коробка с кошачьей едой" width="280" height="270">
-        </picture>
+        <h2 class="functional-nutrition__title main-text">Функциональное питание для котов</h2>
+        <p class="functional-nutrition__text">Занялся собой? Займись котом!</p>
       </div>
-      <div class="functional-nutrition__notext-wrapper">
-      </div>
+      <picture class="functional-nutrition__picture">
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.webp 1x, img/promo/promo-product-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.webp 1x, img/promo/promo-product-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/promo/promo-product-mobile@1x.webp 1x, img/promo/promo-product-mobile@2x.webp 2x">
 
+        <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop@1x.png 1x, img/promo/promo-product-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet@1x.png 1x, img/promo/promo-product-tablet@2x.png 2x">
+        <img class="functional-nutrition__drop-food" src="img/promo/promo-product-mobile@1x.png" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="коробка с кошачьей едой" width="280" height="270">
+      </picture>
       <a class="functional-nutrition__button button" href="form.html">Подобрать программу</a>
+      <div class="functional-nutrition__cat-img">
+      </div>
     </section>
 
     <section class="purpose page-main__purpose page-main__wrapper">
       <h2 class="visually-hidden">Выпор питания</h2>
       <ul class="purpose__list">
-        <li class="purpose__item">
+        <li class="purpose__item purpose__item--lose">
           <h3 class="purpose__title">Похудение</h3>
           <p class="purpose__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a class="purpose__link" href="#">Каталог SLIM</a>
         </li>
-        <li class="purpose__item">
+        <li class="purpose__item purpose__item--gain">
           <h3 class="purpose__title">Набор массы</h3>
           <p class="purpose__text">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -60,28 +57,28 @@
     <section class="metodology page-main__metodology page-main__wrapper">
       <h2 class="metodology__title">Как это работает</h2>
       <ul class="metodology__list">
-        <li class="metodology__item">
+        <li class="metodology__item metodology__item--leaf">
           <p class="metodology__text">
             Функциональное питание
             содержит только полезные
             питательные вещества.
           </p>
         </li>
-        <li class="metodology__item">
+        <li class="metodology__item metodology__item--tub">
           <p class="metodology__text">
             Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.
           </p>
         </li>
-        <li class="metodology__item">
+        <li class="metodology__item metodology__item--eat">
           <p class="metodology__text">
             Замените один-два приема
             обычной еды на наше
             функциональное питание.
           </p>
         </li>
-        <li class="metodology__item">
+        <li class="metodology__item metodology__item--alarm">
           <p class="metodology__text">
             Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!
           </p>
@@ -119,7 +116,42 @@
             Затраты на питание: <span class="example__price-num"></span> 15 000 РУБ.
           </p>
         </div>
+
         <div class="example__slider cat-slider">
+          <div class="cat-slider__images">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.webp 1x, img/example/dead-cat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/dead-cat-mobile@1x.webp 1x, img/example/dead-cat-mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.png 1x, img/example/dead-cat-tablet@2x.png 2x">
+              <img class="cat-slider__now-cat" src="img/example/dead-cat-mobile@1x.png" srcset="img/example/dead-cat-mobile@2x.png 2x" alt="Изображения кота - СТАЛО" width="251" height="240">
+            </picture>
+            <div class="cat-slider__past-cat-block">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-cat-tablet@1x.webp 1x, img/example/fat-cat-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/example/fat-cat-mobile@1x.webp 1x, img/example/fat-cat-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="img/example/fat-cat-tablet@1x.png 1x, img/example/fat-cat-tablet@2x.png 2x">
+                <img class="cat-slider__past-cat" src="img/example/fat-cat-mobile@1x.png" srcset="img/example/fat-cat-mobile@2x.png 2x" alt="Изображения кота прежде - БЫЛО" width="311" height="232">
+              </picture>
+            </div>
+          </div>
+          <div class="cat-slider__interactive">
+            <button class="cat-slider__button cat-slider__button--past" aria-label="кнопка, показывающая кота - ДО">Было</button>
+            <div class="cat-slider__out-decor-container">
+              <div class="cat-slider__range-container">
+                <div class="cat-slider__range">
+                  <div class="cat-slider__bar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="cat-slider__button cat-slider__button--now" aria-label="кнопка, показывающая кота - ПОСЛЕ">Стало</button>
+          </div>
+        </div>
+
+        <!-- <div class="example__slider cat-slider">
           <div class="cat-slider__images">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="img/example/dead-cat-tablet@1x.webp 1x, img/example/dead-cat-tablet@2x.webp 2x">
@@ -149,7 +181,8 @@
             </div>
             <button class="cat-slider__button cat-slider__button--now" aria-label="кнопка, показывающая кота - ПОСЛЕ">Стало</button>
           </div>
-        </div>
+        </div> -->
+
       </div>
       <div class="example__side example__side--right"></div>
     </section>

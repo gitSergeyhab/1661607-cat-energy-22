@@ -58,6 +58,9 @@
     }
   }
 
+  &:focus ~ .optional__label::before {
+    box-shadow: 0 0 1px 1px $dark-gray;
+  }
 
   &:hover ~ .optional__label::before {
     border-color: $again-gray-8;

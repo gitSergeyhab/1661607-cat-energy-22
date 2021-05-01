@@ -19,7 +19,7 @@
 
   @media (min-width: $desktop) {
     @include Oswald(20, 30);
-    position: absolute;
+    // position: absolute;
     min-height: 112px;
     padding-top: 48px;
     width: $desktop;

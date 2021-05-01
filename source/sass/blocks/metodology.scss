@@ -87,19 +87,19 @@
     background-position: center;
   }
 
-  &:first-child::after {
+  &--leaf:after {
     background-image: url("../img/how-working/icon-leaf.svg");
   }
 
-  &:nth-child(2)::after {
+  &--tub::after {
     background-image: url("../img/how-working/icon-tub.svg");
   }
 
-  &:nth-child(3)::after {
+  &--eat::after {
     background-image: url("../img/how-working/icon-eat.svg");
   }
 
-  &:last-child::after {
+  &--alarm::after {
     background-image: url("../img/how-working/icon-alarm.svg");
   }
 

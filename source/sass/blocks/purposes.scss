@@ -67,7 +67,9 @@
       left: 11px;
     }
   }
-
+  &:focus ~ .purposes__label::before {
+    box-shadow: 0 0 1px 1px $dark-gray;
+  }
   &:hover ~ .purposes__label::before {
     border-color: $again-gray-8;
   }

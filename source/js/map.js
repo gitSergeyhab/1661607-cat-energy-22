@@ -1,4 +1,5 @@
-document.querySelector('.footer-location__no-js-text').style.display = 'none';
+document.querySelector('.no-js-map').style.display = 'none';
+
 function showMap(windowSize) {
 
   // мои костыли ->
@@ -86,6 +87,8 @@ function showMap(windowSize) {
 }
 
 // мои костыли ->
+// нужно для изменения размера и положения маркера 'img/icons/map-logo-marker.png'
+// при переходе между брэкпоинтами:
 const windowSizer = () => {
   if (window.innerWidth > 1439) return 3;
   if (window.innerWidth > 767) return 2;

@@ -1,40 +1,43 @@
 .functional-nutrition {
-  min-height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 
   @media (min-width: $desktop) {
-    width: $desktop;
-    z-index: 2;
-    flex-direction: row;
-    align-items: flex-start;
+    position: static;
   }
 }
 
-.functional-nutrition__text-element {
-  z-index: 2;
-  padding-top: 26px;
-  position: absolute;
+.functional-nutrition__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  z-index: 1;
+  color: $basic-white;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet) {
+    color: $basic-black;
+    padding-left: 117px;
     width: 420px;
     padding-top: 31px;
-    padding-left: 117px;
+    align-items: flex-start;
     align-self: flex-start;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 223px;
-    padding-left: 190px;
+    padding-left: 13.25%;
+    padding-top: 103px;
   }
 }
 
 .functional-nutrition__title {
+  text-align: center;
   margin: 0;
   margin-bottom: 25px;
-  text-align: center;
 
   @media (min-width: $tablet) {
     text-align: left;
@@ -44,31 +47,80 @@
 
 .functional-nutrition__text {
   @include Oswald(14, 14);
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 29px;
-  text-align: center;
 
   @media (min-width: $tablet) {
-    @include Oswald(20, 20, $basic-black);
+    @include Oswald(20, 20);
     text-align: left;
-    margin-bottom: 20px;
   }
 }
 
-.functional-nutrition__text-wrapper {
+.functional-nutrition__picture {
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 499px;
+    width: 552px;
+    margin-bottom: -228px;
+  }
+}
+
+.functional-nutrition__drop-food {
+  @media (min-width: $tablet) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    left: 20.7%;
+    top: -281px;
+    height: 499px;
+    width: 552px;
+  }
+}
+
+.functional-nutrition__button {
+  font-size: 14px;
+  width: calc(100% - 40px);
+
+  @media (min-width: $tablet) {
+    @include Oswald(20, 20, $basic-white);
+    position: relative;
+    align-self: flex-start;
+    left: 0;
+    top: -580px;
+    width: 244px;
+    height: 54px;
+    margin-bottom: -54px;
+    z-index: 2;
+    margin-left: 111px;
+  }
+
+  @media (min-width: $desktop) {
+    top: -238px;
+    margin-left: 13.25%;
+    ;
+  }
+}
+
+.functional-nutrition__cat-img {
+  position: absolute;
+  top: 0;
   height: 302px;
   width: 100%;
   background-image: url("../img/promo/promo-cat-mobile@1x.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $basic-white;
   background-color: $dark-gray;
-  position: relative;
 
   &::before {
     content: "";
@@ -76,20 +128,30 @@
     width: 100%;
     height: 302px;
     background-color: rgba($basic-green, 0.85);
+    background-size: contain;
   }
 
   @media (min-width: $tablet) {
-    background-color: transparent;
-    background-image: none;
-
-    &::before {
-      background-color: transparent;
-    }
+    display: none;
   }
 
   @media (min-width: $desktop) {
+    display: block;
+    right: 0;
     width: 50%;
     flex-direction: row;
+    height: 694px;
+    background-image: url("../img/promo/promo-cat-desktop@1x.jpg");
+    background-position: center center;
+    background-color: $basic-green;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 694px;
+    }
   }
 
   @media (min-resolution: 2dppx) {
@@ -103,77 +165,4 @@
   @media (min-resolution: 2dppx) and (min-width: $desktop) {
     background-image: url("../img/promo/promo-cat-desktop@2x.jpg");
   }
-}
-
-.functional-nutrition__drop-food {
-  z-index: 1;
-  padding-top: 167px;
-
-  @media (min-width: $tablet) {
-    width: 709px;
-    height: 609px;
-    padding-top: 232px;
-  }
-
-  @media (min-width: $desktop) {
-    position: absolute;
-    left: 558px;
-    top: 141px;
-    height: 499px;
-    width: 552px;
-    padding-top: 0;
-  }
-}
-
-.functional-nutrition__notext-wrapper {
-  background-color: $basic-white;
-  min-height: 138px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  @media (min-width: $desktop) {
-    position: relative;
-    width: 50%;
-    height: 694px;
-    background-image: url("../img/promo/promo-cat-desktop@1x.jpg");
-    background-color: $basic-green;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 694px;
-      background-color: rgba($basic-green, 0.85);
-    }
-  }
-
-  @media (min-resolution: 2dppx) and (min-width: $desktop) {
-    background-image: url("../img/promo/promo-cat-desktop@2x.jpg");
-  }
-}
-
-.functional-nutrition__button {
-  font-size: 14px;
-  width: calc(100% - 40px);
-
-  @media (min-width: $tablet) {
-    @include Oswald(20, 20, $basic-white);
-    position: absolute;
-    top: 261px;
-    left: 110px;
-    width: 244px;
-    height: 54px;
-    z-index: 2;
-  }
-
-  @media (min-width: $desktop) {
-    top: 455px;
-    left: 190px;
-  }
-}
-
-.functional-nutrition__z-index {
-  z-index: 1;
 }

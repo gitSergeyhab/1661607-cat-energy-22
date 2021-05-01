@@ -9,9 +9,19 @@
         <p class="footer-address__address">Санкт-Питербург</p>
       </div>
     </div>
-    <h2 class="footer-location__no-js-text"> При включенном js тут будет интерактивная Карта: адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8 ... а пока наслаждайтесь созерцанием зеленого квадрата</h2>
     <div class="footer-location__map footer-map" id="map">
       <h3 class="visually-hidden">Карта: адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</h3>
+      <a class="footer-map__no-js no-js-map" href="#" aria-label="ссылка на сервис карт">
+        <picture class="no-js-map__picture">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/desktop-map.webp 1x, img/map/desktop-map@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map/tablet-map.webp 1x, img/map/tablet-map@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/mobil-map.webp 1x, img/map/mobil-map@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/map/desktop-map.jpg 1x, img/map/desktop-map@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map/tablet-map.jpg 1x, img/map/tablet-map@2x.jpg 2x">
+          <img class="no-js-map__img" src="img/map/mobil-map.jpg" srcset="img/map/mobil-map@2x.jpg 2x" width="320" height="362" alt="карта">
+        </picture>
+      </a>
     </div>
   </section>
   <section class="page-footer__contacts contacts">

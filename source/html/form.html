@@ -19,7 +19,7 @@
     <section class="page-main__questionnaire questionnaire">
       <h2 class="visually-hidden">Анкета</h2>
       <p class="questionnaire__text">
-        Заполните анкету, и мы подберем <br>
+        Заполните анкету, и мы подберем
         программу питания для вашего кота
       </p>
       <form class="questionnaire__data data" action="https://echo.htmlacademy.ru" method="post">
@@ -31,11 +31,11 @@
             </li>
             <li class="parameters__item">
               <label class="data__label" for="cat-weight">Вес (кг):*</label>
-              <input class="data__input data__input--weight" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
+              <input class="data__input data__input--weight" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
             </li>
             <li class="parameters__item">
               <label class="data__label" for="cat-age">Возраст (лет):</label>
-              <input class="data__input" id="cat-age" type="number" name="cat-age" placeholder="7">
+              <input class="data__input" id="cat-age" type="text" name="cat-age" placeholder="7">
             </li>
           </ul>
         </div>
@@ -43,7 +43,7 @@
         <div class="data__purposes purposes">
           <ul class="purposes__list label-text">
             <li class="purposes__item">
-              <input class="purposes__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose">
+              <input class="purposes__radio" type="radio" name="purpose" value="weight-lose" id="weight-lose" checked>
               <label class="data__label purposes__label" for="weight-lose">Похудение</label>
             </li>
             <li class="purposes__item">
@@ -98,7 +98,7 @@
           </div>
           <ul class="optional__list label-text">
             <li class="optional__item">
-              <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener">
+              <input class="optional__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
               <label class="data__label optional__label" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="optional__item">

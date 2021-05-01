@@ -9,13 +9,14 @@ $lin-grad-example: linear-gradient(to bottom, $basic-white 0, $basic-white 191px
 
   @media (min-width: $tablet) {
     background-color: $basic-white;
-    padding-top: 0;
+    padding-top: 42px;
   }
 
   @media (min-width: $desktop) {
     display: flex;
     justify-content: center;
     background: $lin-grad-example;
+    padding-top: 0;
   }
 }
 

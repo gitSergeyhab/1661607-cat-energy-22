@@ -103,7 +103,7 @@
     }
   }
 
-  &:first-child::after {
+  &--lose::after {
     background-image: url("../img/purpose/lose-weight.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -120,7 +120,7 @@
     }
   }
 
-  &:last-child::after {
+  &--gain::after {
     background-image: url("../img/purpose/gain-weight.svg");
     background-repeat: no-repeat;
     background-position: center;

@@ -28,10 +28,12 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+  max-width: 230px;
 
   @media (min-width: $tablet) {
     @include Oswald(20, 30);
     margin-bottom: 66px;
+    min-width: 330px;
   }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
