@@ -95,7 +95,16 @@ const windowSizer = () => {
   return 1;
 }
 
-const map = document.querySelector('#map')
+const map = document.querySelector('#map');
+
+// убирает все карты кроме одной
+const killmaps = () => {
+  const ymapsAll = document.querySelectorAll('#map > ymaps');
+  for (let i=1; i<ymapsAll.length; i++) {
+    ymapsAll[0].remove();
+  }
+}
+
 let windowSize = windowSizer();
 
 ymaps.ready(() => showMap(windowSize));
@@ -107,6 +116,10 @@ window.addEventListener('resize', () => {
     if (ymapsBlock) ymapsBlock.remove();
     ymaps.ready(() => showMap(windowSizeNow));
     windowSize = windowSizeNow;
+    //fix
+    setTimeout(killmaps, 100);
+    setTimeout(killmaps, 1000);
+    setTimeout(killmaps, 10000);
   }
 })
 // <-мои костыли
