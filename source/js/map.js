@@ -101,6 +101,7 @@ const map = document.querySelector('#map');
 const killmaps = () => {
   const ymapsAll = document.querySelectorAll('#map > ymaps');
   for (let i=1; i<ymapsAll.length; i++) {
+    console.log(i)
     ymapsAll[0].remove();
   }
 }
@@ -117,6 +118,7 @@ window.addEventListener('resize', () => {
     ymaps.ready(() => showMap(windowSizeNow));
     windowSize = windowSizeNow;
     //fix
+    setTimeout(killmaps, 50);
     setTimeout(killmaps, 100);
     setTimeout(killmaps, 1000);
     setTimeout(killmaps, 10000);
