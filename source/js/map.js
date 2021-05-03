@@ -101,7 +101,6 @@ const map = document.querySelector('#map');
 const killmaps = () => {
   const ymapsAll = document.querySelectorAll('#map > ymaps');
   for (let i=1; i<ymapsAll.length; i++) {
-    console.log(i)
     ymapsAll[0].remove();
   }
 }
